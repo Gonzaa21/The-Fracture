@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk6cg88h5uafg"]
+
+[ext_resource type="Script" uid="uid://g2wo2b8vgu1u" path="res://game/pc/screen/computer_terminal_screen.gd" id="1_rkaev"]
+[ext_resource type="Texture2D" uid="uid://blpxxbk1aof86" path="res://assets/backgrounds_popup/computer/background_pc.png" id="1_trc7o"]
+[ext_resource type="FontFile" uid="uid://b2dmre7dmj1bq" path="res://assets/fonts/CascadiaMono.ttf" id="3_cv0gv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trc7o"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv0gv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcf1s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ComputerTerminalScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_rkaev")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trc7o")
+
+[node name="Control" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_right = 480.0
+offset_bottom = 270.0
+
+[node name="Background" type="TextureRect" parent="Panel/Control"]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_trc7o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OutputScroll" type="ScrollContainer" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 352.0
+offset_bottom = 171.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="OutputLabel" type="RichTextLabel" parent="Panel/Control/OutputScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_cv0gv")
+theme_override_font_sizes/normal_font_size = 6
+bbcode_enabled = true
+fit_content = true
+
+[node name="InputContainer" type="HBoxContainer" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 169.0
+offset_right = 352.0
+offset_bottom = 192.0
+
+[node name="PromptLabel" type="Label" parent="Panel/Control/InputContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cv0gv")
+theme_override_font_sizes/font_size = 6
+text = "PS C:\\Users\\User>"
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="CommandInput" type="LineEdit" parent="Panel/Control/InputContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_placeholder_color = Color(0.875, 0.875, 0.875, 0.6)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 1)
+theme_override_colors/clear_button_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("3_cv0gv")
+theme_override_font_sizes/font_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_cv0gv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tcf1s")
+flat = true

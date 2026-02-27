@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://crgixvyk05bds"]
+
+[ext_resource type="Script" uid="uid://cmvjcp2eucgi6" path="res://game/pc/powersrc/battery.gd" id="1_p51ib"]
+[ext_resource type="Texture2D" uid="uid://b0q7puqasyopl" path="res://assets/player principal/inventory/BateryIcon.png" id="2_eysf8"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="2_p51ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cswul"]
+size = Vector2(15, 21)
+
+[node name="Battery" type="Area2D"]
+script = ExtResource("1_p51ib")
+inventory_icon = ExtResource("2_eysf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_cswul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.375)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -37.0
+offset_top = 3.0
+offset_right = -2.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("2_p51ib")
+theme_override_font_sizes/font_size = 5
+text = "[E] para buscar"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

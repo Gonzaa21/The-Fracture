@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://y62y7n1cnff5"]
+
+[ext_resource type="PackedScene" uid="uid://dp0ntid76fn7s" path="res://game/fragments/fragment.tscn" id="2_4oenv"]
+
+[node name="Fragments_tile_level" type="Node2D"]
+
+[node name="Warning" parent="." instance=ExtResource("2_4oenv")]
+position = Vector2(200, 202)
+popup_style = 0
+
+[node name="Monument" parent="." instance=ExtResource("2_4oenv")]
+position = Vector2(248, 138)
+fragment_id = "monumento"
+popup_style = 3
+
+[node name="Table1" parent="." instance=ExtResource("2_4oenv")]
+position = Vector2(232, 168)
+fragment_id = "homenaje#1"
+popup_style = 3
+
+[node name="Table2" parent="." instance=ExtResource("2_4oenv")]
+position = Vector2(264, 168)
+fragment_id = "homenaje#2"
+popup_style = 3
+
+[node name="Award" parent="." instance=ExtResource("2_4oenv")]
+position = Vector2(191, 56)
+fragment_id = "reconocimiento"
+popup_style = 3

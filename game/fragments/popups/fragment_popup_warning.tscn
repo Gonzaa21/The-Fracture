@@ -1,0 +1,134 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdoo1uhxpr3nf"]
+
+[ext_resource type="Script" uid="uid://tweu1u7806s5" path="res://game/fragments/popups/fragment_popup_BASE.gd" id="1_djjs5"]
+[ext_resource type="Texture2D" uid="uid://dxr87sefyw5pa" path="res://assets/backgrounds_popup/background_warning_sign.png" id="2_8rsc3"]
+[ext_resource type="FontFile" uid="uid://cxrj7pyehmvi0" path="res://assets/fonts/Silkscreen-Bold.ttf" id="2_f84ct"]
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_8rsc3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qrljx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f84ct"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rsc3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d5bd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1libo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="FragmentPopupWarn" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_djjs5")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qrljx")
+
+[node name="BackgroundTexture" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_8rsc3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_left = -42.0
+offset_top = 15.0
+offset_right = 342.0
+offset_bottom = 240.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="Control" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="Control" parent="Panel/MarginContainer/VBoxContainer"]
+anchors_preset = 0
+offset_right = 344.0
+offset_bottom = 104.0
+
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 0
+offset_right = 344.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.6, 0.45882353, 0.2784314, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_f84ct")
+theme_override_font_sizes/font_size = 22
+text = "Título del Fragmento"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 0
+offset_top = 75.0
+offset_right = 344.0
+offset_bottom = 104.0
+
+[node name="ContentLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.05490196, 0.011764706, 0.078431375, 0.49803922)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.36078432)
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/text_highlight_h_padding = 3
+theme_override_fonts/normal_font = ExtResource("3_8rsc3")
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "ContentLabel"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05490196, 0.007843138, 0.078431375, 0.49803922)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.36078432)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_8rsc3")
+theme_override_font_sizes/font_size = 7
+text = "MetadataLabel"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 158.0
+offset_right = 240.0
+offset_bottom = 181.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_8rsc3")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_f84ct")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8rsc3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2d5bd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1libo")
+text = "[Continuar]"

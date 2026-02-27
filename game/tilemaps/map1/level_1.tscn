@@ -1,0 +1,53 @@
+[gd_scene load_steps=15 format=3 uid="uid://dykgdciwbdpma"]
+
+[ext_resource type="Script" uid="uid://dxcjrri58s5dw" path="res://game/tilemaps/map1/level_1.gd" id="1_il7bj"]
+[ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="2_bjooh"]
+[ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="3_65rxe"]
+[ext_resource type="PackedScene" uid="uid://y07ejo2x382s" path="res://game/tilemaps/map1/tilemap.tscn" id="4_mv2oe"]
+[ext_resource type="PackedScene" uid="uid://604eo5ydeh1d" path="res://game/buildings/Build1.tscn" id="5_mv2oe"]
+[ext_resource type="PackedScene" uid="uid://r4bjvtrxcwt1" path="res://game/buildings/building_2.tscn" id="6_0ir3q"]
+[ext_resource type="PackedScene" uid="uid://dccidlad6cjyf" path="res://game/buildings/Monument.tscn" id="7_yrunr"]
+[ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="8_mfrso"]
+[ext_resource type="PackedScene" uid="uid://cg6sy686p065a" path="res://game/objects/street lamp/streetlamp_tile.tscn" id="9_oes7j"]
+[ext_resource type="PackedScene" uid="uid://y62y7n1cnff5" path="res://game/fragments/tiles/fragments_tile.tscn" id="11_ictta"]
+[ext_resource type="PackedScene" uid="uid://cdoo1uhxpr3nf" path="res://game/fragments/popups/fragment_popup_warning.tscn" id="12_slesh"]
+[ext_resource type="PackedScene" uid="uid://brn03jfj0jvmm" path="res://game/fragments/dialogue popup/dialogue_popup.tscn" id="13_aoj2y"]
+[ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/battery.tscn" id="14_p2l5k"]
+[ext_resource type="PackedScene" uid="uid://cfnnaom8xk8hw" path="res://game/tilemaps/map2/portal/level_2_portal.tscn" id="14_slesh"]
+
+[node name="Level1" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_il7bj")
+
+[node name="Filter" parent="." instance=ExtResource("2_bjooh")]
+
+[node name="FragmentPopupWarn" parent="." instance=ExtResource("12_slesh")]
+
+[node name="DialoguePopup" parent="." instance=ExtResource("13_aoj2y")]
+
+[node name="TileMap" parent="." instance=ExtResource("4_mv2oe")]
+
+[node name="Player" parent="." instance=ExtResource("3_65rxe")]
+position = Vector2(264, 257)
+
+[node name="Battery" parent="." instance=ExtResource("14_p2l5k")]
+position = Vector2(240, 224)
+
+[node name="Building1" parent="." instance=ExtResource("5_mv2oe")]
+
+[node name="Building2" parent="." instance=ExtResource("6_0ir3q")]
+
+[node name="Monument" parent="." instance=ExtResource("7_yrunr")]
+
+[node name="Limits" parent="." instance=ExtResource("8_mfrso")]
+visible = false
+
+[node name="SpawnOffice" type="Marker2D" parent="."]
+position = Vector2(70, 108)
+
+[node name="StreetLampTile" parent="." instance=ExtResource("9_oes7j")]
+
+[node name="Fragments_tile_level" parent="." instance=ExtResource("11_ictta")]
+
+[node name="Level2Portal" parent="." instance=ExtResource("14_slesh")]
+position = Vector2(464, 168)

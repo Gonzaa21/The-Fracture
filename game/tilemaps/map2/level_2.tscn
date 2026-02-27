@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmqd6qwxpp56x"]
+
+[ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="1_jjuub"]
+[ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="2_4vws6"]
+[ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_gxqjn"]
+[ext_resource type="PackedScene" uid="uid://ckmtpqg3562w8" path="res://game/player/limits/limits_forest.tscn" id="3_ekqkl"]
+[ext_resource type="PackedScene" uid="uid://dttmmraqxs5l6" path="res://game/tilemaps/map2/tilemap2.tscn" id="3_gxqjn"]
+
+[node name="level_2" type="Node2D"]
+
+[node name="Filter" parent="." instance=ExtResource("1_jjuub")]
+visible = false
+
+[node name="Limits" parent="." instance=ExtResource("2_4vws6")]
+visible = false
+
+[node name="LimitsForest" parent="." instance=ExtResource("3_ekqkl")]
+visible = false
+
+[node name="Tilemap" parent="." instance=ExtResource("3_gxqjn")]
+
+[node name="Player" parent="." instance=ExtResource("2_gxqjn")]
+position = Vector2(8, 168)
+
+[node name="LevelEntrance" type="Marker2D" parent="."]
+position = Vector2(8, 168)

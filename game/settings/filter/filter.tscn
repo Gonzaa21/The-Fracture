@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dck3k86gujnd1"]
+
+[ext_resource type="Script" uid="uid://b6rh0gei57muw" path="res://game/settings/filter/filter.gd" id="1_0b5gx"]
+[ext_resource type="Shader" uid="uid://bpnw664ql0goc" path="res://game/settings/filter/violet_filter.gdshader" id="1_fqhl6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0b5gx"]
+shader = ExtResource("1_fqhl6")
+shader_parameter/intensity = 0.4
+shader_parameter/tint_color = Vector3(0.6, 0.2, 1)
+shader_parameter/fog_amount = 0.6
+shader_parameter/fog_scale = 3.0
+shader_parameter/fog_speed = 0.5
+shader_parameter/particle_density = 200.0
+shader_parameter/particle_size = 2.5
+shader_parameter/particle_speed = Vector2(0.3, 0.5)
+shader_parameter/particle_brightness = 2.0
+shader_parameter/time = 0.0
+
+[node name="Filter" type="CanvasLayer"]
+script = ExtResource("1_0b5gx")
+
+[node name="FilterParticles" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_0b5gx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9529412)
+
+[node name="Darkness" type="ColorRect" parent="."]
+light_mask = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3372549)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.13725491, 0.039215688, 0.23529412, 0.83137256)

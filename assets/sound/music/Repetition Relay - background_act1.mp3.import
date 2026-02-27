@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt5ai6ppxrwyx"
+path="res://.godot/imported/Repetition Relay - background_act1.mp3-21525475d8a3da6b503e72d8080058e0.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/music/Repetition Relay - background_act1.mp3"
+dest_files=["res://.godot/imported/Repetition Relay - background_act1.mp3-21525475d8a3da6b503e72d8080058e0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

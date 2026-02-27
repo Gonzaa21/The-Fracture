@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfnnaom8xk8hw"]
+
+[ext_resource type="Script" uid="uid://c1lqqea43vy22" path="res://game/tilemaps/map2/portal/level_2_portal.gd" id="1_2h8iq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_indbv"]
+
+[node name="Level2Portal" type="Area2D"]
+script = ExtResource("1_2h8iq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_indbv")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]

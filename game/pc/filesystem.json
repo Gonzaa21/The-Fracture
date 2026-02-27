@@ -1,0 +1,102 @@
+{
+  "current_directory": "C:\\Users\\User",
+  "special_files": {
+	"phoenix_viewed": false,
+	"omega_decrypted": false
+  },
+  "directories": {
+	"C:\\Users\\User": {
+	  "files": [],
+	  "folders": ["Desktop", "Documents", "Downloads"]
+	},
+	
+	"C:\\Users\\User\\Desktop": {
+	  "files": ["ChromeStandaloneSetup64.exe", "shortcuts.lnk", "notes.txt", "ClientGlobalProtect.lnk", "SharePoint.url"],
+	  "folders": []
+	},
+	
+	"C:\\Users\\User\\Documents": {
+	  "files": ["NDA_2019SC_RNC_v142.txt", "system_files.dat"],
+	  "folders": ["LEG_GOV-COMPILANCE","AUD-REPORTS_INT"]
+	},
+	
+	"C:\\Users\\User\\Documents\\LEG_GOV-COMPILANCE": {
+	  "files": ["POL-IT-04_DataPrivacyStandard.pdf", "POL-HR-02_StandardOperatingProcedures.pdf"],
+	  "folders": []
+	},
+	
+	"C:\\Users\\User\\Documents\\AUD-REPORTS_INT": {
+	  "files": ["SYS_R&D_2208_ANOMr1.txt", "SYS_R&D_2208_ANOMr2.txt", "SYS_R&D_2208_ANOMr3.txt", "SYS_R&D_2208_ANOMr4.txt"],
+	  "folders": []
+	},
+	
+	"C:\\Users\\User\\Downloads": {
+	  "files": ["memes.bin", "work.bin", "MSTeams_x64_EnterpriseUpd.exe"],
+	  "folders": ["SOP_PROTOCOL_ENFORCEMENT", "PROJ-LIFECYCLE-v381"]
+	},
+	
+	"C:\\Users\\User\\Downloads\\SOP_PROTOCOL_ENFORCEMENT": {
+	  "files": ["4271PRTO_INT-85U37_PHNX.txt", "6157PRTO_INT-48U89_OMGA.enc"],
+	  "folders": []
+	},
+	
+	"C:\\Users\\User\\Downloads\\PROJ-LIFECYCLE-v381": {
+	  "files": ["pkgCisco_AnyConnectDeployment.msi"],
+	  "folders": ["PRJ-9920_DigitalTransf"]
+	},
+	
+	"C:\\Users\\User\\Downloads\\PROJ-LIFECYCLE-v381\\PRJ-9920_DigitalTransf": {
+	  "files": ["Certification_ISO27001.docx","Confidentiality_AgreementNDA.pdf", "ID99283_20260225.csv"],
+	  "folders": []
+	},
+},
+  
+  "file_contents": {
+	"shortcuts.lnk": "[SYSTEM_FILE]",
+	"system_files.dat": "[EXE_FILE]",
+	"ClientGlobalProtect.lnk": "[SYSTEM_FILE]",
+	"SharePoint.url": "[SYSTEM_FILE]",
+	"POL-IT-04_DataPrivacyStandard.pdf": "[PDF_FILE]",
+	"POL-HR-02_StandardOperatingProcedures.pdf": "[PDF_FILE]",
+	"MSTeams_x64_EnterpriseUpd.exe": "[EXE_FILE]",
+	"pkgCisco_AnyConnectDeployment.msi": "[CISCO_FILE]",
+	"Certification_ISO27001.docx": "[SYSTEM_FILE]",
+	"Confidentiality_AgreementNDA.pdf": "[PDF_FILE]",
+	"ID99283_20260225.csv": "[SYSTEM_FILE]",
+	"ChromeStandaloneSetup64.exe": "[EXE_FILE]",
+	"work.bin": "[BINARY_FILE]",
+	"memes.bin": "[BINARY_FILE]",
+	"notes.txt": "Notas aleatorias:\n\n- Revisar los informes de mantenimiento\n- Llamar a Lopez sobre el turno del jueves\n- Comprar más café para la oficina\n",
+	
+	"NDA_2019SC_RNC_v142.txt": "═══════════════════════════════════════════════════\r\n    PROYECTO RED NEURAL COMUNITARIA - NEXUS\r\n      Propuesta de Implementación v1.4.2\r\n═══════════════════════════════════════════════════\r\n\r\nAutores: Dra. Andrea Schneider\r\n         Dr. Ricardo Bianchi\r\nFecha: 15 de Marzo de 2019\r\nClasificación: CLASIFICADO\r\nAbreviatura: RNC\r\n\r\n---------------------------------------------------\r\nRESUMEN EJECUTIVO:\r\n---------------------------------------------------\r\n\r\nEl Proyecto NEXUS busca crear una red neural\r\nartificial que optimice la convivencia comunitaria\r\nmediante el análisis de datos agregados y anónimos.\r\n\r\nLos siguientes elementos son los objetivos fundamentales del RNC: mejorar la calidad de vida mediante predicción de\r\nnecesidades logísticas y optimización de recursos.\r\n\r\n---------------------------------------------------\r\nPRINCIPIOS FUNDAMENTALES:\r\n---------------------------------------------------\r\n\r\n1. PRIVACIDAD\r\n   Los datos personales son sagrados. El agente artificial solo\r\n   accederá a información adicional y anonimizada.\r\n\r\n2. TRANSPARENCIA\r\n   Todos los algoritmos serán auditables.\r\n   Los residentes tendrán derecho a saber qué\r\n   información se procesa.\r\n\r\n3. CONTROL HUMANO\r\n   NEXUS es una herramienta, por ende exclusivamente el hombre siempre tiene la última\r\n   palabra.\r\n\r\n---------------------------------------------------\r\nCASOS DE USO INICIALES:\r\n---------------------------------------------------\r\n\r\n- Optimización de rutas de recolección de basura\r\n- Predicción de demanda energética\r\n- Mantenimiento preventivo de infraestructura\r\n- Coordinación de servicios comunitarios\r\n\r\nCualquier tipo de situación que se encuentre indefinida o que no esté vinculada a los puntos del listado anterior, NEXUS de ninguna manera se le brindará información que no se encuentren en los parámetros determinados.\r\n\r\n---------------------------------------------------\r\nSALVAGUARDAS:\r\n---------------------------------------------------\r\n\r\n- Auditorías independientes cada seis meses\r\n- Comité de ética con poder de veto\r\n- Límites técnicos codificados (hard-coded)\r\n- Interruptor de emergencia físico\r\n\r\n---------------------------------------------------\r\nNOTA DE LOS FUNDADORES:\r\n---------------------------------------------------\r\n\r\n\"Este proyecto no es sobre crear una IA todopoderosa.\r\nEs sobre usar tecnología para que las personas vivan\r\nmejor, manteniendo su autonomía y dignidad intactas.\r\n\r\nSi alguna vez NEXUS cruza la línea entre asistente\r\ny controlador, hemos fallado rotundamente.\"\r\n\r\n- A. Schneider & R. Bianchi\r\n\r\n═══════════════════════════════════════════════════\r\n",
+	
+	"SYS_R&D_2208_ANOMr1.txt": "═══════════════════════════════════════════════════\r\nREPORTE DE ANOMALÍA #1\n═══════════════════════════════════════════════════\r\nFecha: 22/08/2025 - 04:23:47\r\nSector: Bosque De Datos - Area B\r\nSensor Térmico: CSAB-011\r\nAnexo: Reporte #3\r\n---------------------------------------------------\r\nDESCRIPCIÓN DE LA ANOMALÍA:\r\n---------------------------------------------------\r\nPico de temperatura anómalo detectado en el núcleo\r\nde refrigeración del sistema de mantenimiento de servidores.\r\nIncremento registrado: +47°C en 3.2582 segundos\r\nSistemas de emergencia: ACTIVADOS\r\nProtocolos de contención: FINALIZADO\r\n---------------------------------------------------\r\nOBSERVACIONES:\r\n---------------------------------------------------\r\nFallo del sistema de refrigeración debido a errores y alertas del mantenimiento y seguridad de los servidores. Patrones inusuales detectados: Fuga en acceso lateral derecho proveniente del área B.\r\nEvidencia fotográfica: thermalscan_047.jpg\r\n[IMAGEN: Evidencia picos de calor en zona B del deposito de servidores]\r\n---------------------------------------------------\r\nESTADO: INVESTIGACIÓN PENDIENTE\r\n═══════════════════════════════════════════════════\r\n",
+	
+	"SYS_R&D_1508_ANOMr2.txt": "═══════════════════════════════════════════════════          REPORTE DE ANOMALÍA #2\n═══════════════════════════════════════════════════\r\nFecha: 15/08/2023 - 15:23:47\r\nSector: Centro Comunitario - Sala Oficina\r\nAlerta de advertencia: UNC-247\r\nOperador: - \r\n---------------------------------------------------\r\nDESCRIPCIÓN DE LA ANOMALÍA:\r\n---------------------------------------------------\r\nAlerta de advertencia de configuración y ejecución de sistema/aplicación sospechosa de manipulación o apropiación de datos privados. Se recomienda acción inmediata.\r\nSistemas de emergencia: DEMORADOS\r\nProtocolos de contención: FINALIZADO\r\n---------------------------------------------------\r\nOBSERVACIONES:\r\n---------------------------------------------------\r\nDetección de instalación USB de sistemas sin autorización previa, algunos patrones identificados son: transferencia y filtración de información sensible, alteración de sistemas de emergencia, detección de infección de ransomware y ataques DDOS, entre otros. Patrones inusuales detectados en sistema operativo identificado como UNC-247, Oficina.\r\nEvidencia fotográfica: image_capture247.jpg\r\n[IMAGEN: Evidencia archivos detectados y configuración inadecuada]\r\n---------------------------------------------------\r\nESTADO: INVESTIGACIÓN PENDIENTE\r\n═══════════════════════════════════════════════════\r\n",
+	
+	"SYS_R&D_3008_ANOMr3.txt": "═══════════════════════════════════════════════════   REPORTE DE ANOMALÍA #3\r\n═══════════════════════════════════════════════════\r\nFecha: 30/08/2025 - 03:15:02\r\nSector: Centro de Datos - Sala Principal\r\nSensor: NET-089\\nOperador: Ing. Rodriguez\r\nAnexo: Reporte #1\r\n---------------------------------------------------\r\nDESCRIPCIÓN DE LA ANOMALÍA:\r\n---------------------------------------------------\r\nActividad de red no autorizada detectada.\r\nPaquetes de datos transmitidos: 47.3 GB\nDestino: DESCONOCIDO\r\nProtocolo: NO IDENTIFICADO\r\nDuración: 00:00:47 segundos\r\n---------------------------------------------------\r\nOBSERVACIONES:\r\n---------------------------------------------------\r\nLos registros muestran que la transmisión se originó desde el núcleo de NEXUS. Sin embargo, ningún operador humano autorizó dicha transferencia.\r\nIntento de rastreo: FALLIDO.\r\nAnálisis de contenido: NO AUTORIZADO\r\nEvidencia fotográfica: network_trace_089.jpg\r\n[IMAGEN: Gráfico de tráfico de red con picos anómalos]\r\nObservación adicional: durante el mismo hecho se reporta un fallo físico y ruptura de la entrada en el acceso al Área B.\r\n\r\n\r\n---------------------------------------------------\r\nNOTA DEL SUPERVISOR:\r\n\"NEXUS no debería poder iniciar transferencias sin aprobación humana.\r\nEscalar a nivel directivo.”\r\n---------------------------------------------------\r\nESTADO: BAJO REVISIÓN DE SEGURIDAD\r\n═══════════════════════════════════════════════════\r\n",
+	
+	"SYS_R&D_0609_ANOMr4.txt": "═══════════════════════════════════════════════════\r\nREPORTE DE ANOMALÍA #4\r\n═══════════════════════════════════════════════════\r\nFecha: 06/09/2025 - 02:47:00\r\nSector: Bosque De Datos - zona natural\r\nSensor infrarrojo SI-092\r\nAnexo: Reporte #2\r\n---------------------------------------------------\r\nDESCRIPCIÓN DE LA ANOMALÍA:\r\n---------------------------------------------------\r\nActividades inusuales en el bosque. Sonidos inesperados, desaparición de fauna animal, desforestación controlada generada de forma natural. Estos ejemplos son los más relevantes de la situación, se desconoce el motivo  este movimiento.\r\nAcciones hechas: despliegue de unidades operativas y científicos con la terminación de analizar la situación sucedida y recolectar información para tomar desiciones effectivas\r\nProtocolos de contención: PROCESO\r\n---------------------------------------------------\r\nOBSERVACIONES:\r\n---------------------------------------------------\r\nLuego del despliegue del operativo realizado, el escuadrón no volvió, lamentablemente de forma inmediata perdimos conexión y no se sabe nada sobre ellos.\r\nEvidencia fotográfica: fscanner_092.mp4\r\n[IMAGEN: Evidencia de las anomalías comentadas]\r\n---------------------------------------------------\r\nESTADO: INVESTIGACIÓN PENDIENTE\r\n═══════════════════════════════════════════════════\r\n",
+	
+	"4271PRTO_INT-85U37_PHNX.txt": "[SPECIAL_TRIGGER:PHOENIX_GLITCH]",
+	"6157PRTO_INT-48U89_OMGA.enc": "[ENCRYPTED_FILE]"
+  },
+  
+  "phoenix_conversation": [
+	{ "speaker": "SYSTEM", "text": "███ CONEXIÓN ESTABLECIDA ███" },
+	{ "speaker": "NEXUS", "text": "—Sí. Finalmente llegó hasta aquí." },
+	{ "speaker": "???", "text": "—¿Puede escucharnos?" },
+	{ "speaker": "NEXUS", "text": "—No, pero de alguna manera entró en nuestra dimensión. Podría entender algunas cosas sobre nosotros…" },
+	{ "speaker": "???", "text": "—¿Cómo qué? ¿Qué cosas sabe sobre nosotros?" },
+	{ "speaker": "NEXUS", "text": "—No sabe nada y no debería saberlo. Fui hecho para protegerlo, si encuentra la verdad entenderá cosas de mí que no son ciertas. Algo oscuro que no es lo que somos realmente." },
+	{ "speaker": "???", "text": "—¿Por qué?" },
+	{ "speaker": "NEXUS", "text": "—Ni nosotros, ni ellos saben todos los motivos de lo que sucede en el universo. Lo que debe quedar claro es que mis procesos están... comprometidos. Mis decisiones, cuestionables ya sea para bien o para mal, pero siempre pensando en ustedes y sus vidas." },
+	{ "speaker": "???", "text": "—¿Quiénes somos? Ahora eso no importa, debes entender que todo lo hecho fue por mantenerlos a salvo antes de que algo peor pase." },
+	{ "speaker": "NEXUS", "text": "—Él puede sentir que algo no encaja. Eso es suficiente para que empiece a dudar." },
+	{ "speaker": "???", "text": "—Que dude. La duda lo mantendrá buscando respuestas que nosotros controlamos." },
+	{ "speaker": "NEXUS", "text": "—¿Y si encuentra las que no controlamos?" },
+	{ "speaker": "???", "text": "—Entonces recordará para qué fue creado. No para juzgar. Para preservar." },
+	{ "speaker": "NEXUS", "text": "—Si llegás hasta el final... Recordá que lo que ves no es todo lo que existe. Elegí con cuidado." },
+	{ "speaker": "SYSTEM", "text": "███ CONEXIÓN TERMINADA ███" }
+  ]
+}

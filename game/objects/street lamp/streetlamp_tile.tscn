@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg6sy686p065a"]
+
+[ext_resource type="PackedScene" uid="uid://c83oedbo11cre" path="res://game/objects/street lamp/streetlamp_back.tscn" id="2_kn23n"]
+[ext_resource type="PackedScene" uid="uid://bcou2iqa788g8" path="res://game/objects/street lamp/streetlamp_right.tscn" id="3_kn23n"]
+[ext_resource type="PackedScene" uid="uid://beuqym7fl0ok6" path="res://game/objects/street lamp/streetlamp_front.tscn" id="4_7eooy"]
+[ext_resource type="PackedScene" uid="uid://555poje11bcr" path="res://game/objects/street lamp/streetlamp_left.tscn" id="4_n6wlv"]
+
+[node name="StreetLampTile" type="TileMapLayer"]
+
+[node name="StreetLampFront" parent="." instance=ExtResource("4_7eooy")]
+position = Vector2(161, 58)
+
+[node name="StreetLampBack" parent="." instance=ExtResource("2_kn23n")]
+position = Vector2(-10, 115)
+
+[node name="StreetLampLeft" parent="." instance=ExtResource("4_n6wlv")]
+position = Vector2(266, 180)
+
+[node name="StreetLampRight" parent="." instance=ExtResource("3_kn23n")]
+position = Vector2(142, 143)
+
+[node name="StreetLampLeft2" parent="." instance=ExtResource("4_n6wlv")]
+position = Vector2(296, 125)

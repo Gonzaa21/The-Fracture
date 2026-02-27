@@ -1,0 +1,106 @@
+[gd_scene load_steps=11 format=3 uid="uid://cfnwitxraubbw"]
+
+[ext_resource type="Texture2D" uid="uid://cotvpxnqcw6yr" path="res://assets/backgrounds_popup/computer/background_pc_login.png" id="1_5ynb4"]
+[ext_resource type="Script" uid="uid://bkhv0maabrire" path="res://game/pc/screen/computer_login_screen.gd" id="1_xt3ff"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_sqahu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0jh8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ynb4"]
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gscy"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xt3ff"]
+bg_color = Color(0, 0.32831562, 0.6525946, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wh88p"]
+bg_color = Color(0, 0.32941177, 0.6509804, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqahu"]
+bg_color = Color(0, 0.32941177, 0.6509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sw4pa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ComputerLoginScreen" type="CanvasLayer"]
+script = ExtResource("1_xt3ff")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 480.0
+offset_bottom = 270.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t0jh8")
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="Panel/CenterContainer"]
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="Panel/CenterContainer/Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 460.0
+offset_bottom = 250.0
+texture = ExtResource("1_5ynb4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PasswordInput" type="LineEdit" parent="Panel/CenterContainer/Control"]
+process_mode = 3
+layout_mode = 0
+offset_left = 167.0
+offset_top = 118.0
+offset_right = 264.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/caret_color = Color(0.712129, 0.71212953, 0.71212935, 0.79607844)
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ynb4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1gscy")
+placeholder_text = "Password"
+secret = true
+
+[node name="LoginButton" type="Button" parent="Panel/CenterContainer/Control"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 118.0
+offset_right = 278.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxFlat_xt3ff")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wh88p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sqahu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sw4pa")
+text = "˃"
+
+[node name="HintLabel" type="Label" parent="Panel/CenterContainer/Control"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 147.0
+offset_right = 267.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("3_sqahu")
+theme_override_font_sizes/font_size = 7
+text = "Hint: Water"
+horizontal_alignment = 1
+
+[node name="ErrorLabel" type="Label" parent="Panel/CenterContainer/Control"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 130.0
+offset_right = 294.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("3_sqahu")
+theme_override_font_sizes/font_size = 7
+text = "Incorrect password"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dol1uv0vbsaor"]
+
+[sub_resource type="GDScript" id="GDScript_f43ja"]
+script/source = "extends Camera2D
+
+func _ready():
+	enabled = true
+	make_current()
+"
+
+[node name="CameraInterior" type="Camera2D"]
+position = Vector2(192, 120)
+zoom = Vector2(1.2, 1.2)
+script = SubResource("GDScript_f43ja")

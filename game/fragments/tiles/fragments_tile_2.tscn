@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcp8ih358vpce"]
+
+[ext_resource type="PackedScene" uid="uid://dp0ntid76fn7s" path="res://game/fragments/fragment.tscn" id="2_6jar6"]
+
+[node name="Fragments_tile_office" type="Node2D"]
+
+[node name="Article" parent="." instance=ExtResource("2_6jar6")]
+position = Vector2(187, 123)
+fragment_id = "articulo"
+
+[node name="Document" parent="." instance=ExtResource("2_6jar6")]
+position = Vector2(242, 135)
+fragment_id = "documento"
+
+[node name="Note" parent="." instance=ExtResource("2_6jar6")]
+position = Vector2(193, 172)
+fragment_id = "notas"
+popup_style = 2
+
+[node name="Water" parent="." instance=ExtResource("2_6jar6")]
+position = Vector2(271, 183)
+fragment_id = "tarjeta"
+popup_style = 2

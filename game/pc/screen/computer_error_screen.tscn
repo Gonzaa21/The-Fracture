@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://beymwc77mrrx0"]
+
+[ext_resource type="Texture2D" uid="uid://cg3iioaytnujg" path="res://assets/backgrounds_popup/computer/background_pc_error.png" id="1_6g5gw"]
+[ext_resource type="Script" uid="uid://chckla55bf57o" path="res://game/pc/screen/computer_error_screen.gd" id="1_q2ehg"]
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_naamo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxytw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yne45"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsefd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llpke"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dowgv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ComputerErrorScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_q2ehg")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxytw")
+
+[node name="MonitorFrame" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 481.77777
+offset_bottom = 271.0
+texture = ExtResource("1_6g5gw")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="InstallButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 214.0
+offset_right = 311.0
+offset_bottom = 237.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_naamo")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_yne45")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bsefd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_llpke")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dowgv")
+text = "[Instalar batería]"

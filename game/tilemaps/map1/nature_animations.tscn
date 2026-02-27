@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4whma5u2y0bo"]
+
+[ext_resource type="PackedScene" uid="uid://beca25y4ajsk8" path="res://game/natureanimations/nature_animation_1.tscn" id="1_b1j0b"]
+[ext_resource type="PackedScene" uid="uid://7av7aic46epn" path="res://game/natureanimations/nature_animation_2.tscn" id="3_gesk8"]
+[ext_resource type="PackedScene" uid="uid://cvrrvpl0kum8e" path="res://game/natureanimations/nature_animation_3.tscn" id="4_uajj6"]
+
+[node name="NatureAnimations" type="TileMapLayer"]
+
+[node name="NatureAnimation1" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(316, 181)
+
+[node name="NatureAnimation2" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(238, 209)
+
+[node name="NatureAnimation3" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(211, 245)
+
+[node name="NatureAnimation4" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(357, 60)
+
+[node name="NatureAnimation5" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(402, 45)
+
+[node name="NatureAnimation6" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(5, 114)
+
+[node name="NatureAnimation7" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(108, 115)
+
+[node name="NatureAnimation8" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(219, 9)
+
+[node name="NatureAnimation9" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(384, 258)
+
+[node name="NatureAnimation10" parent="." instance=ExtResource("1_b1j0b")]
+position = Vector2(33, 261)
+
+[node name="NatureAnimation11" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(186, 117)
+
+[node name="NatureAnimation12" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(125, 190)
+
+[node name="NatureAnimation13" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(187, 182)
+
+[node name="NatureAnimation33" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(271, 185)
+
+[node name="NatureAnimation15" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(370, 179)
+
+[node name="NatureAnimation16" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(349, 15)
+
+[node name="NatureAnimation14" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(201, 56)
+
+[node name="NatureAnimation18" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(59, 189)
+
+[node name="NatureAnimation17" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(301, 122)
+
+[node name="NatureAnimation20" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(242, 111)
+
+[node name="NatureAnimation21" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(308, 69)
+
+[node name="NatureAnimation19" parent="." instance=ExtResource("3_gesk8")]
+position = Vector2(3, 11)
+
+[node name="NatureAnimation23" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(335, 118)
+
+[node name="NatureAnimation24" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(412, 97)
+
+[node name="NatureAnimation25" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(427, 80)
+
+[node name="NatureAnimation26" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(441, 216)
+
+[node name="NatureAnimation27" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(480, 227)
+
+[node name="NatureAnimation28" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(381, 20)
+
+[node name="NatureAnimation30" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(143, 171)
+
+[node name="NatureAnimation29" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(170, 264)
+
+[node name="NatureAnimation31" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(241, 255)
+
+[node name="NatureAnimation32" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(149, 72)
+
+[node name="NatureAnimation22" parent="." instance=ExtResource("4_uajj6")]
+position = Vector2(211, 185)

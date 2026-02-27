@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://7av7aic46epn"]
+
+[ext_resource type="Texture2D" uid="uid://qqhl8hkdbhk2" path="res://assets/nature/TILESET_NATURE_ANIMATIONS.png" id="1_twg2d"]
+[ext_resource type="Script" uid="uid://c48cd5ceauwyr" path="res://game/natureanimations/nature_animation_2.gd" id="2_cjnje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjnje"]
+atlas = ExtResource("1_twg2d")
+region = Rect2(31.99, 0, 32, 16)
+
+[sub_resource type="Animation" id="Animation_xci16"]
+resource_name = "movement"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.19968587, 0.3, 0.40344697, 0.5012523, 0.6019494, 0.7017923, 0.80175346, 0.8991305),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_t4gt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lwk6b"]
+_data = {
+&"RESET": SubResource("Animation_t4gt5"),
+&"movement": SubResource("Animation_xci16")
+}
+
+[node name="NatureAnimation2" type="Sprite2D"]
+texture = SubResource("AtlasTexture_cjnje")
+hframes = 2
+script = ExtResource("2_cjnje")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lwk6b")
+}
+speed_scale = 0.23

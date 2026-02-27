@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cappgppxb5e2c"]
+
+[ext_resource type="Script" uid="uid://bs0acb1h4iv77" path="res://game/tilemaps/map2/portal/level_1_return.gd" id="1_ypggr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms8k8"]
+
+[node name="Level1Return" type="Area2D"]
+script = ExtResource("1_ypggr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ms8k8")
+
+[node name="SpawnPoint" type="Marker2D" parent="."]

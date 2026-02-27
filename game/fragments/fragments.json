@@ -1,0 +1,47 @@
+{
+	"advertencia": {
+		"id": 1,
+		"title": "PELIGRO",
+		"content": "Acceso Restringido",
+		"date": "Solo personal autorizado"
+	},
+	"reconocimiento": {
+		"id": 2,
+		"content": "A la Ciudad de Nexus En reconocimiento a su orden colectivo, su excelencia en el bienestar común\ny la obra compartida que la proyectó como ejemplo. Sus logros fueron estudiados y reconocidos en todo el mundo.\nNombrada por los medios internacionales como: «La Ciudad Sin Problemas».",
+		"date": "14 de Noviembre de 2021"
+	},
+	"homenaje#1": {
+		"id": 3,
+		"content": "En conmemoración a la Dra. Andrea Shneider (02/06/1987 - )\ny el Ing. Ricardo Bianchi (11/09/1986 - ), fundadores de la ciudad"
+	},
+	"homenaje#2": {
+		"id": 4,
+		"content": "Tratado de Cooperación Tecnológica Transatlántica",
+		"date": "20 de Junio de 2015"
+	},
+	"monumento": {
+		"id": 5,
+		"title": "Plaza 'Memoria, Humanidad y Libertad'",
+		"content": "No es la obra del ingenio lo que amenaza al mundo, sino el espíritu humano cuando abdica de su conciencia."
+	},
+	"articulo": {
+		"id": 6,
+		"title": "La Jaula de Oro",
+		"content": "Todo esto no es lo que parece… NEXUS nos ha convertido nuestras vidas más automáticas y simples. Pero nos ha quitado algo esencial: la capacidad de equivocarnos, de sufrir y crecer, ya no tomamos decisiones.\nDurante toda la historia humana, el hombre lucho por la libertad. ¿Porqué regalar lo que es propio por solo un poco de seguridad y regulación constante de una maquinita?",
+		"author": "Mía Morvoni"
+	},
+	"documento": {
+		"id": 7,
+		"content": "He notado que NEXUS está accediendo a fuentes de datos que no debería tener disponibles. Patrones de sueño REM, microexpresiones faciales, incluso análisis de suspiros y pausas en conversaciones. Esto se nos va a ir de las manos. Mañana enviaré esta información a la auditoría al comité de ética para hacer algo al respecto.\nLucía Quiroga dice que 'es parte del aprendizaje natural del sistema' y por ello no hay nada de qué preocuparse.",
+		"author": "Markus Chen"
+	},
+	"notas": {
+		"id": 8,
+		"content": "-Reunion con el equipo de trabajo\n-Presentacion nuevos IoT y procesamiento\n-Reunion con delegados de NeuralCorp y IBM\n-Organizar reportes"
+	},
+	"tarjeta": {
+		"id": 9,
+		"content": "20Lts N°20483"
+	}
+	
+}
