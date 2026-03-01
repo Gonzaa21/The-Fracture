@@ -118,9 +118,6 @@ position = Vector2(-16, 120)
 [node name="TreeLowYellow3" parent="." instance=ExtResource("2_po0ls")]
 position = Vector2(128, -24)
 
-[node name="TreeLowYellow4" parent="." instance=ExtResource("2_po0ls")]
-position = Vector2(280, -40)
-
 [node name="TreeLowYellow5" parent="." instance=ExtResource("2_po0ls")]
 position = Vector2(144, -56)
 
@@ -221,7 +218,7 @@ position = Vector2(320, 200)
 position = Vector2(160, -64)
 
 [node name="TreeLowYellow43" parent="." instance=ExtResource("2_po0ls")]
-position = Vector2(272, -56)
+position = Vector2(288, -48)
 
 [node name="TreeLowYellow44" parent="." instance=ExtResource("2_po0ls")]
 position = Vector2(240, -64)

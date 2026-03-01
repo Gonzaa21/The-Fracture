@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmqd6qwxpp56x"]
+[gd_scene load_steps=9 format=3 uid="uid://bmqd6qwxpp56x"]
 
+[ext_resource type="Script" uid="uid://cd0vkpkeu6pcp" path="res://game/tilemaps/map2/level_2.gd" id="1_a5w5y"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="1_jjuub"]
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="2_4vws6"]
 [ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_gxqjn"]
 [ext_resource type="PackedScene" uid="uid://ckmtpqg3562w8" path="res://game/player/limits/limits_forest.tscn" id="3_ekqkl"]
 [ext_resource type="PackedScene" uid="uid://dttmmraqxs5l6" path="res://game/tilemaps/map2/tilemap2.tscn" id="3_gxqjn"]
+[ext_resource type="Script" uid="uid://c51r4xuds2qxo" path="res://game/tilemaps/map2/anomalies/forest/object_pool.gd" id="6_jpsdn"]
+[ext_resource type="Script" uid="uid://b7mgxbqiicu1" path="res://game/tilemaps/map2/anomalies/forest/anomaly_spawner.gd" id="8_b0st8"]
 
 [node name="level_2" type="Node2D"]
+script = ExtResource("1_a5w5y")
 
 [node name="Filter" parent="." instance=ExtResource("1_jjuub")]
 visible = false
@@ -24,3 +28,9 @@ position = Vector2(8, 168)
 
 [node name="LevelEntrance" type="Marker2D" parent="."]
 position = Vector2(8, 168)
+
+[node name="ObjectPool" type="Node" parent="."]
+script = ExtResource("6_jpsdn")
+
+[node name="AnomalySpawner" type="Node" parent="."]
+script = ExtResource("8_b0st8")
