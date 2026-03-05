@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp5kvneoy3jlg"]
+
+[ext_resource type="Script" uid="uid://dxtwmrkpt6mn0" path="res://game/tilemaps/map2/anomalies/forest/portal.gd" id="1_5wuct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wuct"]
+
+[node name="PortalLeft" type="Area2D"]
+script = ExtResource("1_5wuct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5wuct")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

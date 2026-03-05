@@ -32,20 +32,20 @@ func apply_anomaly(anomaly: Anomaly) -> void:
 			_apply_speed(anomaly)
 
 
-#func restore_state() -> void:
-#	for tree in original_tree_scales:
-#		tree.scale = original_tree_scales[tree]
-#	
-#	for tree in original_tree_colors:
-#		tree.modulate = original_tree_colors[tree]
-#	
-#	var player = pool.get_player()
-#	if player:
-#		player.speed_walk = original_player_speed_walk
-#		player.speed_run = original_player_speed_run
-#	
-#	original_tree_scales.clear()
-#	original_tree_colors.clear()
+func restore_state() -> void:
+	for tree in original_tree_scales:
+		tree.scale = original_tree_scales[tree]
+	
+	for tree in original_tree_colors:
+		tree.modulate = original_tree_colors[tree]
+	
+	var player = pool.get_player()
+	if player:
+		player.speed_walk = original_player_speed_walk
+		player.speed_run = original_player_speed_run
+	
+	original_tree_scales.clear()
+	original_tree_colors.clear()
 
 
 func _apply_scale(anom: Anomaly) -> void:
