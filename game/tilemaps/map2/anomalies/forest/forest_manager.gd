@@ -62,16 +62,28 @@ func play_echo():
 		echo_player.play()
 		echo_player.finished.connect(func(): echo_player.queue_free())
 
+func reset_player_position():
+	var player = spawner.pool.get_player()
+	var entrance = current_scene.get_node("LevelEntrance")
+	if player and entrance:
+		player.global_position = entrance.global_position
+
 func next_level():
-	spawner.restore_state()
-	play_echo()
-	generate_level()
+	TransitionEffect.fade_in_place(func():
+		spawner.restore_state()
+		reset_player_position()
+		play_echo()
+		generate_level()
+	)
 
 func reset_progress():
-	spawner.restore_state()
-	levels_completed = 0
-	current_level = 0
-	generate_level()
+	TransitionEffect.fade_in_place(func():
+		spawner.restore_state()
+		reset_player_position()
+		levels_completed = 0
+		current_level = 0
+		generate_level()
+	)
 
 func exit_forest():
 	print("saliste pa")

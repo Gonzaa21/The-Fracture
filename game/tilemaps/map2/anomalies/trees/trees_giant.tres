@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_bsxyc")
-scale_value = Vector2(1.1, 1.1)
+scale_value = Vector2(1.05, 1.05)
