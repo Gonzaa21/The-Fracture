@@ -106,6 +106,24 @@ func restore_background_music(duration: float = 1.5):
 		var tween = create_tween()
 		tween.tween_property(background_sound, "volume_db", current_music_volume, duration)
 
+func change_music(new_music_path: String, fade_duration: float = 1.5):
+	if not background_sound:
+		return
+	
+	var tween_out = create_tween()
+	tween_out.tween_property(background_sound, "volume_db", -80.0, fade_duration)
+	
+	tween_out.finished.connect(func():
+		var new_music = load(new_music_path)
+		if new_music:
+			background_sound.stream = new_music
+			background_sound.play()
+			
+			background_sound.volume_db = -80.0
+			var tween_in = create_tween()
+			tween_in.tween_property(background_sound, "volume_db", current_music_volume, fade_duration)
+	)
+
 func unlock_audio():
 	unlock_echo_sound = load("res://assets/sound/effects/eco.wav")
 

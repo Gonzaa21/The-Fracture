@@ -24,6 +24,8 @@ func start_forest(scene: Node, anomaly_spawner: AnomalySpawner):
 	current_level = 0
 	levels_completed = 0
 	
+	GameManager.change_music("res://assets/sound/music/Triptych III  Desolation - Bosque.mp3")
+	
 	generate_level()
 
 func generate_level():
