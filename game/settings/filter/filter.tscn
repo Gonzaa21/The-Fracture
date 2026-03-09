@@ -5,15 +5,20 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0b5gx"]
 shader = ExtResource("1_fqhl6")
-shader_parameter/intensity = 0.4
+shader_parameter/intensity = 0.25
 shader_parameter/tint_color = Vector3(0.6, 0.2, 1)
-shader_parameter/fog_amount = 0.6
+shader_parameter/fog_amount = 1.0
 shader_parameter/fog_scale = 3.0
 shader_parameter/fog_speed = 0.5
-shader_parameter/particle_density = 200.0
-shader_parameter/particle_size = 2.5
-shader_parameter/particle_speed = Vector2(0.3, 0.5)
-shader_parameter/particle_brightness = 2.0
+shader_parameter/particle_density = 100.0
+shader_parameter/particle_size = 2.0
+shader_parameter/particle_speed = Vector2(0.6, 0.9)
+shader_parameter/particle_brightness = 1.5
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_size = 1.0
+shader_parameter/player_position = Vector2(0.5, 0.5)
+shader_parameter/visibility_radius = 80.000001425
+shader_parameter/visibility_softness = 20.000000475
 shader_parameter/time = 0.0
 
 [node name="Filter" type="CanvasLayer"]
@@ -26,16 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.9529412)
-
-[node name="Darkness" type="ColorRect" parent="."]
-light_mask = 2
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.3372549)
+mouse_filter = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.13725491, 0.039215688, 0.23529412, 0.83137256)
+color = Color(0.41981313, 0.41981313, 0.4198131, 1)
