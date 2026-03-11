@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Anomaly" load_steps=2 format=3 uid="uid://c5rwn7flfxy83"]
+
+[ext_resource type="Script" uid="uid://45dyhi1lh7ke" path="res://game/tilemaps/map2/anomalies/anomaly.gd" id="1_55ill"]
+
+[resource]
+script = ExtResource("1_55ill")
+scope = 1
+effect = 1
+color_value = Color(0.4945941, 0.33807397, 0.13559827, 1)

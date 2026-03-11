@@ -3,7 +3,6 @@ extends Resource
 
 enum Scope {
 	GLOBAL,
-	SINGLE,
 	MULTIPLE
 }
 
@@ -17,10 +16,11 @@ enum Target {
 enum Effect {
 	SCALE,
 	COLOR,
-	POSITION_SHIFT,
+	PLAYER_SCALE,
 	SPEED,
 	SPRITE_SWAP,
-	SPAWN_ENTITY
+	SPAWN_ENTITY,
+	INVISIBLE
 }
 
 @export var scope: Scope

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Anomaly" load_steps=2 format=3 uid="uid://clp3qos0xpahm"]
+
+[ext_resource type="Script" uid="uid://45dyhi1lh7ke" path="res://game/tilemaps/map2/anomalies/anomaly.gd" id="1_oju2m"]
+
+[resource]
+script = ExtResource("1_oju2m")
+effect = 6

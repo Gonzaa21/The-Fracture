@@ -13,8 +13,18 @@ var current_anomaly: Anomaly = null
 var anomaly_pool: Array[Anomaly] = []
 
 func _ready() -> void:
-	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/trees_giant.tres"))
-	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/trees_yellow.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/scale/trees_global_giant.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/scale/trees_global_tiny.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/scale/trees_multiple_giant.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/scale/trees_multiple_tiny.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/color/trees_color_global.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/color/trees_color_multiples.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/player/speed/player_fast.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/player/speed/player_slow.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/player/size/player_giant.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/player/size/player_tiny.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/invisibility/trees_missing.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/invisibility/trees_normal_missing.tres"))
 	unlock_echo_sound = load("res://assets/sound/effects/eco.wav")
 
 func start_forest(scene: Node, anomaly_spawner: AnomalySpawner):

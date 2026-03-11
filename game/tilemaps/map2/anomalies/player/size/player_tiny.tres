@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Anomaly" load_steps=2 format=3 uid="uid://cfc2cq3ejnnnn"]
+
+[ext_resource type="Script" uid="uid://45dyhi1lh7ke" path="res://game/tilemaps/map2/anomalies/anomaly.gd" id="1_t0rjs"]
+
+[resource]
+script = ExtResource("1_t0rjs")
+target = 2
+effect = 2
+scale_value = Vector2(0.6, 0.6)
