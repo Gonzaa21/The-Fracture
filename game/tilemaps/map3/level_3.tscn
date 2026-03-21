@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://j3f6qepi2b1l"]
+
+[ext_resource type="PackedScene" uid="uid://ua6ib7bet8mk" path="res://game/tilemaps/map3/tilemap3.tscn" id="1_dbdlj"]
+[ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_482n1"]
+[ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="3_euvld"]
+[ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_83qqx"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_dbdlj")]
+
+[node name="Player" parent="." instance=ExtResource("2_482n1")]
+position = Vector2(16, 168)
+
+[node name="Limits" parent="." instance=ExtResource("3_euvld")]
+visible = false
+
+[node name="Filter" parent="." instance=ExtResource("4_83qqx")]
