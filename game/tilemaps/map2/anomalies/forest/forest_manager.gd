@@ -99,6 +99,7 @@ func reset_progress():
 
 func exit_forest():
 	print("saliste pa")
-	#transicion a siguiente escena
-	# get_tree().change_scene_to_file("res://scenes/...")
+	GameManager.change_music("res://assets/sound/music/River's Bend - background_act3.mp3")
+	await get_tree().create_timer(2.0).timeout
+	TransitionEffect.fade_to_scene("res://game/tilemaps/map3/level_3.tscn")
 	pass
