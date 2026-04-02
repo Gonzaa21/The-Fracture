@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dykgdciwbdpma"]
+[gd_scene format=3 uid="uid://dykgdciwbdpma"]
 
 [ext_resource type="Script" uid="uid://dxcjrri58s5dw" path="res://game/tilemaps/map1/level_1.gd" id="1_il7bj"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="2_bjooh"]
@@ -15,39 +15,42 @@
 [ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/battery.tscn" id="14_p2l5k"]
 [ext_resource type="PackedScene" uid="uid://cfnnaom8xk8hw" path="res://game/tilemaps/map2/portal/level_2_portal.tscn" id="14_slesh"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" unique_id=1757275047]
 y_sort_enabled = true
 script = ExtResource("1_il7bj")
 
-[node name="Filter" parent="." instance=ExtResource("2_bjooh")]
+[node name="Filter" parent="." unique_id=1094971403 instance=ExtResource("2_bjooh")]
 
-[node name="FragmentPopupWarn" parent="." instance=ExtResource("12_slesh")]
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1314191112]
+color = Color(0.5921569, 0.5921569, 0.5921569, 1)
 
-[node name="DialoguePopup" parent="." instance=ExtResource("13_aoj2y")]
+[node name="FragmentPopupWarn" parent="." unique_id=313895717 instance=ExtResource("12_slesh")]
 
-[node name="TileMap" parent="." instance=ExtResource("4_mv2oe")]
+[node name="DialoguePopup" parent="." unique_id=300916902 instance=ExtResource("13_aoj2y")]
 
-[node name="Player" parent="." instance=ExtResource("3_65rxe")]
+[node name="TileMap" parent="." unique_id=505732810 instance=ExtResource("4_mv2oe")]
+
+[node name="Player" parent="." unique_id=1973994351 instance=ExtResource("3_65rxe")]
 position = Vector2(264, 257)
 
-[node name="Battery" parent="." instance=ExtResource("14_p2l5k")]
+[node name="Battery" parent="." unique_id=1257170688 instance=ExtResource("14_p2l5k")]
 position = Vector2(240, 224)
 
-[node name="Building1" parent="." instance=ExtResource("5_mv2oe")]
+[node name="Building1" parent="." unique_id=541241113 instance=ExtResource("5_mv2oe")]
 
-[node name="Building2" parent="." instance=ExtResource("6_0ir3q")]
+[node name="Building2" parent="." unique_id=1067749204 instance=ExtResource("6_0ir3q")]
 
-[node name="Monument" parent="." instance=ExtResource("7_yrunr")]
+[node name="Monument" parent="." unique_id=636315507 instance=ExtResource("7_yrunr")]
 
-[node name="Limits" parent="." instance=ExtResource("8_mfrso")]
+[node name="Limits" parent="." unique_id=1054972989 instance=ExtResource("8_mfrso")]
 visible = false
 
-[node name="SpawnOffice" type="Marker2D" parent="."]
+[node name="SpawnOffice" type="Marker2D" parent="." unique_id=1739669564]
 position = Vector2(70, 108)
 
-[node name="StreetLampTile" parent="." instance=ExtResource("9_oes7j")]
+[node name="StreetLampTile" parent="." unique_id=213941338 instance=ExtResource("9_oes7j")]
 
-[node name="Fragments_tile_level" parent="." instance=ExtResource("11_ictta")]
+[node name="Fragments_tile_level" parent="." unique_id=1190937178 instance=ExtResource("11_ictta")]
 
-[node name="Level2Portal" parent="." instance=ExtResource("14_slesh")]
+[node name="Level2Portal" parent="." unique_id=1856397572 instance=ExtResource("14_slesh")]
 position = Vector2(464, 168)

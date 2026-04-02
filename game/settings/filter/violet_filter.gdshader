@@ -3,17 +3,17 @@ shader_type canvas_item;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
 // Controles de tinte
-uniform float intensity : hint_range(0.0, 1.0) = 0.25;
+uniform float intensity : hint_range(0.0, 1.0) = 0.6;
 uniform vec3 tint_color = vec3(0.6, 0.2, 1.0);
 
 // Controles de niebla
-uniform float fog_amount : hint_range(0.0, 1.0) = 0.7;
+uniform float fog_amount : hint_range(0.0, 1.0) = 0.8;
 uniform float fog_scale = 3.0;
 uniform float fog_speed = 0.5;
 
 // Controles de partículas
 uniform float particle_density : hint_range(10.0, 200.0) = 100.0;
-uniform float particle_size : hint_range(0.5, 3.0) = 2.0;
+uniform float particle_size : hint_range(0.5, 3.0) = 3.0;
 uniform vec2 particle_speed = vec2(0.6, 0.9);
 uniform float particle_brightness : hint_range(0.0, 3.0) = 1.5;
 

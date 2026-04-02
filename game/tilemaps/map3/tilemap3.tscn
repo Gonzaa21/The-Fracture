@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://vhacoqilgvt8" path="res://game/tilemaps/map3/exterior/trees_map.tscn" id="3_0ppdw"]
 [ext_resource type="PackedScene" uid="uid://bv0qc77vwxnaj" path="res://game/tilemaps/map3/exterior/camping.tscn" id="4_ilyw7"]
 [ext_resource type="PackedScene" uid="uid://21fbtprlc63t" path="res://game/tilemaps/map3/exterior/secret_door.tscn" id="5_rrbhu"]
-[ext_resource type="PackedScene" uid="uid://cp6hqaoi8wnvd" path="res://game/tilemaps/map3/exterior/laboratory_exterior.tscn" id="6_xq2rf"]
+[ext_resource type="PackedScene" uid="uid://cp6hqaoi8wnvd" path="res://game/tilemaps/map3/exterior/building_exterior.tscn" id="6_xq2rf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilyw7"]
 texture = ExtResource("1_dc5od")
@@ -1147,4 +1147,4 @@ tile_set = SubResource("TileSet_0ppdw")
 
 [node name="SecretDoor" parent="." unique_id=278794649 instance=ExtResource("5_rrbhu")]
 
-[node name="LaboratoryExterior" parent="." unique_id=170670298 instance=ExtResource("6_xq2rf")]
+[node name="BuildingExterior" parent="." unique_id=170670298 instance=ExtResource("6_xq2rf")]

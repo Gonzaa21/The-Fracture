@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://chdify1tmc6e0"]
+[gd_scene format=4 uid="uid://chdify1tmc6e0"]
 
 [ext_resource type="Texture2D" uid="uid://dbs4t3deicl6e" path="res://assets/interior/clean_floor.png" id="1_78lh4"]
 [ext_resource type="Texture2D" uid="uid://b7m3e8xggy5mo" path="res://assets/interior/dirty_floor.png" id="2_7osvf"]
@@ -3538,24 +3538,24 @@ texture = ExtResource("5_hnnvh")
 physics_layer_0/collision_layer = 4
 sources/1 = SubResource("TileSetAtlasSource_xjyuo")
 
-[node name="CommunityOffice" type="Node2D"]
+[node name="CommunityOffice" type="Node2D" unique_id=2122571638]
 position = Vector2(152, 48)
 
-[node name="FragmentPopupNotes" parent="." instance=ExtResource("21_r8gjy")]
+[node name="FragmentPopupNotes" parent="." unique_id=1145746636 instance=ExtResource("21_r8gjy")]
 
-[node name="FragmentPopupDoc" parent="." instance=ExtResource("20_24ygv")]
+[node name="FragmentPopupDoc" parent="." unique_id=1551853564 instance=ExtResource("20_24ygv")]
 
-[node name="ComputerErrorScreen" parent="." instance=ExtResource("3_r8gjy")]
+[node name="ComputerErrorScreen" parent="." unique_id=512170770 instance=ExtResource("3_r8gjy")]
 
-[node name="ComputerBootScreen" parent="." instance=ExtResource("3_vn8xy")]
+[node name="ComputerBootScreen" parent="." unique_id=1830153000 instance=ExtResource("3_vn8xy")]
 
-[node name="ComputerLoginScreen" parent="." instance=ExtResource("2_rd81t")]
+[node name="ComputerLoginScreen" parent="." unique_id=1534411470 instance=ExtResource("2_rd81t")]
 
-[node name="ComputerTerminalScreen" parent="." instance=ExtResource("7_h63ih")]
+[node name="ComputerTerminalScreen" parent="." unique_id=2073301091 instance=ExtResource("7_h63ih")]
 
-[node name="FragmentsPopupTiles" parent="." instance=ExtResource("23_r8gjy")]
+[node name="FragmentsPopupTiles" parent="." unique_id=1794717855 instance=ExtResource("23_r8gjy")]
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1897434953]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -3567,93 +3567,93 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
-[node name="Darkness" type="CanvasModulate" parent="."]
-color = Color(0.30692267, 0.3069227, 0.3069227, 1)
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=656674749]
+color = Color(0.23753911, 0.23753914, 0.23753911, 1)
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2001332784]
 position = Vector2(72, 88)
 scale = Vector2(0.984375, 1.09375)
 color = Color(0.14509805, 0.2509804, 0.06666667, 0.827451)
 blend_mode = 1
 texture = ExtResource("18_x8vfn")
 
-[node name="Base" type="TileMapLayer" parent="."]
+[node name="Base" type="TileMapLayer" parent="." unique_id=945097848]
 tile_map_data = PackedByteArray("AAABAAgABAAPABAAAAACAAgABAANABAAAAADAAgABAANABEAAAAEAAgABAAMABAAAAABAAcABAAPABEAAAACAAcABAAOABAAAAADAAcABAAMABEAAAAEAAcABAAMABEAAAABAAUABAAPABAAAAABAAYABAAOABEAAAACAAUABAANABAAAAACAAYABAAMABEAAAADAAUABAAMABAAAAADAAYABAAOABEAAAAEAAUABAAMABEAAAAEAAYABAAMABAAAAAFAAUABAANABAAAAAFAAYABAAPABAAAAAFAAcABAANABEAAAAFAAgABAAMABAAAAABAAEABAAIAA4AAAABAAIABAAIAA8AAAACAAEABAAJABAAAAACAAIABAAJAA8AAAADAAEABAAKAA4AAAADAAIABAAJABAAACAEAAEABAAJAA4AAAAEAAIABAAKAA8AAAAFAAEABAAJAA4AAAAFAAIABAAJABAAAAABAAMABAAIABEAAAACAAMABAAJABEAAAADAAMABAAKABEAAAAEAAMABAAJABEAAAAFAAMABAAJABEAAAABAAQABAAPABAAAAACAAQABAANABAAAAADAAQABAAMABAAAAAEAAQABAAMABEAAAAFAAQABAANABAAAAAGAAEABAAKAA4AAAAGAAIABAAIAA4AAAAGAAMABAAKABEAAAAGAAQABAAMABAAAAAGAAUABAAMABAAAAAGAAYABAAOABAAAAAGAAcABAANABEAAAAGAAgABAAPABAAAAAHAAEABAALAA4AAAAHAAIABAALABAAAAAHAAMABAALABEAAAAHAAQABAAOABAAAAAHAAUABAAOABAAAAAHAAYABAAOABAAAAAHAAcABAAOABEAAAAHAAgABAANABEAAAAEAAkAAwAKABEAAAAFAAkAAwALABEAAAA=")
 tile_set = SubResource("TileSet_loniq")
 
-[node name="Window1" parent="." instance=ExtResource("16_hyvlq")]
+[node name="Window1" parent="." unique_id=1039620023 instance=ExtResource("16_hyvlq")]
 position = Vector2(48, 32)
 
-[node name="Window2" parent="." instance=ExtResource("5_mcexp")]
+[node name="Window2" parent="." unique_id=1695893211 instance=ExtResource("5_mcexp")]
 position = Vector2(104, 32)
 
-[node name="DecoWall2" type="TileMapLayer" parent="."]
+[node name="DecoWall2" type="TileMapLayer" parent="." unique_id=2054287263]
 scale = Vector2(0.7, 0.7)
 tile_map_data = PackedByteArray("AAACAAQAAgASAAAAAAACAAUAAgASAAEAAAAGAAIAAgAMAAIAAAAGAAMAAgAMAAMAAAAHAAIAAgANAAIAAAAHAAMAAgANAAMAAAAKAAQAAQAIAAQAAAAIAAMAAgAOAAEAAAA=")
 tile_set = SubResource("TileSet_hnnvh")
 
-[node name="Fornitures1" type="TileMapLayer" parent="."]
+[node name="Fornitures1" type="TileMapLayer" parent="." unique_id=1534121097]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAGAAQAAQAaABUAAAAGAAUAAQAaABYAAAAGAAYAAQAaABcAAAAHAAMAAQAYABgAAAAHAAQAAQAYABkAAAAHAAUAAQAYABoAAAAHAAYAAQAYABsAAAAIAAMAAQAZABgAAAAIAAQAAQAZABkAAAAIAAUAAQAZABoAAAAIAAYAAQAZABsAAAAJAAMAAQAaABgAAAAJAAQAAQAaABkAAAAJAAUAAQAaABoAAAAJAAYAAQAaABsAAAAEAAQAAQAYABUAAAAEAAUAAQAYABYAAAAEAAYAAQAYABcAAAAFAAMAAQAZABQAAAAFAAQAAQAZABUAAAAFAAUAAQAZABYAAAAFAAYAAQAZABcAAAAGAAMAAQAaABQAAAAMAAUAAQACAAIAAAAMAAYAAQACAAMAAAA=")
 tile_set = SubResource("TileSet_qxdf2")
 
-[node name="Plants" type="TileMapLayer" parent="."]
+[node name="Plants" type="TileMapLayer" parent="." unique_id=485483269]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAABAAUAAAAOABoAAAABAAYAAAAOABsAAAACAAUAAAAPABoAAAACAAYAAAAPABsAAAA=")
 tile_set = SubResource("TileSet_y6jn8")
 
-[node name="Plants2" type="TileMapLayer" parent="Plants"]
+[node name="Plants2" type="TileMapLayer" parent="Plants" unique_id=199890254]
 tile_map_data = PackedByteArray("AAAKAAQAAAAGABkAAAAKAAUAAAAGABoAAAAKAAYAAAAGABsAAAALAAQAAAAHABkAAAALAAUAAAAHABoAAAALAAYAAAAHABsAAAA=")
 tile_set = SubResource("TileSet_y6jn8")
 
-[node name="Chair2" type="TileMapLayer" parent="."]
+[node name="Chair2" type="TileMapLayer" parent="." unique_id=2061201650]
 position = Vector2(0, -1)
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAADAAoAAQAAABIAAAADAAsAAQAAABMAAAAEAAoAAQABABIAAAAEAAsAAQABABMAAAAKAAYAAQAAABYAAAAKAAcAAQAAABcAAAAKAAUAAQAAABUAAAA=")
 tile_set = SubResource("TileSet_fcgnb")
 
-[node name="DeskWhiteFront" parent="." instance=ExtResource("6_lnn8b")]
+[node name="DeskWhiteFront" parent="." unique_id=1741603018 instance=ExtResource("6_lnn8b")]
 position = Vector2(36, 67)
 
-[node name="DeskWhiteBack" parent="." instance=ExtResource("7_esn0a")]
+[node name="DeskWhiteBack" parent="." unique_id=206355337 instance=ExtResource("7_esn0a")]
 position = Vector2(96, 72)
 
-[node name="DeskDirtBack" parent="." instance=ExtResource("12_fcgnb")]
+[node name="DeskDirtBack" parent="." unique_id=1959480629 instance=ExtResource("12_fcgnb")]
 position = Vector2(36, 109)
 scale = Vector2(0.6, 0.6)
 
-[node name="DeskDirtFront" parent="." instance=ExtResource("9_esn0a")]
+[node name="DeskDirtFront" parent="." unique_id=1284572909 instance=ExtResource("9_esn0a")]
 position = Vector2(96, 104)
 
-[node name="Chair" type="TileMapLayer" parent="."]
+[node name="Chair" type="TileMapLayer" parent="." unique_id=667708054]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAKAAsAAQALABQAAAAKAAwAAQALABUAAAAJAAwAAQAKABUAAAAJAAsAAQAKABQAAAA=")
 tile_set = SubResource("TileSet_fcgnb")
 
-[node name="Plant1" parent="." instance=ExtResource("10_y0i43")]
+[node name="Plant1" parent="." unique_id=1605125617 instance=ExtResource("10_y0i43")]
 position = Vector2(24, 112)
 scale = Vector2(0.6, 0.6)
 
-[node name="Plant2" parent="." instance=ExtResource("7_xjyuo")]
+[node name="Plant2" parent="." unique_id=497146850 instance=ExtResource("7_xjyuo")]
 position = Vector2(104, 80)
 scale = Vector2(0.6, 0.6)
 
-[node name="Computer" parent="." instance=ExtResource("22_24ygv")]
+[node name="Computer" parent="." unique_id=399210611 instance=ExtResource("22_24ygv")]
 position = Vector2(96, 112)
 
-[node name="Fornitures2" type="TileMapLayer" parent="."]
+[node name="Fornitures2" type="TileMapLayer" parent="." unique_id=1323221635]
 y_sort_enabled = true
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAFAAwAAQAWABwAAAAFAA0AAQAWAB0AAAAGAAwAAQAXABwAAAAGAA0AAQAXAB0AAAAMAAgAAQASAB0AAAAMAAcAAQASABwAAAANAAcAAQATABwAAAANAAgAAQATAB0AAAADAAYAAAAEAAEAAAAEAAwAAAAQAAEAAAAGAAQAAAAGAAoAAAAGAAUAAAAGAAsAAAAGAAYAAAAGAAwAAAAHAAQAAAAHAAoAAAAHAAUAAAAHAAsAAAAHAAYAAAAHAAwAAAAGAAcAAAAGAA0AAAAHAAcAAAAHAA0AAAAFAAYAAAAMAAUAAAAJAAgAAAAOAAEAAAA=")
 tile_set = SubResource("TileSet_qxdf2")
 
-[node name="Fornitures3" type="TileMapLayer" parent="."]
+[node name="Fornitures3" type="TileMapLayer" parent="." unique_id=77427185]
 z_index = 1
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAJAAkAAAAQABYAAAAJAAoAAAAQABcAAAAKAAkAAAARABYAAAAKAAoAAAARABcAAAALAAkAAAASABYAAAALAAoAAAASABcAAAALAAcAAAAUAAEAAAADAAsAAAASABQAAAA=")
 tile_set = SubResource("TileSet_qxdf2")
 
-[node name="PointLight2D2" type="PointLight2D" parent="Fornitures3"]
+[node name="PointLight2D2" type="PointLight2D" parent="Fornitures3" unique_id=1814988399]
 position = Vector2(160, 151.00002)
 scale = Vector2(0.29166663, 0.24218753)
 color = Color(0.19215687, 0.2, 0.6862745, 0.83137256)
@@ -3662,26 +3662,26 @@ shadow_filter = 2
 shadow_filter_smooth = 21.3
 texture = ExtResource("18_x8vfn")
 
-[node name="Dispenser" parent="." instance=ExtResource("6_jem8a")]
+[node name="Dispenser" parent="." unique_id=1009806717 instance=ExtResource("6_jem8a")]
 position = Vector2(104, 136)
 scale = Vector2(0.6, 0.6)
 
-[node name="Limits" type="TileMapLayer" parent="."]
+[node name="Limits" type="TileMapLayer" parent="." unique_id=428335645]
 z_index = 1
 tile_map_data = PackedByteArray("AAAAAAAABAABAAMAAAAAAAEABAABAAQAAAAAAAIABAABAAUAAAABAAAABAACAAMAAAACAAAABAADAAMAAAADAAAABAAEAAMAAAAEAAAABAADAAMAAAAFAAAABAAFAAMAAAAAAAgABAABAAkAAAAAAAYABAABAAQAAAAAAAcABAABAAUAAAAAAAQABAABAAUAAAAAAAUABAABAAUAAAAAAAMABAABAAQAAAAGAAAABAAEAAMAAAAHAAAABAAFAAMAAAAIAAAABAAGAAMAAAAIAAEABAAGAAQAAAAIAAIABAAGAAUAAAAIAAMABAAGAAgAAAAIAAQABAAGAAgAAAAIAAUABAAGAAgAAAAIAAYABAAGAAgAAAAIAAcABAAGAAgAAAAIAAgABAAGAAkAAAAAAAkABAABAAoAAAABAAkABAACAAoAAAACAAkABAAEAAoAAAADAAkABAAEAAoAAAAEAAkABAAIAAwAAAAFAAkABAAIAAwAABAGAAkABAAEAAoAAAAHAAkABAAFAAoAAAAIAAkABAAGAAoAAAA=")
 tile_set = SubResource("TileSet_loniq")
 
-[node name="Player" parent="." instance=ExtResource("5_qxdf2")]
+[node name="Player" parent="." unique_id=906402918 instance=ExtResource("5_qxdf2")]
 position = Vector2(80, 136)
 
-[node name="CameraInterior" parent="." instance=ExtResource("7_y6jn8")]
+[node name="CameraInterior" parent="." unique_id=923053727 instance=ExtResource("7_y6jn8")]
 position = Vector2(72, 88)
 zoom = Vector2(1.5, 1.5)
 
-[node name="ExitInterior" parent="." instance=ExtResource("8_l27as")]
+[node name="ExitInterior" parent="." unique_id=1478114098 instance=ExtResource("8_l27as")]
 position = Vector2(80, 160)
 
-[node name="Fragments_tile_office" parent="." instance=ExtResource("20_4o2nb")]
+[node name="Fragments_tile_office" parent="." unique_id=954048757 instance=ExtResource("20_4o2nb")]
 position = Vector2(-152, -48)
 
 [connection signal="body_entered" from="Computer" to="Computer" method="_on_body_entered"]

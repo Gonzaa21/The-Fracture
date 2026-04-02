@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://r4bjvtrxcwt1"]
+[gd_scene format=4 uid="uid://r4bjvtrxcwt1"]
 
 [ext_resource type="Texture2D" uid="uid://b3gekr11h3x2k" path="res://assets/tile base/Buildings_beige_TileSet.png" id="1_koayv"]
 [ext_resource type="PackedScene" uid="uid://ci5sq3grwtfff" path="res://game/vehicles/vehicle_3.tscn" id="2_ccvsq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfq2dc38kbleb" path="res://assets/tile base/Grass_On-Top_TileSet.png" id="5_5ngba"]
 [ext_resource type="Texture2D" uid="uid://0cp58vrbic51" path="res://assets/vehicles/TILESET_VEHICLES.png" id="5_k1hhp"]
 [ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="7_oyoiy"]
+[ext_resource type="Texture2D" uid="uid://db284tqlfdf4n" path="res://assets/objects/TILESET_OBJECTS_animations.png" id="8_xrxcc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ccvsq"]
 texture = ExtResource("1_koayv")
@@ -646,34 +647,44 @@ texture = ExtResource("5_k1hhp")
 physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_xrxcc")
 
-[node name="Building2" type="TileMapLayer"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_eld0a"]
+atlas = ExtResource("8_xrxcc")
+region = Rect2(0, 7.01038, 16.006838, 24.98962)
 
-[node name="Base" type="TileMapLayer" parent="."]
+[node name="Building2" type="TileMapLayer" unique_id=1532888275]
+
+[node name="Base" type="TileMapLayer" parent="." unique_id=1061784667]
 tile_map_data = PackedByteArray("AAACAAYAAAAEAAUAAAADAAYAAAAFAAUAAAAEAAYAAAAGAAUAAAAFAAYAAAAIAAUAAAAGAAYAAAADAAQAAAACAAUAAAAEAAQAAAACAAQAAAABAAAAAAAEAAQAAAAFAAMAAAAEAAUAAAAHAAQAAAAFAAQAAAADAAEAAAAFAAUAAAAIAAQAAAAGAAQAAAACAAAAAAAGAAUAAAAJAAQAAAADAAQAAAAIAAMAAAADAAUAAAAIAAQAAAACAAMAAAAHAAQAAAADAAMAAAAHAAQAAAAEAAMAAAAHAAQAAAAFAAMAAAAHAAQAAAAGAAMAAAAHAAQAAAA=")
 tile_set = SubResource("TileSet_k1hhp")
 
-[node name="Roof" type="TileMapLayer" parent="."]
+[node name="Roof" type="TileMapLayer" parent="." unique_id=360524307]
 z_index = 3
 tile_map_data = PackedByteArray("AAACAAIAAAALAAIAAAACAAMAAAALAAIAAAADAAIAAAAMAAIAAAADAAMAAAAMAAIAAAAEAAEAAAANAAEAAAAEAAIAAAANAAEAAAAFAAIAAAAOAAIAAAAFAAMAAAAOAAIAAAAGAAIAAAAPAAIAAAAGAAMAAAAPAAIAAAACAAQAAAALAAMAAAADAAQAAAAMAAMAAAAEAAMAAAANAAIAAAAFAAQAAAAOAAMAAAAGAAQAAAAPAAMAAAABAAMAAAALAAIAAAABAAQAAAALAAMAAAAHAAMAAAAPAAIAAAAHAAQAAAAPAAMAAAAEAAAAAAANAAAAAAABAAIAAAALAAEAAAACAAEAAAALAAEAAAADAAEAAAAMAAEAAAAFAAEAAAAOAAEAAAAGAAEAAAAPAAEAAAAHAAIAAAAPAAEAAAA=")
 tile_set = SubResource("TileSet_oyoiy")
 
-[node name="Vehicle3" parent="." instance=ExtResource("2_ccvsq")]
+[node name="Vehicle3" parent="." unique_id=2019109268 instance=ExtResource("2_ccvsq")]
 position = Vector2(49, 33)
 
-[node name="deco" type="TileMapLayer" parent="."]
+[node name="deco" type="TileMapLayer" parent="." unique_id=267296840]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAYAAAAFAAIAAAABAAQAAAAHAAIAAAABAAUAAAAHAAMAAAAGAAgAAAAEAAAAAAAFAAUAAAAJAAUAAAAEAAQAAAAAAAoAAAACAAUAAAAJAAQAAAA=")
 tile_set = SubResource("TileSet_5ngba")
 
-[node name="deco2" type="TileMapLayer" parent="."]
+[node name="deco2" type="TileMapLayer" parent="." unique_id=814691937]
 z_index = 3
 tile_map_data = PackedByteArray("AAAGAAIAAAALAAQAAAAGAAMAAQADAAAAAAAGAAQAAQADAAEAAAAHAAMAAQAEAAAAAAAHAAQAAQAEAAEAAAABAAIAAQADAAAAAAABAAMAAQADAAEAAAACAAIAAQAEAAAAAAACAAMAAQAEAAEAAAADAAMAAQADAAQAAAAEAAMAAQAEAAQAAAAEAAEAAQADAAQAAAAFAAEAAQAEAAQAAAAHAAIAAQAEAAIAAAA=")
 tile_set = SubResource("TileSet_xrxcc")
 
-[node name="VehicleDeco" type="TileMapLayer" parent="."]
+[node name="VehicleDeco" type="TileMapLayer" parent="." unique_id=209961266]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAAUAAAAGAAQAAAAFAAYAAAAGAAUAAAAGAAYAAAAHAAUAAAA=")
 tile_set = SubResource("TileSet_eld0a")
 
-[node name="Door1" parent="." instance=ExtResource("7_oyoiy")]
+[node name="Door1" parent="." unique_id=1193264835 node_paths=PackedStringArray("sprite") instance=ExtResource("7_oyoiy")]
 position = Vector2(69, 91)
+sprite = NodePath("Sprite2D2")
+target_scene = "res://game/tilemaps/map1/CommunityOffice.tscn"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Door1" unique_id=1412670094]
+position = Vector2(0, 2)
+texture = SubResource("AtlasTexture_eld0a")

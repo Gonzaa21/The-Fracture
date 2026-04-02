@@ -1,15 +1,17 @@
 extends Area2D
 
-var community_office: String = "res://game/tilemaps/map1/CommunityOffice.tscn"
+@export var sprite: Sprite2D
+@export var target_scene: String = ""
+@export var spawn_point_id: String = "default"  
+@export var requires_key: bool = false 
+@export var key_id: String = ""
 
 var player_nearby: bool = false
 var is_opening: bool = false
 
-
 func _ready():
-	# Conectar señales del Area2D
-	connect("body_entered", _on_body_entered)
-	connect("body_exited", _on_body_exited)
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
@@ -19,17 +21,23 @@ func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_nearby = false
 
-
 func _process(_delta):
-	if Input.is_action_just_pressed("interact"):
-		print("E PRESIONADA")
-		
 	if player_nearby and Input.is_action_just_pressed("interact") and not is_opening:
 		_open_door()
 
 func _open_door():
-	if is_opening:
+	if is_opening or target_scene.is_empty():
 		return
-
+	
+	if requires_key:
+		if not GameManager.has_fragment(key_id):
+			print("Puerta bloqueada. Necesitas: ", key_id)
+			return
+	
 	is_opening = true
-	TransitionEffect.fade_to_scene(community_office)
+	
+	if not spawn_point_id.is_empty():
+		Global.next_spawn_id = spawn_point_id
+	
+	print("Abriendo puerta hacia: ", target_scene)
+	TransitionEffect.fade_to_scene(target_scene)

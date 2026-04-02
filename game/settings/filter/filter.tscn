@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dck3k86gujnd1"]
+[gd_scene format=3 uid="uid://dck3k86gujnd1"]
 
 [ext_resource type="Script" uid="uid://b6rh0gei57muw" path="res://game/settings/filter/filter.gd" id="1_0b5gx"]
 [ext_resource type="Shader" uid="uid://bpnw664ql0goc" path="res://game/settings/filter/violet_filter.gdshader" id="1_fqhl6"]
@@ -21,10 +21,10 @@ shader_parameter/visibility_radius = 80.000001425
 shader_parameter/visibility_softness = 20.000000475
 shader_parameter/time = 0.0
 
-[node name="Filter" type="CanvasLayer"]
+[node name="Filter" type="CanvasLayer" unique_id=410465455]
 script = ExtResource("1_0b5gx")
 
-[node name="FilterParticles" type="ColorRect" parent="."]
+[node name="FilterParticles" type="ColorRect" parent="." unique_id=427056329]
 material = SubResource("ShaderMaterial_0b5gx")
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,5 +33,5 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1780060144]
+color = Color(0.41960785, 0.41960785, 0.41960785, 1)
