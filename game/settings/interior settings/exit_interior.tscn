@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://buvykcdf6rltu"]
+[gd_scene format=3 uid="uid://buvykcdf6rltu"]
 
 [ext_resource type="Script" uid="uid://c6q7uvfowpqyh" path="res://game/settings/interior settings/exit_interior.gd" id="1_wy30e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqbbl"]
 size = Vector2(32, 10.5)
 
-[node name="ExitInterior" type="Area2D"]
+[node name="ExitInterior" type="Area2D" unique_id=1481888128]
 collision_layer = 2
 script = ExtResource("1_wy30e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=681172012]
 position = Vector2(0, -2.75)
 shape = SubResource("RectangleShape2D_fqbbl")
 
-[node name="SpawnPoint" type="Marker2D" parent="."]
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=741416814]

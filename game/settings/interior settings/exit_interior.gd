@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var central_map := "res://game/tilemaps/map1/level_1.tscn"
+@export var central_map := ""
 @onready var spawn_point: Marker2D = $SpawnPoint
 
 var is_opening := false

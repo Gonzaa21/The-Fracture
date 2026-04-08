@@ -1148,3 +1148,9 @@ tile_set = SubResource("TileSet_0ppdw")
 [node name="SecretDoor" parent="." unique_id=278794649 instance=ExtResource("5_rrbhu")]
 
 [node name="BuildingExterior" parent="." unique_id=170670298 instance=ExtResource("6_xq2rf")]
+
+[node name="LabExit" type="Marker2D" parent="." unique_id=1542912964]
+position = Vector2(384, 88)
+
+[node name="WorkshopExit" type="Marker2D" parent="." unique_id=111083694]
+position = Vector2(440, 168)

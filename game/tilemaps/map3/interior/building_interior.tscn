@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_xyy0a"]
 [ext_resource type="Texture2D" uid="uid://c4ew7bhjlbjgo" path="res://assets/interior/PostApoc_Workshop_WithShadow.png" id="3_yqts3"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_8icl8"]
+[ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="5_ssdyy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyy0a"]
 texture = ExtResource("1_rjfvj")
@@ -2129,6 +2130,9 @@ texture = ExtResource("3_yqts3")
 [sub_resource type="TileSet" id="TileSet_8icl8"]
 sources/0 = SubResource("TileSetAtlasSource_yqts3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssdyy"]
+size = Vector2(29, 2)
+
 [node name="BuildingInterior" type="Node2D" unique_id=1367867879]
 
 [node name="Background" type="ColorRect" parent="." unique_id=448736088]
@@ -2213,5 +2217,18 @@ scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAXAAkAAAAFAA4AAAAPAAoAAAADAA4AAAARABIAAAAHABUAAAAUABMAAAAEAA4AAAAcABEAAAAKAAgAAAAcABIAAAAKAAkAAAAdABEAAAALAAgAAAAdABIAAAALAAkAAAAbABEAAAABABIAAAAbABIAAAABABMAAAAeABEAAAABABAAAAAeABIAAAABABEAAAAkABEAAAAZAA4AAAAfAA8AAAAEAA8AAAAaAA4AAAALAAsAAAAXABEAAAAJAA0AAAAVABAAAAAKAAoAAAAWABAAAAAIABEAAAA=")
 tile_set = SubResource("TileSet_ssdyy")
 
+[node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("5_ssdyy")]
+position = Vector2(112, 168)
+target_scene = "res://game/tilemaps/map3/level_3.tscn"
+spawn_point_id = "WorkshopExit"
+
+[node name="LimitDoor" type="StaticBody2D" parent="." unique_id=1359290341]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimitDoor" unique_id=556814245]
+position = Vector2(113.5, 184)
+shape = SubResource("RectangleShape2D_ssdyy")
+
 [node name="Player" parent="." unique_id=1739036357 instance=ExtResource("2_xyy0a")]
-position = Vector2(116, 170)
+position = Vector2(114, 172)

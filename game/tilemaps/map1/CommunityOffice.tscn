@@ -3680,6 +3680,7 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="ExitInterior" parent="." unique_id=1478114098 instance=ExtResource("8_l27as")]
 position = Vector2(80, 160)
+central_map = "res://game/tilemaps/map1/level_1.tscn"
 
 [node name="Fragments_tile_office" parent="." unique_id=954048757 instance=ExtResource("20_4o2nb")]
 position = Vector2(-152, -48)
