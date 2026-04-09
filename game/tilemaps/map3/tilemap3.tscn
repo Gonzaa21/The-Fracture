@@ -1154,3 +1154,9 @@ position = Vector2(384, 88)
 
 [node name="WorkshopExit" type="Marker2D" parent="." unique_id=111083694]
 position = Vector2(440, 168)
+
+[node name="TentExit1" type="Marker2D" parent="." unique_id=309181864]
+position = Vector2(104, 96)
+
+[node name="TentExit2" type="Marker2D" parent="." unique_id=8413894]
+position = Vector2(152, 144)

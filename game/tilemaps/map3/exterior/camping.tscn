@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://bv0qc77vwxnaj"]
+[gd_scene format=4 uid="uid://bv0qc77vwxnaj"]
 
 [ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="2_oesje"]
 [ext_resource type="Texture2D" uid="uid://btcwvrv7w5ecu" path="res://assets/interior/Camping_Furnitureset.png" id="2_ss238"]
 [ext_resource type="PackedScene" uid="uid://dcb1rf0a6tlnm" path="res://game/natureanimations/campfire_animation.tscn" id="3_ss238"]
+[ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="4_wt1t0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xduja"]
 texture = ExtResource("2_ss238")
@@ -1734,9 +1735,11 @@ texture = ExtResource("2_ss238")
 23:18/0 = 0
 23:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 4.0369616, -8, 5, 8)
 24:18/0 = 0
+24:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.983492, -8, 8, -8, 8, 8, -4.9927177, 8)
 25:18/0 = 0
 26:18/0 = 0
 27:18/0 = 0
+27:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.983492, -8, -8, -8, -8, 8, 4.9927177, 8)
 0:19/0 = 0
 0:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
 4:19/0 = 0
@@ -1762,9 +1765,13 @@ texture = ExtResource("2_ss238")
 23:19/0 = 0
 23:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.0102377, -8, 4.8665133, 1.9298239, -8, 1.9571238)
 24:19/0 = 0
+24:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.9726806, -8, 8, -8, 8, 2.0051136, -4.9726806, 2.031848)
 25:19/0 = 0
+25:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 2.0051136, 8, 1.9783783)
 26:19/0 = 0
+26:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 2.0051136, 8, 1.9783783)
 27:19/0 = 0
+27:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.9726806, -8, -8, -8, -8, 2.0051136, 4.9726806, 2.031848)
 1:20/0 = 0
 2:20/0 = 0
 4:20/0 = 0
@@ -3227,20 +3234,20 @@ texture = ExtResource("2_ss238")
 [sub_resource type="TileSet" id="TileSet_oesje"]
 sources/0 = SubResource("TileSetAtlasSource_gbxlh")
 
-[node name="Camping" type="Node2D"]
+[node name="Camping" type="Node2D" unique_id=1550743515]
 
-[node name="Camp1" type="TileMapLayer" parent="."]
+[node name="Camp1" type="TileMapLayer" parent="." unique_id=1162013572]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAADABcAAAAMAAIAABACABcAAAANAAIAABADABgAAAAMAAMAABACABgAAAANAAMAABAFABoAAAAKAAcAAAAGABoAAAALAAcAAAAFABcAAAACAAwAAAAFABgAAAACAA0AAAAGABcAAAADAAwAAAAGABgAAAADAA0AAAAEABkAAAAAABMAAAAJABkAAAACABAAAAAJABoAAAACABEAAAABABoAAAACABAAAAABABsAAAACABEAAAAEABsAAAAGABEAAAAFABsAAAAHABEAAAAGABsAAAAIABEAAAAIABQAAAAEABEAAAAIABUAAAAEABIAAAAIABYAAAAEABMAAAA=")
 tile_set = SubResource("TileSet_yrbp1")
 
-[node name="Lamp" type="TileMapLayer" parent="."]
+[node name="Lamp" type="TileMapLayer" parent="." unique_id=35248088]
 z_index = 2
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAEABcAAAAZAAAAAAAEABgAAAAZAAEAAAA=")
 tile_set = SubResource("TileSet_ss238")
 
-[node name="PointLight2D" type="PointLight2D" parent="Lamp"]
+[node name="PointLight2D" type="PointLight2D" parent="Lamp" unique_id=1528482930]
 position = Vector2(71.66666, 390.00024)
 scale = Vector2(0.31201172, 0.3236217)
 color = Color(0.8627451, 0.39215687, 0.15686275, 1)
@@ -3250,29 +3257,37 @@ shadow_filter = 2
 shadow_filter_smooth = 5.0
 texture = ExtResource("2_oesje")
 
-[node name="Camp2" type="TileMapLayer" parent="."]
+[node name="Camp2" type="TileMapLayer" parent="." unique_id=1042542165]
 scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAAJAAUAAAAUAA8AAAAJAAYAAAAUABAAAAAJAAcAAAAUABEAAAAJAAgAAAAUABIAAAAJAAkAAAAUABMAAAAKAAUAAAAVAA8AAAAKAAYAAAAVABAAAAAKAAcAAAAVABEAAAAKAAgAAAAVABIAAAAKAAkAAAAVABMAAAALAAUAAAAWAA8AAAALAAYAAAAWABAAAAALAAcAAAAWABEAAAALAAgAAAAWABIAAAALAAkAAAAWABMAAAAMAAUAAAAXAA8AAAAMAAYAAAAXABAAAAAMAAcAAAAXABEAAAAMAAgAAAAXABIAAAAMAAkAAAAXABMAAAAOAAoAAAAUAA8AAAAOAAsAAAAUABAAAAAOAAwAAAAUABEAAAAOAA0AAAAUABIAAAAOAA4AAAAUABMAAAAPAAoAAAAVAA8AAAAPAAsAAAAVABAAAAAPAAwAAAAVABEAAAAPAA0AAAAVABIAAAAPAA4AAAAVABMAAAAQAAoAAAAWAA8AAAAQAAsAAAAWABAAAAAQAAwAAAAWABEAAAAQAA0AAAAWABIAAAAQAA4AAAAWABMAAAARAAoAAAAXAA8AAAARAAsAAAAXABAAAAARAAwAAAAXABEAAAARAA0AAAAXABIAAAARAA4AAAAXABMAAAAHAAYAAAAAABEAAAAIAAsAAAAQAAcAAAAJAAsAAAARAAcAAAANAAYAAAASABMAAAAOAAYAAAATABMAAAASAAwAAAATAAwAAAASAA0AAAATAA0AAAANAAsAAAAEABEAAAANAAwAAAAEABIAAAANAA0AAAAEABMAAAATAAoAAAACABAAAAATAAsAAAACABEAAAAHAAgAAAACABAAAAAHAAkAAAACABEAAAAOAAgAAAAAABMAAAAGAA4AAAACABAAAFAFAA4AAAACABEAAFAIAAwAAAAKAAoAABAHAAwAAAALAAoAABAIAA0AAAAKAAsAABAHAA0AAAALAAsAABA=")
+tile_map_data = PackedByteArray("AAAJAAUAAAAUAA8AAAAJAAYAAAAUABAAAAAJAAcAAAAUABEAAAAJAAgAAAAYABIAAAAJAAkAAAAYABMAAAAKAAUAAAAVAA8AAAAKAAYAAAAVABAAAAAKAAcAAAAZABEAAAAKAAgAAAAZABIAAAAKAAkAAAAZABMAAAALAAUAAAAWAA8AAAALAAYAAAAWABAAAAALAAcAAAAaABEAAAALAAgAAAAaABIAAAALAAkAAAAaABMAAAAMAAUAAAAXAA8AAAAMAAYAAAAXABAAAAAMAAcAAAAXABEAAAAMAAgAAAAbABIAAAAMAAkAAAAbABMAAAAOAAoAAAAUAA8AAAAOAAsAAAAUABAAAAAOAAwAAAAUABEAAAAOAA0AAAAUABIAAAAOAA4AAAAYABMAAAAPAAoAAAAVAA8AAAAPAAsAAAAVABAAAAAPAAwAAAAZABEAAAAPAA0AAAAZABIAAAAPAA4AAAAZABMAAAAQAAoAAAAWAA8AAAAQAAsAAAAWABAAAAAQAAwAAAAWABEAAAAQAA0AAAAWABIAAAAQAA4AAAAWABMAAAARAAoAAAAXAA8AAAARAAsAAAAXABAAAAARAAwAAAAXABEAAAARAA0AAAAXABIAAAARAA4AAAAXABMAAAAHAAYAAAAAABEAAAAIAAsAAAAQAAcAAAAJAAsAAAARAAcAAAANAAYAAAASABMAAAAOAAYAAAATABMAAAASAAwAAAATAAwAAAASAA0AAAATAA0AAAANAAsAAAAEABEAAAANAAwAAAAEABIAAAANAA0AAAAEABMAAAATAAoAAAACABAAAAATAAsAAAACABEAAAAHAAgAAAACABAAAAAHAAkAAAACABEAAAAOAAgAAAAAABMAAAAGAA4AAAACABAAAFAFAA4AAAACABEAAFAIAAwAAAAKAAoAABAHAAwAAAALAAoAABAIAA0AAAAKAAsAABAHAA0AAAALAAsAABA=")
 tile_set = SubResource("TileSet_cx1yr")
 
-[node name="DecoCarp" type="TileMapLayer" parent="."]
+[node name="DecoCarp" type="TileMapLayer" parent="." unique_id=1830207062]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAJAAgAAAASAAwAAAAJAAkAAAASAA0AAAA=")
 tile_set = SubResource("TileSet_llajp")
 
-[node name="DecoTable2" type="TileMapLayer" parent="."]
+[node name="DecoTable2" type="TileMapLayer" parent="." unique_id=1349344549]
 z_index = 2
 position = Vector2(0, 1.1920929e-07)
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAJAAoAAAAEAA8AAAAKAAoAAAAFAA8AAAAIAAoAAAAUAAEAAAA=")
 tile_set = SubResource("TileSet_llajp")
 
-[node name="CampfireAnimation" parent="." instance=ExtResource("3_ss238")]
+[node name="CampfireAnimation" parent="." unique_id=1655402007 instance=ExtResource("3_ss238")]
 position = Vector2(106, 120.99999)
 scale = Vector2(0.50000024, 0.50000024)
 
-[node name="OverItems" type="TileMapLayer" parent="."]
+[node name="OverItems" type="TileMapLayer" parent="." unique_id=1716607493]
 z_index = 1
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAHAAUAAAAAABAAAAAOAAcAAAAAABIAAAAEABgAAAAAABIAAAAOAAkAAAAUAA4AAAAPAAgAAAAVAA0AAAAPAAkAAAAVAA4AAAAQAAgAAAAWAA0AAAAQAAkAAAAWAA4AAAARAAkAAAAXAA4AAAAJAAQAAAAUAA4AAAAKAAMAAAAVAA0AAAAKAAQAAAAVAA4AAAALAAMAAAAWAA0AAAALAAQAAAAWAA4AAAAMAAQAAAAXAA4AAAAIAAoAAAAQAAYAAAAJAAoAAAARAAYAAAACABYAAAANAAEAABAFABkAAAAKAAYAAAAGABkAAAALAAYAAAAHAAsAAAALAAkAABA=")
 tile_set = SubResource("TileSet_oesje")
+
+[node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("4_wt1t0")]
+position = Vector2(104, 80)
+target_scene = "res://game/tilemaps/map3/interior/tent_interior_1.tscn"
+
+[node name="Door2" parent="." unique_id=1283237547 instance=ExtResource("4_wt1t0")]
+position = Vector2(152, 128)
+target_scene = "res://game/tilemaps/map3/interior/tent_interior_2.tscn"
