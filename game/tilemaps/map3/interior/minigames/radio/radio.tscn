@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://buwj2ykrsto3v"]
+
+[ext_resource type="Script" uid="uid://djylmtxscv8xw" path="res://game/tilemaps/map3/interior/minigames/radio/radio.gd" id="1_47ju2"]
+[ext_resource type="Texture2D" uid="uid://cgwivo4ceavob" path="res://assets/objects/tileset_radio.png" id="1_eypto"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_ac8vn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doan0"]
+atlas = ExtResource("1_eypto")
+region = Rect2(32, 8, 32, 24)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_36vro"]
+a = Vector2(-19.999998, 0)
+b = Vector2(0, 0)
+
+[node name="Radio" type="Area2D" unique_id=1309294025]
+script = ExtResource("1_47ju2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1524984421]
+scale = Vector2(0.4, 0.4)
+texture = SubResource("AtlasTexture_doan0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750712567]
+position = Vector2(4.0000014, 0.99999994)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("SegmentShape2D_36vro")
+
+[node name="Label" type="Label" parent="." unique_id=2075364780]
+visible = false
+offset_left = -37.0
+offset_top = 3.0
+offset_right = -2.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("3_ac8vn")
+theme_override_font_sizes/font_size = 5
+text = "[E] para encender"

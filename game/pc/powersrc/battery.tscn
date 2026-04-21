@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://crgixvyk05bds"]
+[gd_scene format=3 uid="uid://crgixvyk05bds"]
 
 [ext_resource type="Script" uid="uid://cmvjcp2eucgi6" path="res://game/pc/powersrc/battery.gd" id="1_p51ib"]
 [ext_resource type="Texture2D" uid="uid://b0q7puqasyopl" path="res://assets/player principal/inventory/BateryIcon.png" id="2_eysf8"]
@@ -7,18 +7,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cswul"]
 size = Vector2(15, 21)
 
-[node name="Battery" type="Area2D"]
+[node name="Battery" type="Area2D" unique_id=706111660]
 script = ExtResource("1_p51ib")
 inventory_icon = ExtResource("2_eysf8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1279633089]
 position = Vector2(-4, 0)
 shape = SubResource("RectangleShape2D_cswul")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1105568110]
 scale = Vector2(0.5, 0.375)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1040817776]
 visible = false
 offset_left = -37.0
 offset_top = 3.0

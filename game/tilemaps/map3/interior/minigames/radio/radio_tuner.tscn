@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://c7b6eitucpway"]
+
+[ext_resource type="Script" uid="uid://bvpk56p5gj8vr" path="res://game/tilemaps/map3/interior/minigames/radio/radio_tuner.gd" id="1_gi2aj"]
+[ext_resource type="Texture2D" uid="uid://c5hdgmo3n0mg3" path="res://assets/objects/tileset_radio_clean.png" id="2_jtngv"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_3tas2"]
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_qh3dw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtngv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3tas2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ajqs"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfwy7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="RadioTuner" type="CanvasLayer" unique_id=42273130]
+script = ExtResource("1_gi2aj")
+
+[node name="Panel" type="Panel" parent="." unique_id=2006022999]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=1760260521]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 272.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1942506531]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 72.0
+offset_right = 355.55554
+offset_bottom = 264.0
+texture = ExtResource("2_jtngv")
+stretch_mode = 4
+
+[node name="FrequencyLabel" type="Label" parent="Panel" unique_id=154868834]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 147.0
+offset_right = 227.0
+offset_bottom = 157.0
+theme_override_fonts/font = ExtResource("3_3tas2")
+theme_override_font_sizes/font_size = 4
+text = "Frecuencia: 87.5 MHz"
+horizontal_alignment = 1
+
+[node name="FrequencySlider" type="HSlider" parent="Panel" unique_id=1956284954]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 162.0
+offset_right = 248.0
+offset_bottom = 178.0
+min_value = 85.0
+step = 0.1
+value = 87.5
+
+[node name="SignalStrength" type="ProgressBar" parent="Panel" unique_id=1285747600]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 100.0
+offset_right = 333.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("3_3tas2")
+theme_override_font_sizes/font_size = 8
+show_percentage = false
+
+[node name="WaveForm" type="Control" parent="Panel" unique_id=2068463146]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = 104.0
+offset_right = -232.0
+offset_bottom = -126.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="Panel" unique_id=1094522841]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 208.0
+offset_right = 335.0
+offset_bottom = 231.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_qh3dw")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_jtngv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3tas2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ajqs")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jfwy7")
+disabled = true
+text = "[Reproducir transmisión]"
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=1592005194]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 203.0
+offset_bottom = 63.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_qh3dw")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_jtngv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3tas2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ajqs")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jfwy7")
+text = "[X]"
+
+[node name="StaticPlayer" type="AudioStreamPlayer" parent="." unique_id=1412677364]
+
+[node name="MorsePlayer" type="AudioStreamPlayer" parent="." unique_id=641803775]

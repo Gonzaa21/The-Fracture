@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="4_qq0uh"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_wv8mu"]
 [ext_resource type="Texture2D" uid="uid://c4ew7bhjlbjgo" path="res://assets/interior/PostApoc_Workshop_WithShadow.png" id="5_id7pn"]
+[ext_resource type="PackedScene" uid="uid://buwj2ykrsto3v" path="res://game/tilemaps/map3/interior/minigames/radio/radio.tscn" id="6_qtlt7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wv8mu"]
 texture = ExtResource("1_4xllf")
@@ -2122,6 +2123,7 @@ sources/2 = SubResource("TileSetAtlasSource_qtlt7")
 [node name="TentInterior2" type="Node2D" unique_id=505160155]
 
 [node name="Background" type="ColorRect" parent="." unique_id=1800501458]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2132,9 +2134,11 @@ grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=830461728]
+visible = false
 color = Color(0.5921569, 0.5921569, 0.5921569, 1)
 
 [node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_wv8mu")]
+visible = false
 
 [node name="CameraInterior" parent="." unique_id=649875111 instance=ExtResource("3_xw85q")]
 position = Vector2(240, 168)
@@ -2166,10 +2170,13 @@ scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAcABEAAgAKAAgAAAAcABIAAgAKAAkAAAAdABEAAgALAAgAAAAdABIAAgALAAkAAAA=")
 tile_set = SubResource("TileSet_id7pn")
 
+[node name="Radio" parent="." unique_id=1309294025 instance=ExtResource("6_qtlt7")]
+position = Vector2(229, 137)
+
 [node name="Deco4" type="TileMapLayer" parent="." unique_id=2089739920]
 position = Vector2(-0.9999999, 0)
 scale = Vector2(0.4, 0.4)
-tile_map_data = PackedByteArray("AAAjABQAAQACAAAAAAAjABUAAQACAAEAAAAkABQAAQADAAAAAAAkABUAAQADAAEAAAAlABUAAAAXAAMAAAAkABYAAAAWAAMAABA=")
+tile_map_data = PackedByteArray("AAAlABUAAAAXAAMAAAAkABYAAAAWAAMAABA=")
 tile_set = SubResource("TileSet_id7pn")
 
 [node name="TopLayer" type="TileMapLayer" parent="." unique_id=1408277130]
