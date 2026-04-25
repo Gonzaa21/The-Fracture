@@ -8,9 +8,8 @@
 atlas = ExtResource("1_eypto")
 region = Rect2(32, 8, 32, 24)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_36vro"]
-a = Vector2(-19.999998, 0)
-b = Vector2(0, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac8vn"]
+size = Vector2(39.999996, 20)
 
 [node name="Radio" type="Area2D" unique_id=1309294025]
 script = ExtResource("1_47ju2")
@@ -20,16 +19,15 @@ scale = Vector2(0.4, 0.4)
 texture = SubResource("AtlasTexture_doan0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750712567]
-position = Vector2(4.0000014, 0.99999994)
+position = Vector2(2.3841858e-07, 8.999998)
 scale = Vector2(0.4, 0.4)
-shape = SubResource("SegmentShape2D_36vro")
+shape = SubResource("RectangleShape2D_ac8vn")
 
 [node name="Label" type="Label" parent="." unique_id=2075364780]
-visible = false
-offset_left = -37.0
-offset_top = 3.0
-offset_right = -2.0
-offset_bottom = 10.0
+offset_left = -19.0
+offset_top = -10.0
+offset_right = 22.0
+offset_bottom = -3.0
 theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
 theme_override_fonts/font = ExtResource("3_ac8vn")

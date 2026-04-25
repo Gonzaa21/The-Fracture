@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c7st6l3md4w84"]
 
 [ext_resource type="Texture2D" uid="uid://btcwvrv7w5ecu" path="res://assets/interior/Camping_Furnitureset.png" id="1_4xllf"]
+[ext_resource type="PackedScene" uid="uid://c7b6eitucpway" path="res://game/tilemaps/map3/interior/minigames/radio/radio_tuner.tscn" id="2_3ma01"]
 [ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_xw85q"]
 [ext_resource type="PackedScene" uid="uid://dol1uv0vbsaor" path="res://game/settings/interior settings/camera_interior.tscn" id="3_xw85q"]
 [ext_resource type="Texture2D" uid="uid://cgwivo4ceavob" path="res://assets/objects/tileset_radio.png" id="4_6lgt2"]
@@ -2138,7 +2139,6 @@ visible = false
 color = Color(0.5921569, 0.5921569, 0.5921569, 1)
 
 [node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_wv8mu")]
-visible = false
 
 [node name="CameraInterior" parent="." unique_id=649875111 instance=ExtResource("3_xw85q")]
 position = Vector2(240, 168)
@@ -2183,7 +2183,13 @@ tile_set = SubResource("TileSet_id7pn")
 z_index = 1
 position = Vector2(0, 4)
 scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAAXABEAAAAOAAAAAAAZABEAAAASAAIAAAAaABEAAAATAAIAAAA=")
+tile_map_data = PackedByteArray("AAAXABEAAAAOAAAAAAA=")
+tile_set = SubResource("TileSet_id7pn")
+
+[node name="TopLayer2" type="TileMapLayer" parent="." unique_id=1142114319]
+z_index = 1
+scale = Vector2(0.6, 0.6)
+tile_map_data = PackedByteArray("AAAZABEAAAASAAIAAAAaABEAAAATAAIAAAA=")
 tile_set = SubResource("TileSet_id7pn")
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("4_qq0uh")]
@@ -2193,3 +2199,6 @@ spawn_point_id = "TentExit2"
 
 [node name="Player" parent="." unique_id=1455462959 instance=ExtResource("2_xw85q")]
 position = Vector2(240, 184)
+
+[node name="RadioTuner" parent="." unique_id=42273130 instance=ExtResource("2_3ma01")]
+visible = false

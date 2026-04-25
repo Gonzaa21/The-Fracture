@@ -1,8 +1,11 @@
 extends CanvasLayer
 
+@onready var panel: Panel = $Panel
 @onready var frequency_label: Label = $Panel/FrequencyLabel
-@onready var frequency_slider: HSlider = $Panel/FrequencySlider
-@onready var signal_bar: ProgressBar = $Panel/SignalStrength
+@onready var frequency_slider: Control = $Panel/FrequencySlider
+@onready var signal_bar: Control = $Panel/SignalStrength
+@onready var waveform: Control = $Panel/WaveForm
+@onready var dial_control: Control = $Panel/DialControl
 @onready var play_button: Button = $Panel/PlayButton
 @onready var close_button: Button = $Panel/CloseButton
 
@@ -10,31 +13,60 @@ extends CanvasLayer
 @onready var morse_player: AudioStreamPlayer = $MorsePlayer
 
 var target_frequency: float = 92.3
-var tolerance: float = 0.2
+var tolerance: float = 0.01
+
+var dial_value: float = 87.5 
+var slider_value: float = 0.0
+var combined_frequency: float = 87.5
 
 var is_calibrated: bool = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	frequency_slider.value_changed.connect(_on_frequency_changed)
+	
+	frequency_slider.value_changed.connect(_on_slider_changed)
+	dial_control.value_changed.connect(_on_dial_changed)
 	play_button.pressed.connect(_on_play_pressed)
 	close_button.pressed.connect(_on_close_pressed)
 	
-	get_tree().paused = true
+	_setup_controls()
+	
 	if static_player:
 		static_player.play()
 	
-	_on_frequency_changed(frequency_slider.value)
+	_update_combined_frequency()
 
-func _on_frequency_changed(value: float):
-	frequency_label.text = "FRECUENCIA: %.1f MHz" % value
+func _setup_controls():
+	dial_control.min_value = 85.0
+	dial_control.max_value = 100.0
+	dial_control.current_value = 87.5
 	
-	var distance = abs(value - target_frequency)
+	frequency_slider.min_value = -0.5
+	frequency_slider.max_value = 0.5
+	frequency_slider.current_value = 0.0
+
+func _on_dial_changed(value: float):
+	dial_value = value
+	_update_combined_frequency()
+
+func _on_slider_changed(value: float):
+	slider_value = value
+	_update_combined_frequency()
+
+func _update_combined_frequency():
+	combined_frequency = dial_value + slider_value
 	
-	var signal_strength = 100.0 * exp(-distance * 5.0)
+	frequency_label.text = "%.2f MHz" % combined_frequency
+	
+	var distance = abs(combined_frequency - target_frequency)
+	
+	var signal_strength = 100.0 * exp(-distance * 8.0)
 	signal_strength = clamp(signal_strength, 0, 100)
-
-	signal_bar.value = signal_strength
+	
+	signal_bar.set_signal(signal_strength)
+	
+	var sync = clamp(1.0 - (distance / 2.0), 0.0, 1.0)
+	waveform.set_sync_level(sync)
 	
 	if static_player:
 		var static_volume = lerp(-10.0, -30.0, signal_strength / 100.0)
@@ -62,7 +94,6 @@ func _on_close_pressed():
 		morse_player.stop()
 	
 	var player = get_tree().get_first_node_in_group("player")
-	
 	if player:
 		player.set_process_input(true)
 	
