@@ -13,7 +13,7 @@ extends CanvasLayer
 @onready var morse_player: AudioStreamPlayer = $MorsePlayer
 
 var target_frequency: float = 92.3
-var tolerance: float = 0.01
+var tolerance: float = 0.05
 
 var dial_value: float = 87.5 
 var slider_value: float = 0.0
@@ -23,6 +23,8 @@ var is_calibrated: bool = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	target_frequency = MorseManager.get_target_frequency()
 	
 	frequency_slider.value_changed.connect(_on_slider_changed)
 	dial_control.value_changed.connect(_on_dial_changed)
@@ -85,9 +87,10 @@ func _on_play_pressed():
 	if static_player:
 		static_player.stop()
 	print("Reproduciendo morse...")
-	# MorseManager.play_current_message()
+	MorseManager.play_current_message()
 
 func _on_close_pressed():
+	MorseManager.stop_transmission()
 	if static_player:
 		static_player.stop()
 	if morse_player:

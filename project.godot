@@ -24,6 +24,7 @@ Global="*res://game/settings/global.gd"
 TransitionEffect="*res://game/settings/transition effect/transition_effect.tscn"
 GameManager="*res://game/settings/GameManager.gd"
 ForestManager="*res://game/tilemaps/map2/anomalies/forest/forest_manager.gd"
+MorseManager="*uid://c12oab6skdbf0"
 
 [display]
 
