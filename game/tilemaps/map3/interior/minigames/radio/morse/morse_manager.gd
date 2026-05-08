@@ -4,6 +4,7 @@ var messages_database: Array = []
 var current_message: Dictionary = {}
 var target_frequency: float = 92.3
 
+@onready var play_button: Button = get_tree().get_root().find_child("PlayButton", true, false)
 @onready var audio_player: AudioStreamPlayer
 @onready var morse_timer: Timer
 var morse_sequence: Array = []
@@ -121,6 +122,7 @@ func morse_to_sequence(morse_string: String) -> Array:
 
 func _play_next_symbol():
 	if sequence_index >= morse_sequence.size():
+		play_button.text = "Volver a reproducir"
 		print("MorseManager: Transmisión completa")
 		return
 	
