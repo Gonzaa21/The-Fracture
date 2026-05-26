@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbpxyggr337s1"
-path="res://.godot/imported/TILESET_LABORATORY.png-7fcae373224d634321c84d34ccd4ba3a.ctex"
+uid="uid://d18ny4kaau5tw"
+path="res://.godot/imported/PictureB.png-23845ad2d87cd8b6f6431f50170760ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/tilemaps/map3/interior/TILESET_LABORATORY.png"
-dest_files=["res://.godot/imported/TILESET_LABORATORY.png-7fcae373224d634321c84d34ccd4ba3a.ctex"]
+source_file="res://assets/photos/PictureB.png"
+dest_files=["res://.godot/imported/PictureB.png-23845ad2d87cd8b6f6431f50170760ec.ctex"]
 
 [params]
 
