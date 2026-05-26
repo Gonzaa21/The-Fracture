@@ -22,6 +22,8 @@ var background_sound: AudioStreamPlayer
 var current_music_volume: float = -10.0
 # inventory
 var current_inventory_icon: Texture2D = null
+# lab
+var key_code: Array = []
 #level2
 var level2_unlocked: bool = false
 var unlock_echo_sound: AudioStream

@@ -5,9 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_482n1"]
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="3_euvld"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_83qqx"]
+[ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/tilemaps/map3/exterior/objects/fragment_popup_photo.tscn" id="4_wfijn"]
 
 [node name="Level3" type="Node2D" unique_id=1226103913]
 script = ExtResource("1_b83io")
+
+[node name="FragmentPopupPhoto" parent="." unique_id=66329717 instance=ExtResource("4_wfijn")]
+layer = 2
 
 [node name="TileMap" parent="." unique_id=1177837361 instance=ExtResource("1_dbdlj")]
 

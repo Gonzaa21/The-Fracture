@@ -1,5 +1,5 @@
 extends Area2D
-enum PopupStyle { WARNING, DOCUMENT, NOTES, DIALOGUE }
+enum PopupStyle { WARNING, DOCUMENT, NOTES, DIALOGUE}
 
 @export var fragment_id: String = ""
 @export var popup_style: PopupStyle = PopupStyle.DOCUMENT 

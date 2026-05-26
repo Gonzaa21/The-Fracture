@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://in4n1whx7esl"]
+[gd_scene format=3 uid="uid://in4n1whx7esl"]
 
 [ext_resource type="Script" uid="uid://tweu1u7806s5" path="res://game/fragments/popups/fragment_popup_BASE.gd" id="1_b42hs"]
 [ext_resource type="Texture2D" uid="uid://bbfuah5wow534" path="res://assets/backgrounds_popup/document.png" id="2_b42hs"]
@@ -19,11 +19,11 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrvnl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="FragmentPopupDoc" type="CanvasLayer"]
+[node name="FragmentPopupDoc" type="CanvasLayer" unique_id=1398118531]
 process_mode = 3
 script = ExtResource("1_b42hs")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=655896694]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -37,13 +37,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qrljx")
 
-[node name="BackgroundTexture" type="TextureRect" parent="Panel"]
+[node name="BackgroundTexture" type="TextureRect" parent="Panel" unique_id=818493321]
 layout_mode = 0
 offset_right = 300.0
 offset_bottom = 200.0
 texture = ExtResource("2_b42hs")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1111068249]
 layout_mode = 0
 offset_left = 59.0
 offset_top = 16.0
@@ -54,14 +54,15 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="Control" parent="Panel/MarginContainer"]
+[node name="VBoxContainer" type="Control" parent="Panel/MarginContainer" unique_id=258004122]
 layout_mode = 2
 
-[node name="VBoxContainer2" type="Control" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=1459163472]
 anchors_preset = 0
 offset_right = 141.0
 
-[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2"]
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=2044741449]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 12.0
 offset_top = -2.0
@@ -77,14 +78,15 @@ theme_override_fonts/font = ExtResource("3_bd4pb")
 theme_override_font_sizes/font_size = 9
 text = "Título del Fragmento"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1395311963]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 13.0
 offset_right = 130.0
 offset_bottom = 133.0
 
-[node name="ContentLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="ContentLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer" unique_id=1517113082]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 0.5529412)
 theme_override_constants/shadow_outline_size = 3
@@ -97,7 +99,8 @@ fit_content = true
 autowrap_mode = 2
 justification_flags = 235
 
-[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer" unique_id=645208697]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.15686275, 0.15686275, 0.15686275, 0.827451)
 theme_override_constants/shadow_offset_x = 1
@@ -107,7 +110,7 @@ theme_override_fonts/font = ExtResource("4_wrvnl")
 theme_override_font_sizes/font_size = 5
 text = "MetadataLabel"
 
-[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=172848646]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 163.0

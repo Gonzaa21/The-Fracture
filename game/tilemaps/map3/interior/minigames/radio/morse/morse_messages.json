@@ -1,19 +1,25 @@
 {
-  "messages": [
-	{
-	  "id": "msg_001",
-	  "text": "ONE TWO THREE FOUR FIVE",
-	  "code": [1, 2, 3, 4, 5]
-	},
-	{
-	  "id": "msg_002", 
-	  "text": "FOUR FIVE THREE TWO ONE",
-	  "code": [4, 5, 3, 2, 1]
-	},
-	{
-	  "id": "msg_003",
-	  "text": "TWO FOUR FIVE THREE FOUR",
-	  "code": [2, 4, 5, 3, 4]
-	}
-  ]
+	"messages": [
+		{
+			"id": "msg_001",
+			"text": "NORTE BASE SEGURA",
+			"location_id": "north_secure_base",
+			"photo_id": "A",
+			"key_code": [3, 5, 1, 2, 4]
+		},
+		{
+			"id": "msg_002", 
+			"text": "PASAJE PARED DE ROCAS",
+			"location_id": "way_wall_rocks",
+			"photo_id": "B",
+			"key_code": [1, 4, 2, 4, 5]
+		},
+		{
+			"id": "msg_003",
+			"text": "COFRE BAJO PINOS",
+			"location_id": "chest_overpines",
+			"photo_id": "C",
+			"key_code": [5, 2, 5, 2, 3]
+		}
+	]
 }

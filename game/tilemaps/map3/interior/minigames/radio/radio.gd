@@ -26,7 +26,7 @@ func _process(_delta):
 
 func _open_radio_tuner():
 	var radio_instance = radio_tuner_scene.instantiate()
-	get_tree().root.add_child(radio_instance)
+	get_tree().current_scene.add_child(radio_instance)
 	get_tree().paused = true
 	var player = get_tree().get_first_node_in_group("player")
 	if player:

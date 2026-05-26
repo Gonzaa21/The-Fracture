@@ -1160,3 +1160,12 @@ position = Vector2(104, 96)
 
 [node name="TentExit2" type="Marker2D" parent="." unique_id=8413894]
 position = Vector2(152, 144)
+
+[node name="north_secure_base" type="Marker2D" parent="." unique_id=1537673707]
+position = Vector2(134, 65)
+
+[node name="way_wall_rocks" type="Marker2D" parent="." unique_id=445631280]
+position = Vector2(266, 76)
+
+[node name="chest_overpines" type="Marker2D" parent="." unique_id=1037685918]
+position = Vector2(355, 243)

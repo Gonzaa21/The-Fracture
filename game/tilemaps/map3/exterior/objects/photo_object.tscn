@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://css8jwi5qmloq"]
+
+[ext_resource type="Script" uid="uid://goykawmgub5e" path="res://game/tilemaps/map3/exterior/objects/photo_object.gd" id="1_7syqn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm60a"]
+size = Vector2(25, 25)
+
+[node name="PhotoObject" type="Area2D" unique_id=1306957376]
+script = ExtResource("1_7syqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=552332313]
+shape = SubResource("RectangleShape2D_rm60a")

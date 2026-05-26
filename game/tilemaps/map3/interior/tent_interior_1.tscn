@@ -2076,8 +2076,6 @@ sources/2 = SubResource("TileSetAtlasSource_hjws0")
 
 [node name="TentInterior1" type="Node2D" unique_id=591354033]
 
-[node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_w718i")]
-
 [node name="Background" type="ColorRect" parent="." unique_id=495469451]
 anchors_preset = 15
 anchor_right = 1.0
@@ -2090,6 +2088,8 @@ color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=570656939]
 color = Color(0.5921569, 0.5921569, 0.5921569, 1)
+
+[node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_w718i")]
 
 [node name="CameraInterior" parent="." unique_id=431117305 instance=ExtResource("3_oadwr")]
 position = Vector2(240, 168)

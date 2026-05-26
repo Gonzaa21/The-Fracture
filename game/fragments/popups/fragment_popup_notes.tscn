@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3xst03ftir7h"]
+[gd_scene format=3 uid="uid://b3xst03ftir7h"]
 
 [ext_resource type="Script" uid="uid://tweu1u7806s5" path="res://game/fragments/popups/fragment_popup_BASE.gd" id="1_dbb01"]
 [ext_resource type="Texture2D" uid="uid://o5o04doo0mjh" path="res://assets/backgrounds_popup/document_break.png" id="2_c8kj2"]
@@ -20,11 +20,11 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waf83"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="FragmentPopupNotes" type="CanvasLayer"]
+[node name="FragmentPopupNotes" type="CanvasLayer" unique_id=155521319]
 process_mode = 3
 script = ExtResource("1_dbb01")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1552420385]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,13 +38,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qrljx")
 
-[node name="BackgroundTexture" type="TextureRect" parent="Panel"]
+[node name="BackgroundTexture" type="TextureRect" parent="Panel" unique_id=401268638]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_c8kj2")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=521793124]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 87.0
@@ -55,15 +55,16 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="Control" parent="Panel/MarginContainer"]
+[node name="VBoxContainer" type="Control" parent="Panel/MarginContainer" unique_id=1992626919]
 layout_mode = 2
 
-[node name="VBoxContainer2" type="Control" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=1830197099]
 anchors_preset = 0
 offset_right = 162.0
 offset_bottom = 9.0
 
-[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2"]
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=139502829]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 theme_override_colors/font_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
@@ -76,14 +77,15 @@ theme_override_fonts/font = ExtResource("3_dbb01")
 theme_override_font_sizes/font_size = 13
 text = "Título del Fragmento"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=683478325]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 1.0
 offset_right = 132.0
 offset_bottom = 10.0
 
-[node name="ContentLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="ContentLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer" unique_id=1263705173]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/default_color = Color(0.15686275, 0.15686275, 0.15686275, 0.49803922)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5411765)
@@ -97,7 +99,8 @@ bbcode_enabled = true
 text = "ContentLabel"
 fit_content = true
 
-[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer" unique_id=1603762279]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.15686275, 0.15686275, 0.15686275, 1)
@@ -108,7 +111,7 @@ theme_override_fonts/font = ExtResource("4_o6ejt")
 theme_override_font_sizes/font_size = 6
 text = "MetadataLabel"
 
-[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=663643960]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 89.0
