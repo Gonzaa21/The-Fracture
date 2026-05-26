@@ -1,10 +1,10 @@
 extends Node
 
+signal transmission_finished
 var messages_database: Array = []
 var current_message: Dictionary = {}
 var target_frequency: float = 92.3
 
-@onready var play_button: Button = get_tree().get_root().find_child("PlayButton", true, false)
 @onready var audio_player: AudioStreamPlayer
 @onready var morse_timer: Timer
 var morse_sequence: Array = []
@@ -81,18 +81,25 @@ func generate_new_message():
 		
 	current_message = messages_database.pick_random()
 	generate_random_frequency()
-	#GameManager.morse_code = current_message["code"]
+	GameManager.key_code = current_message["key_code"]
 	#GameManager.radio_frequency = target_frequency
 
-func get_current_code() -> Array:
+func get_current_key_code() -> Array:
 	if current_message.is_empty():
 		return []
-	print("Code:", current_message["code"])
-	return current_message["code"]
+	print("Key Code:", current_message["key_code"])
+	return current_message["key_code"]
+	
+func get_current_location() -> String:
+	if current_message.is_empty():
+		return ""
+	print("Location ID:", current_message["location_id"])
+	return current_message["location_id"]
 
 func play_current_message() -> void:
 	if current_message.is_empty(): return
 	var text = current_message["text"]
+	print(text)
 	var morse = to_morse(text)
 	morse_sequence = morse_to_sequence(morse)
 	sequence_index = 0
@@ -122,7 +129,7 @@ func morse_to_sequence(morse_string: String) -> Array:
 
 func _play_next_symbol():
 	if sequence_index >= morse_sequence.size():
-		play_button.text = "Volver a reproducir"
+		transmission_finished.emit()
 		print("MorseManager: Transmisión completa")
 		return
 	

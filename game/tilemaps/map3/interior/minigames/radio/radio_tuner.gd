@@ -30,6 +30,7 @@ func _ready():
 	dial_control.value_changed.connect(_on_dial_changed)
 	play_button.pressed.connect(_on_play_pressed)
 	close_button.pressed.connect(_on_close_pressed)
+	MorseManager.transmission_finished.connect(_on_morse_finished)
 	
 	_setup_controls()
 	
@@ -37,6 +38,9 @@ func _ready():
 		static_player.play()
 	
 	_update_combined_frequency()
+
+func _on_morse_finished() -> void:
+	$Panel/PlayButton.text = "Volver a reproducir"
 
 func _setup_controls():
 	dial_control.min_value = 85.0
