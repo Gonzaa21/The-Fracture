@@ -27,6 +27,10 @@ var key_code: Array = []
 #level2
 var level2_unlocked: bool = false
 var unlock_echo_sound: AudioStream
+#level3
+var generator_pieces: Dictionary = { "A": false, "B": false,  "C": false }
+var lab_door_powered: bool = false
+var generator_repaired: bool = false
 
 func load_database():
 	var file = FileAccess.open("res://game/fragments/fragments.json",FileAccess.READ)

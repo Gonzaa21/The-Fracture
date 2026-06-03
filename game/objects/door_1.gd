@@ -5,6 +5,7 @@ extends Area2D
 @export var spawn_point_id: String = "default"  
 @export var requires_key: bool = false 
 @export var key_id: String = ""
+@export var requires_power: bool = false
 
 var player_nearby: bool = false
 var is_opening: bool = false
@@ -27,6 +28,10 @@ func _process(_delta):
 
 func _open_door():
 	if is_opening or target_scene.is_empty():
+		return
+	
+	if requires_power and not GameManager.lab_door_powered:
+		print("Sin energía")
 		return
 	
 	if requires_key:

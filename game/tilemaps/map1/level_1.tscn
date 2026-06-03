@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://y62y7n1cnff5" path="res://game/fragments/tiles/fragments_tile.tscn" id="11_ictta"]
 [ext_resource type="PackedScene" uid="uid://cdoo1uhxpr3nf" path="res://game/fragments/popups/fragment_popup_warning.tscn" id="12_slesh"]
 [ext_resource type="PackedScene" uid="uid://brn03jfj0jvmm" path="res://game/fragments/dialogue popup/dialogue_popup.tscn" id="13_aoj2y"]
-[ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/battery.tscn" id="14_p2l5k"]
+[ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="14_p2l5k"]
 [ext_resource type="PackedScene" uid="uid://cfnnaom8xk8hw" path="res://game/tilemaps/map2/portal/level_2_portal.tscn" id="14_slesh"]
 
 [node name="Level1" type="Node2D" unique_id=1757275047]
