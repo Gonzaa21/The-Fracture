@@ -59,9 +59,9 @@ horizontal_alignment = 1
 [node name="FrequencySlider" type="Control" parent="Panel" unique_id=1387257123]
 anchors_preset = 0
 offset_left = 152.0
-offset_top = 162.0
+offset_top = 160.0
 offset_right = 248.0
-offset_bottom = 178.0
+offset_bottom = 176.0
 script = ExtResource("4_wcic6")
 
 [node name="SignalStrength" type="Control" parent="Panel" unique_id=785534057]

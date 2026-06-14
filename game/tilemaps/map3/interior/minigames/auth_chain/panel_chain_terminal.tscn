@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cllglexvfl4jy"]
+
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_tmhmf"]
+[ext_resource type="Script" uid="uid://cj5td2608nihb" path="res://game/tilemaps/map3/interior/minigames/auth_chain/panel_chain_terminal.gd" id="1_wawmc"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="4_po85k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0w73"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qrry"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxsio"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tv4u0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wawmc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igvbm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tv4u0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_po85k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PanelChainTerminal" type="CanvasLayer" unique_id=2032599532]
+script = ExtResource("1_wawmc")
+digit_index = [1, 2]
+
+[node name="Panel" type="VBoxContainer" parent="." unique_id=1444059331]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1479598680]
+layout_mode = 2
+alignment = 1
+
+[node name="Digit1" type="LineEdit" parent="Panel/HBoxContainer" unique_id=1286860879]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_placeholder_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("1_tmhmf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_k0w73")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4qrry")
+placeholder_text = "-"
+alignment = 1
+max_length = 1
+
+[node name="Digit2" type="LineEdit" parent="Panel/HBoxContainer" unique_id=1938740596]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_placeholder_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("1_tmhmf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sxsio")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tv4u0")
+placeholder_text = "-"
+alignment = 1
+max_length = 1
+virtual_keyboard_type = 2
+caret_blink = true
+
+[node name="Error" type="Label" parent="Panel" unique_id=1864566709]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.57, 0.22799999, 0.25079995, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("1_tmhmf")
+theme_override_font_sizes/font_size = 6
+text = "PIN inválido"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="Panel" unique_id=246876935]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99585456, 1, 0.6588055, 1)
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_tmhmf")
+theme_override_font_sizes/font_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_wawmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_igvbm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tv4u0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_po85k")
+text = "[confirmar]"
+
+[node name="Label" type="Label" parent="Panel" unique_id=2118506863]
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("4_po85k")
+theme_override_font_sizes/font_size = 6

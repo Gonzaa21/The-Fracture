@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bv0qc77vwxnaj" path="res://game/tilemaps/map3/exterior/camping.tscn" id="4_ilyw7"]
 [ext_resource type="PackedScene" uid="uid://21fbtprlc63t" path="res://game/tilemaps/map3/exterior/secret_door.tscn" id="5_rrbhu"]
 [ext_resource type="PackedScene" uid="uid://cp6hqaoi8wnvd" path="res://game/tilemaps/map3/exterior/building_exterior.tscn" id="6_xq2rf"]
+[ext_resource type="PackedScene" uid="uid://bokfojviw4n1p" path="res://game/tilemaps/map3/interior/minigames/auth_chain/chain_terminal_object.tscn" id="7_0qllr"]
 [ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="7_li5i0"]
+[ext_resource type="Texture2D" uid="uid://d5s5s8dryy2r" path="res://assets/player principal/inventory/workshop_items.png" id="8_yrefk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilyw7"]
 texture = ExtResource("1_dc5od")
@@ -1124,6 +1126,22 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_dc5od")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibis2"]
+atlas = ExtResource("8_yrefk")
+region = Rect2(155, 7, 27, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrefk"]
+atlas = ExtResource("8_yrefk")
+region = Rect2(130, 0, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcq73"]
+atlas = ExtResource("8_yrefk")
+region = Rect2(93, 5, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qllr"]
+atlas = ExtResource("8_yrefk")
+region = Rect2(67, 0, 9, 16)
+
 [node name="TileMap" type="Node2D" unique_id=1310404651]
 
 [node name="Grass" type="TileMapLayer" parent="." unique_id=441235835]
@@ -1171,9 +1189,22 @@ position = Vector2(266, 76)
 [node name="chest_overpines" type="Marker2D" parent="." unique_id=1037685918]
 position = Vector2(355, 243)
 
+[node name="Terminal02" parent="." unique_id=1494331541 instance=ExtResource("7_0qllr")]
+z_index = 1
+position = Vector2(71.999985, 56)
+scale = Vector2(0.6, 0.6)
+skew = 0.087266445
+terminal_id = "terminal_2"
+digit_index = [2, 3]
+
 [node name="ItemB" parent="." unique_id=97888739 instance=ExtResource("7_li5i0")]
-position = Vector2(416, 208)
+position = Vector2(420, 224)
+inventory_icon = SubResource("AtlasTexture_ibis2")
+item_id = "B"
+item_sprite = SubResource("AtlasTexture_yrefk")
 
 [node name="ItemC" parent="." unique_id=1380358990 instance=ExtResource("7_li5i0")]
-position = Vector2(39.999996, 232)
-rotation = 1.5711408
+position = Vector2(72, 248)
+inventory_icon = SubResource("AtlasTexture_lcq73")
+item_id = "C"
+item_sprite = SubResource("AtlasTexture_0qllr")

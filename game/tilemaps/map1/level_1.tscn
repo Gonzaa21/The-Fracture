@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://r4bjvtrxcwt1" path="res://game/buildings/building_2.tscn" id="6_0ir3q"]
 [ext_resource type="PackedScene" uid="uid://dccidlad6cjyf" path="res://game/buildings/Monument.tscn" id="7_yrunr"]
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="8_mfrso"]
+[ext_resource type="Texture2D" uid="uid://b0q7puqasyopl" path="res://assets/player principal/inventory/BateryIcon.png" id="8_tejcn"]
 [ext_resource type="PackedScene" uid="uid://cg6sy686p065a" path="res://game/objects/street lamp/streetlamp_tile.tscn" id="9_oes7j"]
 [ext_resource type="PackedScene" uid="uid://y62y7n1cnff5" path="res://game/fragments/tiles/fragments_tile.tscn" id="11_ictta"]
 [ext_resource type="PackedScene" uid="uid://cdoo1uhxpr3nf" path="res://game/fragments/popups/fragment_popup_warning.tscn" id="12_slesh"]
@@ -35,6 +36,7 @@ position = Vector2(264, 257)
 
 [node name="Battery" parent="." unique_id=1257170688 instance=ExtResource("14_p2l5k")]
 position = Vector2(240, 224)
+inventory_icon = ExtResource("8_tejcn")
 
 [node name="Building1" parent="." unique_id=541241113 instance=ExtResource("5_mv2oe")]
 

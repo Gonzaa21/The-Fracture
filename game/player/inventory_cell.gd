@@ -33,6 +33,7 @@ func fade_in():
 func remove_item():
 	if sound: sound.play()
 	fade_out()
+	current_icon = null
 
 func fade_out():
 	var tween = create_tween()

@@ -17,8 +17,9 @@ func _ready():
 			if GameManager.battery_collected:
 				queue_free()
 		"A", "B", "C":
-			if GameManager.generator_pieces.get(item_id, false):
+			if GameManager.items_collected.get(item_id, false):
 				queue_free()
+			label.text = ""
 
 func _process(_delta):
 	if player_nearby and Input.is_action_just_pressed("interact"):
@@ -38,18 +39,13 @@ func collect():
 			GameManager.has_battery = true
 			GameManager.battery_collected = true
 		"A", "B", "C":
-			GameManager.generator_pieces[item_id] = true
+			GameManager.items_collected[item_id] = true
+			label.text = ""
 	
 	if inventory_icon:
 		player.add_inventory(inventory_icon)
 		GameManager.current_inventory_icon = inventory_icon
-	print("Item obtenido: ", item_id)
-	
-	var tween = create_tween()
-	tween.tween_property(sprite, "position:y", sprite.position.y - 50, 0.3)
-	tween.tween_property(sprite, "modulate:a", 0.0, 0.3)
-	await tween.finished
-	
+		GameManager.current_item_id = item_id
 	queue_free()
 
 func _on_body_entered(body):

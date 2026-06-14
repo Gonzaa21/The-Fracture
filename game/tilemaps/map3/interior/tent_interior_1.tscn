@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="4_ggsws"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_w718i"]
 [ext_resource type="Texture2D" uid="uid://ny8w567v2f36" path="res://assets/interior/TILESET_LABORATORY.png" id="5_ex2e6"]
+[ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="8_pc7uy"]
+[ext_resource type="Texture2D" uid="uid://d5s5s8dryy2r" path="res://assets/player principal/inventory/workshop_items.png" id="9_hjws0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ggsws"]
 texture = ExtResource("1_inc18")
@@ -2074,6 +2076,14 @@ sources/0 = SubResource("TileSetAtlasSource_d6mw5")
 sources/1 = SubResource("TileSetAtlasSource_pc7uy")
 sources/2 = SubResource("TileSetAtlasSource_hjws0")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_57gvk"]
+atlas = ExtResource("9_hjws0")
+region = Rect2(25, 1, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djh1j"]
+atlas = ExtResource("9_hjws0")
+region = Rect2(1, 2, 13, 13)
+
 [node name="TentInterior1" type="Node2D" unique_id=591354033]
 
 [node name="Background" type="ColorRect" parent="." unique_id=495469451]
@@ -2104,6 +2114,12 @@ scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAXAA4AAAAUAAgAAAAXAA8AAAAUAAkAAAAXABAAAAAUAAoAAAAXABEAAAAUAAsAAAAYAA4AAAAVAAgAAAAYAA8AAAAVAAkAAAAYABAAAAAVAAoAAAAYABEAAAAVAAsAAAAXABIAAAASAA8AAAAYABIAAAATAA8AAAAZABAAAAATAAEAAAAaAA8AAQAMAAEAAAA=")
 tile_set = SubResource("TileSet_w718i")
 
+[node name="ItemA" parent="." unique_id=706111660 instance=ExtResource("8_pc7uy")]
+position = Vector2(254, 169)
+inventory_icon = SubResource("AtlasTexture_57gvk")
+item_id = "A"
+item_sprite = SubResource("AtlasTexture_djh1j")
+
 [node name="Deco2" type="TileMapLayer" parent="." unique_id=121641249]
 position = Vector2(0, 4)
 scale = Vector2(0.6, 0.6)
@@ -2113,7 +2129,7 @@ tile_set = SubResource("TileSet_w718i")
 [node name="Deco3" type="TileMapLayer" parent="." unique_id=1122428117]
 position = Vector2(0, 4)
 scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAAZAAwAAAAYAAAAAAAZAA0AAAAYAAEAAAAZAA8AAAAQAAEAAAAaABIAAAASAAEAAAAaAA4AAAABAA4AAAAaAA8AAAABAA8AAAAXAA4AAAAWAAMAAAAYABAAAgAZAAYAAAAYAA8AAQAIAAEAAAAXABAAAgAYAAYAAAAXABEAAgAYAAcAAAAYABEAAgAZAAcAAAA=")
+tile_map_data = PackedByteArray("AAAZAAwAAAAYAAAAAAAZAA0AAAAYAAEAAAAaABIAAAASAAEAAAAaAA4AAAABAA4AAAAaAA8AAAABAA8AAAAXAA4AAAAWAAMAAAAYABAAAgAZAAYAAAAYAA8AAQAIAAEAAAAXABAAAgAYAAYAAAAXABEAAgAYAAcAAAAYABEAAgAZAAcAAAAZAA8AAAAQAAEAAAAZAA4AAAAQAAAAAAA=")
 tile_set = SubResource("TileSet_w718i")
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("4_ggsws")]

@@ -6,6 +6,7 @@ extends Area2D
 @export var requires_key: bool = false 
 @export var key_id: String = ""
 @export var requires_power: bool = false
+var auth = GameManager.chain_auth
 
 var player_nearby: bool = false
 var is_opening: bool = false
@@ -30,9 +31,14 @@ func _open_door():
 	if is_opening or target_scene.is_empty():
 		return
 	
-	if requires_power and not GameManager.lab_door_powered:
-		print("Sin energía")
-		return
+	if requires_power:
+		if not GameManager.lab_door_powered:
+			print("Sin energía")
+			return
+		
+		if not (auth["terminal_1"] and auth["terminal_2"] and auth["terminal_3"]):
+			print("Faltan autorizaciones")
+			return
 	
 	if requires_key:
 		if not GameManager.has_fragment(key_id):

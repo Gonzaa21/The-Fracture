@@ -22,6 +22,7 @@ var background_sound: AudioStreamPlayer
 var current_music_volume: float = -10.0
 # inventory
 var current_inventory_icon: Texture2D = null
+var current_item_id: String = ""
 # lab
 var key_code: Array = []
 #level2
@@ -29,8 +30,10 @@ var level2_unlocked: bool = false
 var unlock_echo_sound: AudioStream
 #level3
 var generator_pieces: Dictionary = { "A": false, "B": false,  "C": false }
+var items_collected: Dictionary = { "A": false, "B": false, "C": false }
 var lab_door_powered: bool = false
 var generator_repaired: bool = false
+var chain_auth: Dictionary = { "terminal_1": false, "terminal_2": false, "terminal_3": false }
 
 func load_database():
 	var file = FileAccess.open("res://game/fragments/fragments.json",FileAccess.READ)

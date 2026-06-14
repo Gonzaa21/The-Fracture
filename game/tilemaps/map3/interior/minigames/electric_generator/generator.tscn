@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c4ew7bhjlbjgo" path="res://assets/interior/PostApoc_Workshop_WithShadow.png" id="1_dg0vf"]
 [ext_resource type="Script" uid="uid://dpiys5r4lkcbk" path="res://game/tilemaps/map3/interior/minigames/electric_generator/generator.gd" id="1_wjd25"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_0b24t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjd25"]
 texture = ExtResource("1_dg0vf")
@@ -1594,7 +1595,7 @@ texture = ExtResource("1_dg0vf")
 sources/0 = SubResource("TileSetAtlasSource_gdf35")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crrd1"]
-size = Vector2(20, 10)
+size = Vector2(32, 26)
 
 [node name="Generator" type="Area2D" unique_id=1111638430]
 script = ExtResource("1_wjd25")
@@ -1609,5 +1610,16 @@ tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 18, 0, 26, 0, 0,
 tile_set = SubResource("TileSet_lwjs4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=333525542]
-position = Vector2(0, 5)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_crrd1")
+
+[node name="Label" type="Label" parent="." unique_id=13340861]
+z_index = 10
+offset_left = -40.0
+offset_top = 7.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("3_0b24t")
+theme_override_font_sizes/font_size = 6
+text = "[E] Interactuar"

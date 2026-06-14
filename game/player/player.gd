@@ -14,7 +14,7 @@ var footstep_interval: float = 0.3
 
 func _ready() -> void:
 	setup_footstep_audio()
-	if GameManager.has_battery and GameManager.current_inventory_icon:
+	if GameManager.current_inventory_icon:
 		inventory_cell.show_item_silent(GameManager.current_inventory_icon)
 
 func _physics_process(delta: float) -> void:
