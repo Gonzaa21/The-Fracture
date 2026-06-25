@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_42hib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cswul"]
-size = Vector2(15, 21)
+size = Vector2(15, 10.5)
 
 [node name="CollectItem" type="Area2D" unique_id=706111660]
 script = ExtResource("1_b5ld5")

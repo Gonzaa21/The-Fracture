@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b76fg2866dr14" path="res://game/tilemaps/map3/interior/minigames/radio/display/signalstrength_display.gd" id="4_5ajqs"]
 [ext_resource type="Script" uid="uid://bvcmu21egkalg" path="res://game/tilemaps/map3/interior/minigames/radio/display/frequency_slider.gd" id="4_wcic6"]
 [ext_resource type="Script" uid="uid://bd520k4sbdvv" path="res://game/tilemaps/map3/interior/minigames/radio/display/dial_control.gd" id="6_jfwy7"]
+[ext_resource type="Script" uid="uid://cu48w65oh2rt6" path="res://game/tilemaps/map3/interior/minigames/radio/dial_port.gd" id="8_wcic6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtngv"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -92,6 +93,25 @@ offset_top = 113.0
 offset_right = 327.0
 offset_bottom = 170.6
 script = ExtResource("6_jfwy7")
+
+[node name="Port" type="Label" parent="Panel" unique_id=295017486]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 90.0
+offset_right = 162.0
+offset_bottom = 103.0
+theme_override_fonts/font = ExtResource("3_qh3dw")
+theme_override_font_sizes/font_size = 8
+text = "00"
+horizontal_alignment = 1
+
+[node name="DialPort" type="Control" parent="Panel" unique_id=1918938398]
+anchors_preset = 0
+offset_left = 128.0
+offset_top = 100.0
+offset_right = 135.0
+offset_bottom = 121.5
+script = ExtResource("8_wcic6")
 
 [node name="PlayButton" type="Button" parent="Panel" unique_id=1094522841]
 layout_mode = 0
