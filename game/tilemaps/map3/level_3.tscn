@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="3_euvld"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_83qqx"]
 [ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/tilemaps/map3/exterior/objects/fragment_popup_photo.tscn" id="4_wfijn"]
-[ext_resource type="PackedScene" uid="uid://cllglexvfl4jy" path="res://game/tilemaps/map3/interior/minigames/auth_chain/panel_chain_terminal.tscn" id="7_k65yf"]
 
 [node name="Level3" type="Node2D" unique_id=1226103913]
 script = ExtResource("1_b83io")
@@ -26,6 +25,3 @@ visible = false
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=1539688206]
 color = Color(0.59313357, 0.5931336, 0.5931334, 1)
-
-[node name="PanelChainTerminal" parent="." unique_id=2032599532 instance=ExtResource("7_k65yf")]
-digit_index = [0, 1]

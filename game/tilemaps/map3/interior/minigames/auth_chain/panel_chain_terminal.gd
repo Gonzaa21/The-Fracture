@@ -14,7 +14,7 @@ func _ready() -> void:
 	panel.visible = false
 	var key = GameManager.key_code
 	for i in digit_index:
-		correct_digits.append(key[i])
+		correct_digits.append(int(key[i]))
 	
 	if digit_index.size() == 1:
 		digit_2.visible = false
@@ -25,9 +25,10 @@ func _ready() -> void:
 func _on_confirm_pressed():
 	var digits_int = []
 	digits_int.append(int(digit_1.text))
+	print(correct_digits)
 	if digit_index.size() > 1:
 		digits_int.append(int(digit_2.text))
-	
+	print(digits_int)
 	if correct_digits == digits_int:
 		GameManager.chain_auth[terminal_id] = true
 		authorized.emit()
