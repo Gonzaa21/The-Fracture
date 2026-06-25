@@ -1,6 +1,7 @@
 extends Node
 
 signal fragment_collected(fragment_id)
+signal open_lab_door
 
 # fragments var
 var fragments_database = {}

@@ -2133,7 +2133,7 @@ tile_map_data = PackedByteArray("AAAZAAwAAAAYAAAAAAAZAA0AAAAYAAEAAAAaABIAAAASAAE
 tile_set = SubResource("TileSet_w718i")
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("4_ggsws")]
-position = Vector2(240, 181)
+position = Vector2(239, 179)
 target_scene = "res://game/tilemaps/map3/level_3.tscn"
 spawn_point_id = "TentExit1"
 

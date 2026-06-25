@@ -14,6 +14,7 @@ var is_opening: bool = false
 func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
+	GameManager.open_lab_door.connect(_on_lab_door_opened)
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
@@ -52,3 +53,7 @@ func _open_door():
 	
 	print("Abriendo puerta hacia: ", target_scene)
 	TransitionEffect.fade_to_scene(target_scene)
+
+func _on_lab_door_opened():
+	if target_scene != "res://game/tilemaps/map3/interior/laboratory_interior1.tscn": return
+	if not is_instance_valid(sprite): return

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c3p5on8l3nau5" path="res://game/objects/door_1.gd" id="1_ce8ea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i07xd"]
-size = Vector2(24, 14)
+size = Vector2(21, 9)
 
 [node name="Door1" type="Area2D" unique_id=1253240259]
 collision_layer = 2
@@ -14,5 +14,5 @@ position = Vector2(0, 2.7000003)
 scale = Vector2(1.2, 0.97499996)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=639672412]
-position = Vector2(0, 13)
+position = Vector2(1, 13)
 shape = SubResource("RectangleShape2D_i07xd")
