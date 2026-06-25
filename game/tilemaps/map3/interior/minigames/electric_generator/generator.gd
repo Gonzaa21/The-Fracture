@@ -12,6 +12,9 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	label.visible = false
+	if GameManager.generator_repaired:
+		is_fixed = true
+		label.text = "Generador Activo"
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):

@@ -150,7 +150,7 @@ func _on_close_pressed():
 	get_tree().paused = false
 	if transmission_authorized:
 		var echo_player = AudioStreamPlayer.new()
-		get_tree().add_child(echo_player)
+		GameManager.add_child(echo_player)
 		echo_player.stream = load("res://assets/sound/effects/eco.wav")
 		echo_player.play()
 		echo_player.finished.connect(func():
