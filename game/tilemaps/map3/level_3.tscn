@@ -4,14 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://ua6ib7bet8mk" path="res://game/tilemaps/map3/tilemap3.tscn" id="1_dbdlj"]
 [ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_482n1"]
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="3_euvld"]
+[ext_resource type="PackedScene" uid="uid://in4n1whx7esl" path="res://game/fragments/popups/fragment_popup_document.tscn" id="3_k65yf"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_83qqx"]
 [ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/tilemaps/map3/exterior/objects/fragment_popup_photo.tscn" id="4_wfijn"]
 
 [node name="Level3" type="Node2D" unique_id=1226103913]
 script = ExtResource("1_b83io")
 
+[node name="Filter" parent="." unique_id=1738502881 instance=ExtResource("4_83qqx")]
+
+[node name="Darkness" type="CanvasModulate" parent="." unique_id=1539688206]
+color = Color(0.59313357, 0.5931336, 0.5931334, 1)
+
 [node name="FragmentPopupPhoto" parent="." unique_id=66329717 instance=ExtResource("4_wfijn")]
 layer = 2
+
+[node name="FragmentPopupDoc" parent="." unique_id=1398118531 instance=ExtResource("3_k65yf")]
 
 [node name="TileMap" parent="." unique_id=1177837361 instance=ExtResource("1_dbdlj")]
 
@@ -20,8 +28,3 @@ position = Vector2(16, 168)
 
 [node name="Limits" parent="." unique_id=1816366298 instance=ExtResource("3_euvld")]
 visible = false
-
-[node name="Filter" parent="." unique_id=1738502881 instance=ExtResource("4_83qqx")]
-
-[node name="Darkness" type="CanvasModulate" parent="." unique_id=1539688206]
-color = Color(0.59313357, 0.5931336, 0.5931334, 1)

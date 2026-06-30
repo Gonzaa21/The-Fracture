@@ -2,12 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://btcwvrv7w5ecu" path="res://assets/interior/Camping_Furnitureset.png" id="1_inc18"]
 [ext_resource type="PackedScene" uid="uid://cruxte650capa" path="res://game/player/player.tscn" id="2_uqwiy"]
+[ext_resource type="PackedScene" uid="uid://in4n1whx7esl" path="res://game/fragments/popups/fragment_popup_document.tscn" id="3_djh1j"]
 [ext_resource type="PackedScene" uid="uid://dol1uv0vbsaor" path="res://game/settings/interior settings/camera_interior.tscn" id="3_oadwr"]
 [ext_resource type="Texture2D" uid="uid://c4wv5dlit7fly" path="res://assets/interior/post apoc office furniture set updated.png" id="4_b6i84"]
 [ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="4_ggsws"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_w718i"]
 [ext_resource type="Texture2D" uid="uid://ny8w567v2f36" path="res://assets/interior/TILESET_LABORATORY.png" id="5_ex2e6"]
+[ext_resource type="Texture2D" uid="uid://cal4x6qbacepq" path="res://assets/interior/PostApoc_Workshop_Icons.png" id="6_hjws0"]
 [ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="8_pc7uy"]
+[ext_resource type="PackedScene" uid="uid://dp0ntid76fn7s" path="res://game/fragments/fragment.tscn" id="9_57gvk"]
 [ext_resource type="Texture2D" uid="uid://d5s5s8dryy2r" path="res://assets/player principal/inventory/workshop_items.png" id="9_hjws0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ggsws"]
@@ -2069,12 +2072,118 @@ texture = ExtResource("5_ex2e6")
 24:19/0 = 0
 25:19/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57gvk"]
+texture = ExtResource("6_hjws0")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_w718i"]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_d6mw5")
 sources/1 = SubResource("TileSetAtlasSource_pc7uy")
 sources/2 = SubResource("TileSetAtlasSource_hjws0")
+sources/3 = SubResource("TileSetAtlasSource_57gvk")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_57gvk"]
 atlas = ExtResource("9_hjws0")
@@ -2104,6 +2213,8 @@ color = Color(0.5921569, 0.5921569, 0.5921569, 1)
 [node name="CameraInterior" parent="." unique_id=431117305 instance=ExtResource("3_oadwr")]
 position = Vector2(240, 168)
 
+[node name="FragmentPopupDoc" parent="." unique_id=1398118531 instance=ExtResource("3_djh1j")]
+
 [node name="Floor" type="TileMapLayer" parent="." unique_id=948625357]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAXAA0AAAAOAA0AAAAXAA4AAAAOAA4AAAAXAA8AAAAOAA8AAAAXABAAAAAOABAAAAAXABEAAAAOABEAAAAXABIAAAAOABIAAAAXABMAAAAOABMAAAAYAAwAAAAPAAwAAAAYAA0AAAAPAA0AAAAYAA4AAAAPAA4AAAAYAA8AAAAPAA8AAAAYABAAAAAPABAAAAAYABEAAAAPABEAAAAYABIAAAAPABIAAAAYABMAAAAPABMAAAAZAAwAAAAQAAwAAAAZAA0AAAAQAA0AAAAZAA4AAAAQAA4AAAAZAA8AAAAQAA8AAAAZABAAAAAQABAAAAAZABEAAAAQABEAAAAZABIAAAAQABIAAAAZABMAAAAQABMAAAAaAA0AAAARAA0AAAAaAA4AAAARAA4AAAAaAA8AAAARAA8AAAAaABAAAAARABAAAAAaABEAAAARABEAAAAaABIAAAARABIAAAAaABMAAAARABMAAAA=")
@@ -2129,8 +2240,12 @@ tile_set = SubResource("TileSet_w718i")
 [node name="Deco3" type="TileMapLayer" parent="." unique_id=1122428117]
 position = Vector2(0, 4)
 scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAAZAAwAAAAYAAAAAAAZAA0AAAAYAAEAAAAaABIAAAASAAEAAAAaAA4AAAABAA4AAAAaAA8AAAABAA8AAAAXAA4AAAAWAAMAAAAYABAAAgAZAAYAAAAYAA8AAQAIAAEAAAAXABAAAgAYAAYAAAAXABEAAgAYAAcAAAAYABEAAgAZAAcAAAAZAA8AAAAQAAEAAAAZAA4AAAAQAAAAAAA=")
+tile_map_data = PackedByteArray("AAAZAAwAAAAYAAAAAAAZAA0AAAAYAAEAAAAaABIAAAASAAEAAAAaAA4AAAABAA4AAAAaAA8AAAABAA8AAAAXAA4AAAAWAAMAAAAYABAAAgAZAAYAAAAXABAAAgAYAAYAAAAXABEAAgAYAAcAAAAYABEAAgAZAAcAAAAZAA8AAAAQAAEAAAAZAA4AAAAQAAAAAAAYAA8AAwALAAcAABA=")
 tile_set = SubResource("TileSet_w718i")
+
+[node name="Diary3" parent="." unique_id=770656303 instance=ExtResource("9_57gvk")]
+position = Vector2(236, 153)
+fragment_id = "texto_cientifico3"
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("4_ggsws")]
 position = Vector2(239, 179)

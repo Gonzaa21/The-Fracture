@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://crw7417dfa2lo" path="res://game/objects/door_1.tscn" id="5_ssdyy"]
 [ext_resource type="PackedScene" uid="uid://twduaxvgwe35" path="res://game/tilemaps/map3/interior/minigames/electric_generator/generator.tscn" id="7_546kx"]
 [ext_resource type="PackedScene" uid="uid://bokfojviw4n1p" path="res://game/tilemaps/map3/interior/minigames/auth_chain/chain_terminal_object.tscn" id="7_o6xks"]
+[ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="8_duabm"]
+[ext_resource type="Texture2D" uid="uid://d5s5s8dryy2r" path="res://assets/player principal/inventory/workshop_items.png" id="9_1l1x0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyy0a"]
 texture = ExtResource("1_rjfvj")
@@ -2132,6 +2134,14 @@ texture = ExtResource("3_yqts3")
 [sub_resource type="TileSet" id="TileSet_8icl8"]
 sources/0 = SubResource("TileSetAtlasSource_yqts3")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkeej"]
+atlas = ExtResource("9_1l1x0")
+region = Rect2(93, 5, 22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwr07"]
+atlas = ExtResource("9_1l1x0")
+region = Rect2(67, 0, 9, 16)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssdyy"]
 size = Vector2(29, 2)
 
@@ -2214,6 +2224,12 @@ z_index = 1
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAXAAkAAAAFAA4AAAAPAAoAAAADAA4AAAARABIAAAAHABUAAAAUABMAAAAEAA4AAAAcABEAAAAKAAgAAAAcABIAAAAKAAkAAAAdABEAAAALAAgAAAAdABIAAAALAAkAAAAbABEAAAABABIAAAAbABIAAAABABMAAAAeABEAAAABABAAAAAeABIAAAABABEAAAAkABEAAAAZAA4AAAAfAA8AAAAEAA8AAAAaAA4AAAALAAsAAAAXABEAAAAJAA0AAAAVABAAAAAKAAoAAAAWABAAAAAIABEAAAA=")
 tile_set = SubResource("TileSet_ssdyy")
+
+[node name="ItemC" parent="." unique_id=706111660 instance=ExtResource("8_duabm")]
+position = Vector2(168, 120)
+inventory_icon = SubResource("AtlasTexture_xkeej")
+item_id = "C"
+item_sprite = SubResource("AtlasTexture_vwr07")
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("5_ssdyy")]
 position = Vector2(112, 168)

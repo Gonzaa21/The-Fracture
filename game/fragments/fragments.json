@@ -42,6 +42,31 @@
 	"tarjeta": {
 		"id": 9,
 		"content": "20Lts N°20483"
-	}
+	},
 	
+	
+	
+	"texto_cientifico1": {
+		"id": 10,
+		"content": "Van tres días desde que puse la firma. Afuera el mundo se está cayendo a pedazos, con los hospitales desbordados y los aeropuertos cerrados, pero aquí adentro parece que el tiempo se detuvo. Nexus es... otra cosa. Mi tarea es monótona: puros datos de salud.",
+		"date" : "14 de marzo, 2020"
+	},
+	"texto_cientifico2": {
+		"id": 11,
+		"content": "Llevo un año analizando estos números y no tienen lógica. En poblaciones de este tamaño hay insomnio, cuadros crónicos; es estadística básica. Pero aquí las curvas son... planas. Rangos perfectos, artificiales.\nMara esquivó la mirada cuando le pregunté por la salud mental de los residentes. NEXUS 'previene' los síntomas antes de que existan. ¿A qué costo?",
+		"date": "2 de febrero, 2021"
+	},
+	"texto_cientifico3": {
+		"id": 12,
+		"content": "No recordaba sobre este diario…\nHay variables en mis reportes que nunca me explicaron para qué sirven. No son biomarcadores. Pasé dos semanas investigando y llegué a una conclusión: miden la respuesta emocional ante estímulos del entorno.\nEs decir, NEXUS no solo monitorea la salud. Clasifica estados afectivos en tiempo real. Lo que yo analizaba era el resultado de algo que alguien ya había hecho antes de que los datos llegaran a mí.",
+		"date": "17 de diciembre, 2022"
+	},
+	"texto_cientifico4": {
+		"id": 13,
+		"content": "Dejé de anotar fechas.\nSeguí tirando del hilo del expediente. Tardé semanas. Los documentos de NeuralCorp no están en la red interna, o al menos no donde se supone que debería mirar.\nEncontré archivos de NeuralCorp que no deberían existir. Coordenadas de otras ciudades, presupuestos sin origen y un estado para Nexus: 'Fase Final'. Esto nunca fue un refugio, compró un laboratorio a escala urbana, somos el experimento."
+	},
+	"texto_cientifico5": {
+		"id": 14,
+		"content": "No sé para quién escribo esto.\nHoy tres personas que conozco no vinieron a trabajar. Me dijeron que estaban bien, que se habían tomado un día. Los tres me lo dijeron con exactamente las mismas palabras.\nHay algo que viene. Lo siento en cómo funciona la ciudad estos días, demasiado quieta, demasiado normal.\nSi alguien encuentra esto, no busques a NeuralCorp. Busca lo que NeuralCorp estaba mirando. Nexus nunca fue el destino.",
+	},
 }
