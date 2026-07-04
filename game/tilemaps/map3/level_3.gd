@@ -12,7 +12,8 @@ func _ready():
 	var marker = find_child(location, true, false)
 	if marker:
 		var photo = preload("res://game/tilemaps/map3/exterior/objects/photo_object.tscn").instantiate()
+		var tilemap_node = get_node("TileMap")
+		tilemap_node.add_child(photo)
 		photo.global_position = marker.global_position
-		add_child(photo)
 	else:
 		push_error("No se encontró marker: " + location)

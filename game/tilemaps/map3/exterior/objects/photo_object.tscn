@@ -1,12 +1,23 @@
 [gd_scene format=3 uid="uid://css8jwi5qmloq"]
 
 [ext_resource type="Script" uid="uid://goykawmgub5e" path="res://game/tilemaps/map3/exterior/objects/photo_object.gd" id="1_7syqn"]
+[ext_resource type="Texture2D" uid="uid://cal4x6qbacepq" path="res://assets/interior/PostApoc_Workshop_Icons.png" id="2_hbce0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rm60a"]
-size = Vector2(25, 25)
+size = Vector2(11.125, 11.125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kquqr"]
+atlas = ExtResource("2_hbce0")
+region = Rect2(193, 115, 13, 11)
 
 [node name="PhotoObject" type="Area2D" unique_id=1306957376]
 script = ExtResource("1_7syqn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=552332313]
 shape = SubResource("RectangleShape2D_rm60a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=824426293]
+y_sort_enabled = true
+position = Vector2(0, 2.3841858e-07)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_kquqr")
