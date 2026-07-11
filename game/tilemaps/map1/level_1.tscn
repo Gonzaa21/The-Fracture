@@ -37,6 +37,7 @@ position = Vector2(264, 257)
 [node name="Battery" parent="." unique_id=1257170688 instance=ExtResource("14_p2l5k")]
 position = Vector2(240, 224)
 inventory_icon = ExtResource("8_tejcn")
+item_id = "battery"
 
 [node name="Building1" parent="." unique_id=541241113 instance=ExtResource("5_mv2oe")]
 

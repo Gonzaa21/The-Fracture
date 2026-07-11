@@ -1,10 +1,11 @@
 extends Area2D
-enum PopupStyle { WARNING, DOCUMENT, NOTES, DIALOGUE}
+enum PopupStyle { WARNING, DOCUMENT, NOTES, DIALOGUE, IMAGE}
 
 @export var fragment_id: String = ""
 @export var popup_style: PopupStyle = PopupStyle.DOCUMENT 
 @onready var sprite = $Sprite2D
 @onready var icon = $CanvasLayer/TextureRect
+@export var image_texture: Texture2D
 
 var player_nearby: bool = false
 var already_collected: bool = false
@@ -28,8 +29,7 @@ func setup_audio():
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_nearby = true
-		icon.visible = true
-		
+		if !already_collected: icon.visible = true
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -66,6 +66,9 @@ func interact():
 				var dialogue_popup = get_tree().current_scene.get_node_or_null("DialoguePopup")
 				if dialogue_popup:
 					dialogue_popup.show_fragment(fragment_id)
+			PopupStyle.IMAGE:
+				var image_popup = get_tree().current_scene.get_node_or_null("FragmentPopupPhoto")
+				if image_popup: image_popup.show_photo(image_texture, [])
 		
 		var popup = get_tree().current_scene.get_node_or_null(popup_node_name)
 		if popup:
@@ -73,4 +76,4 @@ func interact():
 			print("¡Fragmento recolectado! ID: ", fragment_id)
 
 func should_play_collect_sound() -> bool:
-	return popup_style == PopupStyle.DOCUMENT or popup_style == PopupStyle.NOTES
+	return popup_style == PopupStyle.DOCUMENT or popup_style == PopupStyle.NOTES or popup_style == PopupStyle.IMAGE

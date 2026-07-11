@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="3_euvld"]
 [ext_resource type="PackedScene" uid="uid://in4n1whx7esl" path="res://game/fragments/popups/fragment_popup_document.tscn" id="3_k65yf"]
 [ext_resource type="PackedScene" uid="uid://dck3k86gujnd1" path="res://game/settings/filter/filter.tscn" id="4_83qqx"]
-[ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/tilemaps/map3/exterior/objects/fragment_popup_photo.tscn" id="4_wfijn"]
+[ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/fragments/popups/fragment_popup_photo.tscn" id="4_wfijn"]
 
 [node name="Level3" type="Node2D" unique_id=1226103913]
 script = ExtResource("1_b83io")
