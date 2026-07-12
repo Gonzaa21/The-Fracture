@@ -27,7 +27,8 @@ func _process(_delta):
 func _open_radio_tuner():
 	var radio_instance = radio_tuner_scene.instantiate()
 	get_tree().current_scene.add_child(radio_instance)
-	get_tree().paused = true
+	Global.input_locked = true
+	GameManager.lower_background_music(-28, 1.5)
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		player.set_process_input(false)

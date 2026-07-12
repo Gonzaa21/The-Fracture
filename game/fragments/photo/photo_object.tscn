@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://css8jwi5qmloq"]
 
-[ext_resource type="Script" uid="uid://goykawmgub5e" path="res://game/tilemaps/map3/exterior/objects/photo_object.gd" id="1_7syqn"]
+[ext_resource type="Script" uid="uid://goykawmgub5e" path="res://game/fragments/photo/photo_object.gd" id="1_7syqn"]
 [ext_resource type="Texture2D" uid="uid://cal4x6qbacepq" path="res://assets/interior/PostApoc_Workshop_Icons.png" id="2_hbce0"]
 [ext_resource type="Texture2D" uid="uid://6jn4qq5nm6b2" path="res://assets/backgrounds_popup/icon_fragment.png" id="3_kquqr"]
 

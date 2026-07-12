@@ -107,12 +107,12 @@ func background_music():
 		background_sound.play()
 
 func lower_background_music(target_volume: float = -30.0, duration: float = 1.5):
-	if background_music:
+	if background_sound:
 		var tween = create_tween()
 		tween.tween_property(background_sound, "volume_db", target_volume, duration)
 
 func restore_background_music(duration: float = 1.5):
-	if background_music:
+	if background_sound:
 		var tween = create_tween()
 		tween.tween_property(background_sound, "volume_db", current_music_volume, duration)
 

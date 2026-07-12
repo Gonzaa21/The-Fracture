@@ -147,7 +147,8 @@ func _on_close_pressed():
 	if player:
 		player.set_process_input(true)
 	
-	get_tree().paused = false
+	Global.input_locked = false
+	GameManager.restore_background_music(1.5)
 	if transmission_authorized:
 		var echo_player = AudioStreamPlayer.new()
 		GameManager.add_child(echo_player)
