@@ -21,9 +21,6 @@ position = Vector2(176, 168)
 [node name="TreeLowYellow20" parent="." unique_id=617692229 instance=ExtResource("2_yy55t")]
 position = Vector2(136, 168)
 
-[node name="TreeLowYellow21" parent="." unique_id=1221188983 instance=ExtResource("2_yy55t")]
-position = Vector2(425, 157)
-
 [node name="TreeLowYellow22" parent="." unique_id=773416510 instance=ExtResource("2_yy55t")]
 position = Vector2(216, 160)
 
