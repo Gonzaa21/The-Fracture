@@ -16,14 +16,10 @@ script = ExtResource("1_a5w5y")
 
 [node name="Filter" parent="." unique_id=2099620669 instance=ExtResource("1_jjuub")]
 
-[node name="Darkness" type="CanvasModulate" parent="." unique_id=411457695]
-color = Color(0.5921569, 0.5921569, 0.5921569, 1)
-
 [node name="Limits" parent="." unique_id=356794169 instance=ExtResource("2_4vws6")]
 visible = false
 
 [node name="LimitsForest" parent="." unique_id=9302445 instance=ExtResource("3_ekqkl")]
-visible = false
 
 [node name="Tilemap" parent="." unique_id=1369873902 instance=ExtResource("3_gxqjn")]
 

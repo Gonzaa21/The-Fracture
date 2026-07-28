@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcb1rf0a6tlnm"]
+[gd_scene format=3 uid="uid://dcb1rf0a6tlnm"]
 
 [ext_resource type="Texture2D" uid="uid://pv6xiphb2lmj" path="res://assets/nature/campfire_animation.png" id="1_6lp3j"]
 [ext_resource type="Script" uid="uid://btcim7245yyw4" path="res://game/natureanimations/nature_animation_3.gd" id="2_mlu4q"]
@@ -43,25 +43,23 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6lp3j"]
 
-[node name="CampfireAnimation" type="Sprite2D"]
+[node name="CampfireAnimation" type="Sprite2D" unique_id=1158786612]
 texture = ExtResource("1_6lp3j")
 hframes = 2
 script = ExtResource("2_mlu4q")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_44qh4")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1492637059]
+libraries/ = SubResource("AnimationLibrary_44qh4")
 speed_scale = 0.625
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1210030943]
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=466951053]
 shape = SubResource("CircleShape2D_6lp3j")
 
-[node name="PointLight2D" type="PointLight2D" parent="StaticBody2D"]
+[node name="PointLight2D" type="PointLight2D" parent="StaticBody2D" unique_id=518010658]
 position = Vector2(7.6293945e-06, 3.0517578e-05)
 scale = Vector2(0.31201172, 0.3236217)
 color = Color(0.8627451, 0.39215687, 0.15686275, 1)

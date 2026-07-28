@@ -1,8 +1,6 @@
 extends Area2D
-
 @export var level2_scene := "res://game/tilemaps/map2/level_2.tscn"
 @onready var spawn_point: Marker2D = $SpawnPoint
-
 var player_nearby: bool = false
 var is_transitioning := false
 

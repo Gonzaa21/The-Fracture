@@ -2206,7 +2206,7 @@ grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=570656939]
-color = Color(0.5921569, 0.5921569, 0.5921569, 1)
+color = Color(0.8156863, 0.8156863, 0.8156863, 1)
 
 [node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_w718i")]
 

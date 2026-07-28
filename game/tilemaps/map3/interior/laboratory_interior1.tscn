@@ -5557,9 +5557,6 @@ script = ExtResource("1_g16gn")
 
 [node name="Filter" parent="." unique_id=410465455 instance=ExtResource("3_01qvl")]
 
-[node name="Darkness" type="CanvasModulate" parent="." unique_id=1981066154]
-color = Color(0.5921569, 0.5921569, 0.5921569, 1)
-
 [node name="FragmentPopupDoc" parent="." unique_id=1398118531 instance=ExtResource("3_ff7wb")]
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=612168695]

@@ -2124,7 +2124,6 @@ sources/2 = SubResource("TileSetAtlasSource_qtlt7")
 [node name="TentInterior2" type="Node2D" unique_id=505160155]
 
 [node name="Background" type="ColorRect" parent="." unique_id=1800501458]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2135,8 +2134,7 @@ grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=830461728]
-visible = false
-color = Color(0.5921569, 0.5921569, 0.5921569, 1)
+color = Color(0.8175209, 0.8175214, 0.8175209, 1)
 
 [node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_wv8mu")]
 

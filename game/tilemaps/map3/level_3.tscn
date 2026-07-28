@@ -13,9 +13,6 @@ script = ExtResource("1_b83io")
 
 [node name="Filter" parent="." unique_id=1738502881 instance=ExtResource("4_83qqx")]
 
-[node name="Darkness" type="CanvasModulate" parent="." unique_id=1539688206]
-color = Color(0.59313357, 0.5931336, 0.5931334, 1)
-
 [node name="FragmentPopupPhoto" parent="." unique_id=66329717 instance=ExtResource("4_wfijn")]
 layer = 2
 

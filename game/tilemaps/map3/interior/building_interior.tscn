@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d5s5s8dryy2r" path="res://assets/player principal/inventory/workshop_items.png" id="9_1l1x0"]
 [ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/fragments/popups/fragment_popup_photo.tscn" id="9_xkeej"]
 [ext_resource type="PackedScene" uid="uid://dp0ntid76fn7s" path="res://game/fragments/fragment.tscn" id="10_vwr07"]
-[ext_resource type="Texture2D" uid="uid://cep3enj8kxsd2" path="res://assets/photos/electrical_plan.png" id="11_tkg17"]
+[ext_resource type="Texture2D" uid="uid://rqoby1pjc8g8" path="res://assets/photos/electrical_plan.png" id="11_tkg17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xyy0a"]
 texture = ExtResource("1_rjfvj")
@@ -2159,9 +2159,6 @@ offset_bottom = 272.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
-
-[node name="Darkness" type="CanvasModulate" parent="." unique_id=280406874]
-color = Color(0.5921569, 0.5921569, 0.5921569, 1)
 
 [node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_8icl8")]
 
