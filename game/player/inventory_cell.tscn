@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cooray4f6eqqx"]
+[gd_scene format=3 uid="uid://cooray4f6eqqx"]
 
 [ext_resource type="Script" uid="uid://bxxn80uh1drva" path="res://game/player/inventory_cell.gd" id="1_1nxjf"]
 [ext_resource type="Texture2D" uid="uid://btac617b4nto2" path="res://assets/player principal/inventory/Inventory-Cell.png" id="2_oju2s"]
 [ext_resource type="AudioStream" uid="uid://bxw31uf12hitd" path="res://assets/sound/effects/collect/collect.wav" id="3_oju2s"]
 
-[node name="InventoryCell" type="Control"]
+[node name="InventoryCell" type="Control" unique_id=827872275]
 z_index = 1
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
@@ -13,14 +13,14 @@ offset_right = 32.0
 offset_bottom = 32.0
 script = ExtResource("1_1nxjf")
 
-[node name="CellBackground" type="Sprite2D" parent="."]
+[node name="CellBackground" type="Sprite2D" parent="." unique_id=944994736]
 position = Vector2(16, 16)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_oju2s")
 
-[node name="ItemIcon" type="Sprite2D" parent="."]
+[node name="ItemIcon" type="Sprite2D" parent="." unique_id=370859855]
 position = Vector2(16, 16)
 scale = Vector2(0.104166664, 0.10416665)
 
-[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=233810165]
 stream = ExtResource("3_oju2s")
