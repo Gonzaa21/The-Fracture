@@ -8,8 +8,9 @@ var fragments_database = {}
 var fragments_collected = []
 # computer vars
 var computer_has_battery = false
-var has_battery = false
-var battery_collected: bool = false
+var has_instructor = false
+var instructor_collected: bool = false
+var instruction_file_used: bool = false
 var computer_password = "20483"
 var password_hint_shown = false
 var computer_has_booted: bool = false
@@ -18,6 +19,11 @@ var filesystem_data: Dictionary = {}
 var current_directory: String = "C:\\Users\\User"
 var phoenix_viewed: bool = false
 var omega_decrypted: bool = false
+var degradation_speed_multiplier: float = 1.0
+var degradation_elapsed: float = 0.0
+var degradation_limit: float = 720
+var glitch_timer: Timer
+var omega_acceleration_triggered: bool = false
 # audio
 var background_sound: AudioStreamPlayer
 var current_music_volume: float = -10.0
@@ -73,7 +79,6 @@ func load_filesystem():
 			filesystem_data = json.data
 			current_directory = filesystem_data.get("current_directory", "C:\\Users\\User")
 			
-			# Cargar estado de archivos especiales
 			var special = filesystem_data.get("special_files", {})
 			phoenix_viewed = special.get("phoenix_viewed", false)
 			omega_decrypted = special.get("omega_decrypted", false)
@@ -88,12 +93,16 @@ func load_filesystem():
 
 func mark_phoenix_viewed():
 	phoenix_viewed = true
-	# Eliminar el archivo del filesystem
 	var phoenix_dir = "C:\\Users\\User\\Downloads\\SOP_PROTOCOL_ENFORCEMENT"
 	if filesystem_data["directories"].has(phoenix_dir):
 		var files = filesystem_data["directories"][phoenix_dir]["files"]
 		files.erase("4271PRTO_INT-85U37_PHNX.txt")
 	print("Protocolo Phoenix eliminado permanentemente")
+
+func trigger_omega_acceleration(multiplier: float = 3.0) -> void:
+	if omega_acceleration_triggered: return
+	omega_acceleration_triggered = true
+	degradation_speed_multiplier = multiplier
 
 func background_music():
 	background_sound = AudioStreamPlayer.new()

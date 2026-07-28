@@ -18,15 +18,15 @@ scale = Vector2(0.5, 0.375)
 
 [node name="Label" type="Label" parent="." unique_id=1040817776]
 visible = false
-offset_left = -37.0
+offset_left = -32.0
 offset_top = 3.0
 offset_right = -2.0
-offset_bottom = 10.0
+offset_bottom = 9.0
 theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
 theme_override_fonts/font = ExtResource("3_42hib")
-theme_override_font_sizes/font_size = 5
-text = "[E] para buscar/recoger"
+theme_override_font_sizes/font_size = 4
+text = "[E] para recoger"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

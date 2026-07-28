@@ -13,13 +13,19 @@ func _ready():
 	if item_sprite:
 		sprite.texture = item_sprite
 	match item_id:
-		"battery":
-			if GameManager.battery_collected:
+		"instructor":
+			if GameManager.instructor_collected:
 				queue_free()
+			elif not GameManager.omega_acceleration_triggered:
+				visible = false
+				set_process(false)
+				monitoring = false
 		"A", "B", "C":
 			if GameManager.items_collected.get(item_id, false):
 				queue_free()
 			label.text = ""
+		"modulo_sync":
+			pass
 
 func _process(_delta):
 	if player_nearby and Input.is_action_just_pressed("interact"):
@@ -35,9 +41,9 @@ func collect():
 	
 	already_collected = true
 	match item_id:
-		"battery":
-			GameManager.has_battery = true
-			GameManager.battery_collected = true
+		"instructor":
+			GameManager.has_instructor = true
+			GameManager.instructor_collected = true
 		"A", "B", "C":
 			GameManager.items_collected[item_id] = true
 			label.text = ""

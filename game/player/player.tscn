@@ -1,10 +1,11 @@
-[gd_scene load_steps=88 format=3 uid="uid://cruxte650capa"]
+[gd_scene format=3 uid="uid://cruxte650capa"]
 
 [ext_resource type="Script" uid="uid://cacyrohaq5yio" path="res://game/player/player.gd" id="1_a4w0n"]
 [ext_resource type="Texture2D" uid="uid://c56e2aanj76wm" path="res://assets/player principal/espera/idle.png" id="2_5fytw"]
 [ext_resource type="Texture2D" uid="uid://bvakjl2mxpfv3" path="res://assets/player principal/correr/run.png" id="3_4ste8"]
 [ext_resource type="Texture2D" uid="uid://cbxe05aubo558" path="res://assets/player principal/caminar/walk.png" id="4_anr75"]
 [ext_resource type="PackedScene" uid="uid://cooray4f6eqqx" path="res://game/player/inventory_cell.tscn" id="5_5fytw"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="6_4ste8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_epvkq"]
 atlas = ExtResource("2_5fytw")
@@ -632,23 +633,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80rvt"]
 size = Vector2(8, 8)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=2115979187 groups=["player"]]
 y_sort_enabled = true
 position = Vector2(212, 128)
 collision_mask = 4
 script = ExtResource("1_a4w0n")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601773606]
 sprite_frames = SubResource("SpriteFrames_q4eq6")
 animation = &"idle_down"
 frame = 3
 frame_progress = 0.11993107
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=391445157]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_80rvt")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=314016783]
 z_index = 2
 zoom = Vector2(1.3, 1.3)
 limit_left = 0
@@ -658,8 +659,22 @@ limit_bottom = 270
 position_smoothing_enabled = true
 position_smoothing_speed = 9.0
 
-[node name="InventoryCell" parent="." instance=ExtResource("5_5fytw")]
+[node name="InventoryCell" parent="." unique_id=45083217 instance=ExtResource("5_5fytw")]
+z_index = 12
 offset_left = -17.0
 offset_top = -30.0
 offset_right = 15.0
 offset_bottom = 2.0
+
+[node name="UsePrompt" type="Label" parent="." unique_id=404120290]
+visible = false
+z_index = 4
+offset_left = -17.0
+offset_top = 6.0
+offset_right = 18.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("6_4ste8")
+theme_override_font_sizes/font_size = 5
+text = "[E] interactuar"

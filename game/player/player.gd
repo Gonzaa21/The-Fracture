@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var inventory_cell = $InventoryCell
+@onready var use_prompt: Label = $UsePrompt
 
 # config
 var speed_walk = 50.0;
@@ -16,6 +17,17 @@ func _ready() -> void:
 	setup_footstep_audio()
 	if GameManager.current_inventory_icon:
 		inventory_cell.show_item_silent(GameManager.current_inventory_icon)
+	use_prompt.visible = false
+
+func _process(_delta: float) -> void:
+	var show_prompt = GameManager.current_item_id == "instructor" and not GameManager.level2_unlocked
+	use_prompt.visible = show_prompt
+	if show_prompt and Input.is_action_just_pressed("interact"):
+		_use_instructor()
+
+func _use_instructor():
+	GameManager.unlock_level2()
+	use_item()
 
 func _physics_process(delta: float) -> void:
 	if Global.input_locked:

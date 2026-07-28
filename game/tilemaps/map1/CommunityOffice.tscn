@@ -21,10 +21,13 @@
 [ext_resource type="PackedScene" uid="uid://c7e0xm0skioew" path="res://game/objects/desks/desk_dirt_back.tscn" id="12_fcgnb"]
 [ext_resource type="PackedScene" uid="uid://be14oxd3dc27n" path="res://game/objects/windows/window_1.tscn" id="16_hyvlq"]
 [ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="18_x8vfn"]
+[ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="19_qe4pr"]
 [ext_resource type="PackedScene" uid="uid://dcp8ih358vpce" path="res://game/fragments/tiles/fragments_tile_2.tscn" id="20_4o2nb"]
 [ext_resource type="PackedScene" uid="uid://in4n1whx7esl" path="res://game/fragments/popups/fragment_popup_document.tscn" id="20_24ygv"]
+[ext_resource type="Texture2D" uid="uid://cal4x6qbacepq" path="res://assets/interior/PostApoc_Workshop_Icons.png" id="20_uhvks"]
 [ext_resource type="PackedScene" uid="uid://b3xst03ftir7h" path="res://game/fragments/popups/fragment_popup_notes.tscn" id="21_r8gjy"]
 [ext_resource type="PackedScene" uid="uid://b5561orom5k2m" path="res://game/pc/computer.tscn" id="22_24ygv"]
+[ext_resource type="PackedScene" uid="uid://eup8adrwvdnq" path="res://game/global_anomalies/ghost.tscn" id="23_h63ih"]
 [ext_resource type="PackedScene" uid="uid://dicbtg2dnh3f4" path="res://game/fragments/tiles/fragments_popup_tiles.tscn" id="23_r8gjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hnnvh"]
@@ -3538,6 +3541,14 @@ texture = ExtResource("5_hnnvh")
 physics_layer_0/collision_layer = 4
 sources/1 = SubResource("TileSetAtlasSource_xjyuo")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug0y0"]
+atlas = ExtResource("20_uhvks")
+region = Rect2(209, 146, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cvq4"]
+atlas = ExtResource("20_uhvks")
+region = Rect2(209, 146, 12, 12)
+
 [node name="CommunityOffice" type="Node2D" unique_id=2122571638]
 position = Vector2(152, 48)
 
@@ -3568,7 +3579,7 @@ grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Darkness" type="CanvasModulate" parent="." unique_id=656674749]
-color = Color(0.23753911, 0.23753914, 0.23753911, 1)
+color = Color(0.43904907, 0.43904915, 0.43904895, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2001332784]
 position = Vector2(72, 88)
@@ -3625,6 +3636,13 @@ scale = Vector2(0.6, 0.6)
 [node name="DeskDirtFront" parent="." unique_id=1284572909 instance=ExtResource("9_esn0a")]
 position = Vector2(96, 104)
 
+[node name="ModuleSync" parent="." unique_id=706111660 instance=ExtResource("19_qe4pr")]
+z_index = 1
+position = Vector2(90, 72)
+inventory_icon = SubResource("AtlasTexture_ug0y0")
+item_id = "modulo_sync"
+item_sprite = SubResource("AtlasTexture_1cvq4")
+
 [node name="Chair" type="TileMapLayer" parent="." unique_id=667708054]
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAKAAsAAQALABQAAAAKAAwAAQALABUAAAAJAAwAAQAKABUAAAAJAAsAAQAKABQAAAA=")
@@ -3665,6 +3683,9 @@ texture = ExtResource("18_x8vfn")
 [node name="Dispenser" parent="." unique_id=1009806717 instance=ExtResource("6_jem8a")]
 position = Vector2(104, 136)
 scale = Vector2(0.6, 0.6)
+
+[node name="Ghost" parent="." unique_id=1610749309 instance=ExtResource("23_h63ih")]
+position = Vector2(72, 104)
 
 [node name="Limits" type="TileMapLayer" parent="." unique_id=428335645]
 z_index = 1
