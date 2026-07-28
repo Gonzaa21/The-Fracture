@@ -5,10 +5,15 @@ extends CanvasLayer
 @onready var prompt_label = $Panel/Control/InputContainer/PromptLabel
 @onready var command_input = $Panel/Control/InputContainer/CommandInput
 
+@onready var glitch_burst_timer: Timer = Timer.new()
+@onready var computer_ref = get_parent().get_node("Computer")
+@onready var glitch_material: ShaderMaterial = $Panel/ColorRect.material
+
 var typewriter_sounds: Array[AudioStream] = []
 var typewriter_player: AudioStreamPlayer
 
 var pc_ambient_sfx: AudioStreamPlayer
+var glitch_ambient_sfx: AudioStreamPlayer
 var terminal_boot_sfx: AudioStreamPlayer
 var terminal_error_sfx: AudioStreamPlayer
 var glitch_sfx: AudioStreamPlayer
@@ -22,7 +27,19 @@ func _ready():
 	is_initialized = true
 	typewriter_audio()
 	pc_audio()
+	glitch_burst_timer.one_shot = true
+	glitch_burst_timer.timeout.connect(_on_glitch_burst_timeout)
+	add_child(glitch_burst_timer)
+
+func _process(_delta: float) -> void:
+	if not panel.visible or not computer_ref.is_degrading(): return
+	if not panel.visible: return
+	if not glitch_material: return
 	
+	var ratio = clamp(GameManager.degradation_elapsed / GameManager.degradation_limit, 0.0, 1.0)
+	glitch_material.set_shader_parameter("intensity", ratio)
+	glitch_material.set_shader_parameter("time_offset", Time.get_ticks_msec() / 1000.0)
+
 func show_terminal():
 	Global.input_locked = true
 	
@@ -42,6 +59,7 @@ func show_terminal():
 	if not has_booted_before:
 		if terminal_boot_sfx and terminal_boot_sfx.stream:
 			terminal_boot_sfx.play()
+			glitch_ambient_sfx.play()
 		has_booted_before = true
 	
 	# Mostrar mensaje de bienvenida
@@ -116,7 +134,6 @@ func phoenix_sequence():
 	command_input.editable = false
 	await glitch_effect()
 	await phoenix_conversation()
-	GameManager.unlock_level2()
 	await get_tree().create_timer(1.5).timeout
 	command_input.editable = true
 	command_input.grab_focus()
@@ -322,6 +339,12 @@ func pc_audio():
 	pc_ambient_sfx.volume_db = -6
 	pc_ambient_sfx.bus = "SFX"
 	
+	glitch_ambient_sfx = AudioStreamPlayer.new()
+	add_child(glitch_ambient_sfx)
+	glitch_ambient_sfx.stream = load("res://assets/sound/effects/pc/pc_glitch_background.mp3")
+	glitch_ambient_sfx.volume_db = -6
+	glitch_ambient_sfx.bus = "SFX"
+	
 	# Terminal Boot
 	terminal_boot_sfx = AudioStreamPlayer.new()
 	add_child(terminal_boot_sfx)
@@ -342,3 +365,13 @@ func pc_audio():
 	glitch_sfx.stream = load("res://assets/sound/effects/pc/pc_glitch.wav")
 	glitch_sfx.volume_db = -3
 	glitch_sfx.bus = "SFX"
+
+func _on_glitch_burst_timeout():
+	if panel.visible and computer_ref.is_degrading():
+		play_error_burst(1)
+		_schedule_next_glitch()
+
+func _schedule_next_glitch():
+	var ratio = clamp(GameManager.degradation_elapsed / GameManager.degradation_limit, 0.0, 1.0)
+	var wait = lerp(4.0, 0.3, ratio)
+	glitch_burst_timer.start(wait)
