@@ -27,7 +27,10 @@ visible = false
 position = Vector2(24, 168)
 
 [node name="LevelEntrance" type="Marker2D" parent="." unique_id=1360591956]
-position = Vector2(8, 168)
+position = Vector2(9, 168)
+
+[node name="LevelExit" type="Marker2D" parent="." unique_id=1322622463]
+position = Vector2(466, 168)
 
 [node name="ObjectPool" type="Node" parent="." unique_id=653910108]
 script = ExtResource("6_jpsdn")
@@ -36,7 +39,7 @@ script = ExtResource("6_jpsdn")
 script = ExtResource("8_b0st8")
 
 [node name="PortalRight" parent="." unique_id=1173820540 instance=ExtResource("9_bw38y")]
-position = Vector2(480, 168)
+position = Vector2(479, 168)
 
 [node name="PortalLeft" parent="." unique_id=2100439949 instance=ExtResource("10_r1ydk")]
-position = Vector2(0, 168)
+position = Vector2(1, 168)
