@@ -5,10 +5,12 @@ extends Node
 
 var original_tree_scales: Dictionary = {}
 var original_tree_colors: Dictionary = {}
+var original_sign_cells: Dictionary = {}
 var original_player_speed_walk: float = 0.0
 var original_player_speed_run: float = 0.0
 var original_player_scale: Vector2 = Vector2.ONE
 var original_tree_visibility: Dictionary = {}
+var spawned_entities: Array[Node] = []
 
 func save_original_state() -> void:
 	var trees = pool.get_all_trees()
@@ -40,6 +42,12 @@ func apply_anomaly(anomaly: Anomaly) -> void:
 		
 		Anomaly.Effect.PLAYER_SCALE:
 			_apply_player_scale(anomaly)
+		
+		Anomaly.Effect.SPAWN_ENTITY:
+			_apply_spawn_entity(anomaly)
+		
+		Anomaly.Effect.SPRITE_SWAP:
+			_apply_sprite_swap(anomaly)
 
 func restore_state() -> void:
 	for tree in original_tree_scales:
@@ -57,9 +65,19 @@ func restore_state() -> void:
 		player.speed_run = original_player_speed_run
 		player.scale = original_player_scale
 	
+	for ghost in spawned_entities:
+		if is_instance_valid(ghost):
+			ghost.queue_free()
+	
 	original_tree_scales.clear()
 	original_tree_colors.clear()
 	original_tree_visibility.clear()
+	spawned_entities.clear()
+	
+	for cell in original_sign_cells:
+		var data = original_sign_cells[cell]
+		pool.signs_layer.set_cell(cell, data["source"], data["atlas"])
+	original_sign_cells.clear()
 
 
 func _apply_scale(anom: Anomaly) -> void:
@@ -109,3 +127,34 @@ func _apply_invisibility(anom: Anomaly) -> void:
 		for tree in trees:
 			if tree.get_parent().name == "TreesTilemap":
 				tree.visible = false
+
+func _apply_spawn_entity(anom: Anomaly) -> void:
+	var count = 3 if anom.scope == Anomaly.Scope.MULTIPLE else 1
+	var chosen_points: Array[Marker2D] = []
+
+	if anom.scope == Anomaly.Scope.MULTIPLE:
+		var all_points = pool.get_all_ghost_spawn_points()
+		all_points.shuffle()
+		chosen_points = all_points.slice(0, min(count, all_points.size()))
+	else:
+		chosen_points = [pool.get_random_ghost_spawn_point()]
+
+	for point in chosen_points:
+		call_deferred("_spawn_ghost_at", anom, point)
+
+func _spawn_ghost_at(anom: Anomaly, point: Marker2D) -> void:
+	var ghost = anom.entity_scene.instantiate()
+	ghost.behavior = anom.ghost_behavior
+	point.get_parent().add_child(ghost)
+	ghost.global_position = point.global_position
+	spawned_entities.append(ghost)
+
+func _apply_sprite_swap(anom: Anomaly) -> void:
+	var cell = pool.get_random_sign_cell()
+	var signs_layer = pool.signs_layer
+
+	var original_source = signs_layer.get_cell_source_id(cell)
+	var original_atlas = signs_layer.get_cell_atlas_coords(cell)
+	original_sign_cells[cell] = {"source": original_source, "atlas": original_atlas}
+
+	signs_layer.set_cell(cell, anom.sign_source_id, anom.sign_atlas_coords)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Anomaly" format=3 uid="uid://c7iavpfy48hye"]
+
+[ext_resource type="Script" uid="uid://45dyhi1lh7ke" path="res://game/tilemaps/map2/anomalies/anomaly.gd" id="1_853ru"]
+
+[resource]
+script = ExtResource("1_853ru")
+scope = 1
+effect = 4
+sign_source_id = 2
+sign_atlas_coords = Vector2i(2, 0)
+metadata/_custom_type_script = "uid://45dyhi1lh7ke"

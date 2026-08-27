@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ckmtpqg3562w8" path="res://game/player/limits/limits_forest.tscn" id="3_ekqkl"]
 [ext_resource type="PackedScene" uid="uid://dttmmraqxs5l6" path="res://game/tilemaps/map2/tilemap2.tscn" id="3_gxqjn"]
 [ext_resource type="Script" uid="uid://c51r4xuds2qxo" path="res://game/tilemaps/map2/anomalies/forest/object_pool.gd" id="6_jpsdn"]
+[ext_resource type="PackedScene" uid="uid://ccs8v86bfl0wo" path="res://game/tilemaps/map2/anomalies/ghost_spawn_points.tscn" id="7_r1ydk"]
 [ext_resource type="Script" uid="uid://b7mgxbqiicu1" path="res://game/tilemaps/map2/anomalies/forest/anomaly_spawner.gd" id="8_b0st8"]
 [ext_resource type="PackedScene" uid="uid://b3dq8a057eb2x" path="res://game/tilemaps/map2/anomalies/forest/anomaly_portals/portal_right.tscn" id="9_bw38y"]
 [ext_resource type="PackedScene" uid="uid://cp5kvneoy3jlg" path="res://game/tilemaps/map2/anomalies/forest/anomaly_portals/portal_left.tscn" id="10_r1ydk"]
@@ -37,6 +38,8 @@ script = ExtResource("6_jpsdn")
 
 [node name="AnomalySpawner" type="Node" parent="." unique_id=1999100675]
 script = ExtResource("8_b0st8")
+
+[node name="GhostSpawnPoints" parent="." unique_id=1189632378 instance=ExtResource("7_r1ydk")]
 
 [node name="PortalRight" parent="." unique_id=1173820540 instance=ExtResource("9_bw38y")]
 position = Vector2(479, 168)

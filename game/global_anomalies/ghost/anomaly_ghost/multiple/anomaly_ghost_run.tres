@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Anomaly" format=3 uid="uid://cb5pu71rha1e1"]
+
+[ext_resource type="Script" uid="uid://45dyhi1lh7ke" path="res://game/tilemaps/map2/anomalies/anomaly.gd" id="1_5qm1d"]
+[ext_resource type="PackedScene" uid="uid://eup8adrwvdnq" path="res://game/global_anomalies/ghost/ghost.tscn" id="1_hoavu"]
+[ext_resource type="Resource" uid="uid://cfvm1j21ahil3" path="res://game/global_anomalies/ghost/behaviors/ghost_behavior_run.tres" id="2_xc221"]
+
+[resource]
+script = ExtResource("1_5qm1d")
+scope = 1
+effect = 5
+entity_scene = ExtResource("1_hoavu")
+ghost_behavior = ExtResource("2_xc221")
+metadata/_custom_type_script = "uid://45dyhi1lh7ke"

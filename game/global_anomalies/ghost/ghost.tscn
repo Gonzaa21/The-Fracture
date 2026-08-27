@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://eup8adrwvdnq"]
 
-[ext_resource type="Script" uid="uid://dkvrcjmv8caj0" path="res://game/global_anomalies/ghost.gd" id="1_1webm"]
-[ext_resource type="Texture2D" uid="uid://eq4oa0qqjil5" path="res://assets/player principal/ghost/ghost_idle.png" id="2_sg5g1"]
-[ext_resource type="Texture2D" uid="uid://d3k24ktf4w43j" path="res://assets/player principal/ghost/ghost_run.png" id="3_6grix"]
+[ext_resource type="Script" uid="uid://dkvrcjmv8caj0" path="res://game/global_anomalies/ghost/ghost.gd" id="1_n8mdv"]
+[ext_resource type="Texture2D" uid="uid://eq4oa0qqjil5" path="res://assets/player principal/ghost/ghost_idle.png" id="2_jd0be"]
+[ext_resource type="Texture2D" uid="uid://d3k24ktf4w43j" path="res://assets/player principal/ghost/ghost_run.png" id="3_7dr1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg5g1"]
 
@@ -73,22 +73,29 @@ _data = {
 &"ghost_run": SubResource("Animation_3fa0b")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g1q56"]
+
 [node name="Ghost" type="Area2D" unique_id=1610749309]
-script = ExtResource("1_1webm")
+script = ExtResource("1_n8mdv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1498847151]
 shape = SubResource("RectangleShape2D_sg5g1")
 
 [node name="Idle" type="Sprite2D" parent="." unique_id=1534219537]
-texture = ExtResource("2_sg5g1")
+texture = ExtResource("2_jd0be")
 hframes = 4
 
 [node name="Run" type="Sprite2D" parent="." unique_id=161650942]
 visible = false
-texture = ExtResource("3_6grix")
+texture = ExtResource("3_7dr1t")
 hframes = 8
 vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=80563893]
 libraries/ = SubResource("AnimationLibrary_3fa0b")
 speed_scale = 0.539
+
+[node name="ProximityDetector" type="Area2D" parent="." unique_id=138505608]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximityDetector" unique_id=1066133009]
+shape = SubResource("CircleShape2D_g1q56")

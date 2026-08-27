@@ -32,3 +32,7 @@ enum Effect {
 @export var position_offset: Vector2 = Vector2.ZERO
 @export var speed_multiplier: float = 1.0
 @export var entity_scene: PackedScene
+@export var ghost_behavior: GhostBehavior
+
+@export var sign_source_id: int = 0
+@export var sign_atlas_coords: Vector2i = Vector2i.ZERO

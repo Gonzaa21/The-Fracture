@@ -27,8 +27,9 @@
 [ext_resource type="Texture2D" uid="uid://cal4x6qbacepq" path="res://assets/interior/PostApoc_Workshop_Icons.png" id="20_uhvks"]
 [ext_resource type="PackedScene" uid="uid://b3xst03ftir7h" path="res://game/fragments/popups/fragment_popup_notes.tscn" id="21_r8gjy"]
 [ext_resource type="PackedScene" uid="uid://b5561orom5k2m" path="res://game/pc/computer.tscn" id="22_24ygv"]
-[ext_resource type="PackedScene" uid="uid://eup8adrwvdnq" path="res://game/global_anomalies/ghost.tscn" id="23_h63ih"]
+[ext_resource type="PackedScene" uid="uid://eup8adrwvdnq" path="res://game/global_anomalies/ghost/ghost.tscn" id="23_h63ih"]
 [ext_resource type="PackedScene" uid="uid://dicbtg2dnh3f4" path="res://game/fragments/tiles/fragments_popup_tiles.tscn" id="23_r8gjy"]
+[ext_resource type="Script" uid="uid://ctkyf20e6aiqk" path="res://game/global_anomalies/ghost/ghost_behavior.gd" id="29_uhvks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hnnvh"]
 texture = ExtResource("1_78lh4")
@@ -3549,6 +3550,10 @@ region = Rect2(209, 146, 12, 12)
 atlas = ExtResource("20_uhvks")
 region = Rect2(209, 146, 12, 12)
 
+[sub_resource type="Resource" id="Resource_ug0y0"]
+script = ExtResource("29_uhvks")
+metadata/_custom_type_script = "uid://ctkyf20e6aiqk"
+
 [node name="CommunityOffice" type="Node2D" unique_id=2122571638]
 position = Vector2(152, 48)
 
@@ -3684,13 +3689,14 @@ texture = ExtResource("18_x8vfn")
 position = Vector2(104, 136)
 scale = Vector2(0.6, 0.6)
 
-[node name="Ghost" parent="." unique_id=1610749309 instance=ExtResource("23_h63ih")]
-position = Vector2(72, 104)
-
 [node name="Limits" type="TileMapLayer" parent="." unique_id=428335645]
 z_index = 1
 tile_map_data = PackedByteArray("AAAAAAAABAABAAMAAAAAAAEABAABAAQAAAAAAAIABAABAAUAAAABAAAABAACAAMAAAACAAAABAADAAMAAAADAAAABAAEAAMAAAAEAAAABAADAAMAAAAFAAAABAAFAAMAAAAAAAgABAABAAkAAAAAAAYABAABAAQAAAAAAAcABAABAAUAAAAAAAQABAABAAUAAAAAAAUABAABAAUAAAAAAAMABAABAAQAAAAGAAAABAAEAAMAAAAHAAAABAAFAAMAAAAIAAAABAAGAAMAAAAIAAEABAAGAAQAAAAIAAIABAAGAAUAAAAIAAMABAAGAAgAAAAIAAQABAAGAAgAAAAIAAUABAAGAAgAAAAIAAYABAAGAAgAAAAIAAcABAAGAAgAAAAIAAgABAAGAAkAAAAAAAkABAABAAoAAAABAAkABAACAAoAAAACAAkABAAEAAoAAAADAAkABAAEAAoAAAAEAAkABAAIAAwAAAAFAAkABAAIAAwAABAGAAkABAAEAAoAAAAHAAkABAAFAAoAAAAIAAkABAAGAAoAAAA=")
 tile_set = SubResource("TileSet_loniq")
+
+[node name="Ghost" parent="." unique_id=1610749309 instance=ExtResource("23_h63ih")]
+position = Vector2(72, 104)
+behavior = SubResource("Resource_ug0y0")
 
 [node name="Player" parent="." unique_id=906402918 instance=ExtResource("5_qxdf2")]
 position = Vector2(80, 136)

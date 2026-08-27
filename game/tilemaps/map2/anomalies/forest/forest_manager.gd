@@ -1,4 +1,5 @@
 extends Node
+signal player_crossed_portal
 
 var spawner: AnomalySpawner
 var current_scene: Node
@@ -28,6 +29,18 @@ func _ready() -> void:
 	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/player/size/player_tiny.tres"))
 	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/invisibility/trees_missing.tres"))
 	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/trees/invisibility/trees_normal_missing.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/global/anomaly_ghost_chase.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/global/anomaly_ghost_flash.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/global/anomaly_ghost_run.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/global/anomaly_ghost_idle.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/multiple/anomaly_ghost_chase.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/multiple/anomaly_ghost_flash.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/multiple/anomaly_ghost_idle.tres"))
+	anomaly_pool.append(preload("res://game/global_anomalies/ghost/anomaly_ghost/multiple/anomaly_ghost_run.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/objects/signs/anomaly_sign1.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/objects/signs/anomaly_sign2.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/objects/signs/anomaly_sign3.tres"))
+	anomaly_pool.append(preload("res://game/tilemaps/map2/anomalies/objects/signs/anomaly_sign4.tres"))
 	unlock_echo_sound = load("res://assets/sound/effects/eco.wav")
 
 func start_forest(scene: Node, anomaly_spawner: AnomalySpawner):
@@ -58,6 +71,7 @@ func validate_choice(portal_crossed: EntrySide):
 	var correct = (back == has_anomaly)
 	print("current entry side: ", current_entry_side)
 	current_entry_side = EntrySide.RIGHT if portal_crossed == EntrySide.LEFT else EntrySide.LEFT
+	player_crossed_portal.emit()
 	
 	if correct:
 		print("crack")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GhostBehavior" format=3 uid="uid://bh84lff42gxuu"]
+
+[ext_resource type="Script" uid="uid://ctkyf20e6aiqk" path="res://game/global_anomalies/ghost/ghost_behavior.gd" id="1_rer82"]
+
+[resource]
+script = ExtResource("1_rer82")
+mode = 3
+detection_radius = 50.0
+chase_duration = 3.0
+metadata/_custom_type_script = "uid://ctkyf20e6aiqk"
