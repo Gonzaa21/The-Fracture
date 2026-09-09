@@ -10,6 +10,14 @@ enum GhostState { IDLE, ACTIVE, GONE }
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var proximity: Area2D = $ProximityDetector
 
+var detection_sfx: Array[AudioStream] = [
+	preload("res://assets/sound/horror/jumpscare1.mp3"),
+	preload("res://assets/sound/horror/jumpscare2.mp3"),
+	preload("res://assets/sound/horror/jumpscare3.mp3"),
+	preload("res://assets/sound/horror/jumpscare4.mp3")
+]
+var last_sfx_index: int = -1
+
 var state: GhostState = GhostState.IDLE
 var run_start_position: Vector2
 var chase_elapsed: float = 0.0
@@ -37,6 +45,7 @@ func _on_proximity_entered(body: Node2D) -> void:
 	if state != GhostState.IDLE or not body.is_in_group("player"):
 		return
 	proximity.set_deferred("monitoring", false)
+	_play_detection_sfx()
 
 	match behavior.mode:
 		GhostBehavior.Mode.RUN_PAST:
@@ -53,6 +62,25 @@ func _on_proximity_entered(body: Node2D) -> void:
 			state = GhostState.ACTIVE
 			anim.play("ghost_run")
 			chase_elapsed = 0.0
+
+func _play_detection_sfx() -> void:
+	if detection_sfx.is_empty():
+		return
+	
+	var random_index: int = randi() % detection_sfx.size()
+	if detection_sfx.size() > 1:
+		while random_index == last_sfx_index:
+			random_index = randi() % detection_sfx.size()
+	
+	last_sfx_index = random_index
+	
+	var player := AudioStreamPlayer2D.new()
+	get_tree().current_scene.add_child(player)
+	player.stream = detection_sfx[random_index]
+	player.global_position = global_position
+	player.bus = "SFX"
+	player.play()
+	player.finished.connect(player.queue_free)
 
 func _physics_process(delta: float) -> void:
 	if state != GhostState.ACTIVE:
