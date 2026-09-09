@@ -20,7 +20,8 @@ enum Effect {
 	SPEED,
 	SPRITE_SWAP,
 	SPAWN_ENTITY,
-	INVISIBLE
+	INVISIBLE,
+	EYES
 }
 
 @export var scope: Scope

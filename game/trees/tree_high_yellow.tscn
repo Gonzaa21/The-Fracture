@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://cegueueolmtok"]
+[gd_scene format=4 uid="uid://cegueueolmtok"]
 
 [ext_resource type="Texture2D" uid="uid://ne5an11ggna4" path="res://assets/nature/TILESET_TREES.png" id="1_f1x8j"]
 
@@ -273,14 +273,29 @@ texture = ExtResource("1_f1x8j")
 [sub_resource type="TileSet" id="TileSet_5hpc2"]
 sources/0 = SubResource("TileSetAtlasSource_j8asp")
 
-[node name="TreeHighYellow" type="TileMapLayer"]
+[node name="TreeHighYellow" type="TileMapLayer" unique_id=373217918]
 
-[node name="TreeBottom" type="TileMapLayer" parent="."]
+[node name="TreeBottom" type="TileMapLayer" parent="." unique_id=2028395040]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAADAAUAAAANAAoAAAAEAAUAAAAOAAoAAAA=")
 tile_set = SubResource("TileSet_leih1")
 
-[node name="TreeTop" type="TileMapLayer" parent="."]
+[node name="TreeTop" type="TileMapLayer" parent="." unique_id=1029622394]
 z_index = 1
 tile_map_data = PackedByteArray("AAACAAMAAAAMAAgAAAADAAIAAAANAAcAAAADAAMAAAANAAgAAAADAAQAAAANAAkAAAAEAAIAAAAOAAcAAAAEAAMAAAAOAAgAAAAEAAQAAAAOAAkAAAAFAAMAAAAPAAgAAAAFAAQAAAAPAAkAAAA=")
 tile_set = SubResource("TileSet_5hpc2")
+
+[node name="EyeAnchors" type="Node2D" parent="." unique_id=702061801]
+position = Vector2(65, 81)
+
+[node name="Anchor1" type="Marker2D" parent="EyeAnchors" unique_id=102515217]
+position = Vector2(0, -16)
+
+[node name="Anchor2" type="Marker2D" parent="EyeAnchors" unique_id=786155731]
+position = Vector2(9, -18)
+
+[node name="Anchor3" type="Marker2D" parent="EyeAnchors" unique_id=1321606606]
+position = Vector2(-8, -18)
+
+[node name="Anchor4" type="Marker2D" parent="EyeAnchors" unique_id=289345195]
+position = Vector2(0, -28)

@@ -48,6 +48,9 @@ func apply_anomaly(anomaly: Anomaly) -> void:
 		
 		Anomaly.Effect.SPRITE_SWAP:
 			_apply_sprite_swap(anomaly)
+		
+		Anomaly.Effect.EYES:
+			_apply_eyes(anomaly)
 
 func restore_state() -> void:
 	for tree in original_tree_scales:
@@ -158,3 +161,31 @@ func _apply_sprite_swap(anom: Anomaly) -> void:
 	original_sign_cells[cell] = {"source": original_source, "atlas": original_atlas}
 
 	signs_layer.set_cell(cell, anom.sign_source_id, anom.sign_atlas_coords)
+
+func _apply_eyes(anom: Anomaly) -> void:
+	var trees = pool.get_all_trees()
+	trees.shuffle()
+	var count = 10 if anom.scope == Anomaly.Scope.MULTIPLE else 5
+	var chosen = trees.slice(0, min(count, trees.size()))
+	
+	for tree in chosen:
+		call_deferred("_spawn_eye_at", anom, tree)
+
+func _spawn_eye_at(anom: Anomaly, tree: Node2D) -> void:
+	var ysort_root = tree.get_parent().get_parent()
+	var anchors_container = tree.get_node_or_null("EyeAnchors")
+	var tree_top = tree.get_node_or_null("TreeTop") as TileMapLayer
+	var target_z = tree_top.z_index if tree_top else 1
+
+	if anchors_container and anchors_container.get_child_count() > 0:
+		for anchor in anchors_container.get_children():
+			_instantiate_eye(anom, ysort_root, anchor.global_position, target_z)
+	else:
+		_instantiate_eye(anom, ysort_root, tree.global_position, target_z)
+
+func _instantiate_eye(anom: Anomaly, ysort_root: Node, pos: Vector2, z_idx: int = 1) -> void:
+	var eye = anom.entity_scene.instantiate()
+	ysort_root.add_child(eye)
+	eye.global_position = pos
+	if eye is CanvasItem: eye.z_index = z_idx
+	spawned_entities.append(eye)

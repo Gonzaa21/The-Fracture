@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Anomaly" format=3 uid="uid://f2qpuhx1xdtw"]
+
+[ext_resource type="Script" uid="uid://45dyhi1lh7ke" path="res://game/tilemaps/map2/anomalies/anomaly.gd" id="1_3rloo"]
+[ext_resource type="PackedScene" uid="uid://00vd0mt5guwq" path="res://game/global_anomalies/eye/eye.tscn" id="1_jbgi1"]
+
+[resource]
+script = ExtResource("1_3rloo")
+scope = 1
+target = 3
+effect = 7
+entity_scene = ExtResource("1_jbgi1")
+metadata/_custom_type_script = "uid://45dyhi1lh7ke"

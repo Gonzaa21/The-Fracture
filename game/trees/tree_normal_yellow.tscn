@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://c401ys87xo41o"]
+[gd_scene format=4 uid="uid://c401ys87xo41o"]
 
 [ext_resource type="Texture2D" uid="uid://ne5an11ggna4" path="res://assets/nature/TILESET_TREES.png" id="1_fsiw8"]
 
@@ -275,14 +275,23 @@ texture = ExtResource("1_fsiw8")
 [sub_resource type="TileSet" id="TileSet_iqlrp"]
 sources/0 = SubResource("TileSetAtlasSource_tg3gg")
 
-[node name="TreeNormalYellow" type="TileMapLayer"]
+[node name="TreeNormalYellow" type="TileMapLayer" unique_id=949024926]
 
-[node name="TreeBottom" type="TileMapLayer" parent="."]
+[node name="TreeBottom" type="TileMapLayer" parent="." unique_id=1796586014]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAQAAAAKAAoAAAADAAQAAAALAAoAAAA=")
 tile_set = SubResource("TileSet_r3yo0")
 
-[node name="TreeTop" type="TileMapLayer" parent="."]
+[node name="TreeTop" type="TileMapLayer" parent="." unique_id=2133388962]
 z_index = 1
 tile_map_data = PackedByteArray("AAACAAEAAAAKAAcAAAACAAIAAAAKAAgAAAADAAEAAAALAAcAAAADAAIAAAALAAgAAAACAAMAAAAKAAkAAAADAAMAAAALAAkAAAA=")
 tile_set = SubResource("TileSet_iqlrp")
+
+[node name="EyeAnchors" type="Node2D" parent="." unique_id=937237834]
+position = Vector2(65, 81)
+
+[node name="Anchor1" type="Marker2D" parent="EyeAnchors" unique_id=2145069558]
+position = Vector2(-13, -31)
+
+[node name="Anchor2" type="Marker2D" parent="EyeAnchors" unique_id=1026682903]
+position = Vector2(-21, -31)

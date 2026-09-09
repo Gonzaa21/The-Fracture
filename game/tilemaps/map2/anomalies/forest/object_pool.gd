@@ -3,18 +3,18 @@ extends Node
 
 @onready var tree_container: Node2D = get_parent().get_node("Tilemap/TreesTilemap")
 @onready var pines_container: Node2D = get_parent().get_node("Tilemap/TreePinesMap")
-@onready var decorations: TileMapLayer = get_parent().get_node("Tilemap/TechDeco")
+@onready var decorations: TileMapLayer = get_parent().get_node("Tilemap/Props")
 @onready var ghost_spawn_container: Node2D = get_parent().get_node("GhostSpawnPoints")
 @onready var signs_layer: TileMapLayer = get_parent().get_node("Tilemap/Signs")
 
 func get_all_trees() -> Array[Node2D]:
 	var trees: Array[Node2D] = []
 	for child in tree_container.get_children():
-		if child is Node2D:
+		if child is Node2D and not child is Eye:
 			trees.append(child)
 	
 	for child in pines_container.get_children():
-		if child is Node2D:
+		if child is Node2D and not child is Eye:
 			trees.append(child)
 	return trees
 

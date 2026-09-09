@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://6nhddkr7bbly"]
+[gd_scene format=3 uid="uid://6nhddkr7bbly"]
 
 [ext_resource type="Texture2D" uid="uid://ne5an11ggna4" path="res://assets/nature/TILESET_TREES.png" id="1_3gw3j"]
 
@@ -135,9 +135,9 @@ texture = ExtResource("1_3gw3j")
 0:13/0 = 0
 1:13/0 = 0
 3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, -1.4388695, 1.2590103, -1.6187286, 5.5756187, -8)
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, -2.0222101, 0.9658316, -2.0071187, 5.5756187, -8)
 4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4.299284, -8, -1.1094923, -2.0109558, -8, -2.0802994)
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -4.299284, -8, -0.9921875, -1.9921875, -8, -2.0078125)
 5:2/0 = 0
 6:2/0 = 0
 
@@ -283,15 +283,21 @@ texture = ExtResource("1_3gw3j")
 [sub_resource type="TileSet" id="TileSet_ovbms"]
 sources/0 = SubResource("TileSetAtlasSource_g3orw")
 
-[node name="TreeLowGreen" type="TileMapLayer"]
+[node name="TreeLowGreen" type="TileMapLayer" unique_id=301601490]
 metadata/_edit_group_ = true
 
-[node name="TreeBottom" type="TileMapLayer" parent="."]
+[node name="TreeBottom" type="TileMapLayer" parent="." unique_id=917961175]
 y_sort_enabled = true
 tile_map_data = PackedByteArray(0, 0, 2, 0, 3, 0, 0, 0, 4, 0, 2, 0, 0, 0, 1, 0, 3, 0, 0, 0, 3, 0, 2, 0, 0, 0)
 tile_set = SubResource("TileSet_mqfyy")
 
-[node name="TreeTop" type="TileMapLayer" parent="."]
+[node name="TreeTop" type="TileMapLayer" parent="." unique_id=1894285650]
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 0, 0, 3, 0, 0, 0, 0, 0, 2, 0, 1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 2, 0, 0, 0, 4, 0, 1, 0, 0, 0)
 tile_set = SubResource("TileSet_ovbms")
+
+[node name="EyeAnchors" type="Node2D" parent="." unique_id=1136841941]
+position = Vector2(65, 81)
+
+[node name="Anchor1" type="Marker2D" parent="EyeAnchors" unique_id=28491359]
+position = Vector2(-33, -34)
