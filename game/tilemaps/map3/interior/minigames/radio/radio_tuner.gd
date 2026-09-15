@@ -11,6 +11,7 @@ extends CanvasLayer
 @onready var dial_port: Control = $Panel/DialPort
 @onready var port_label: Label = $Panel/Port
 
+@onready var port_click_player: AudioStreamPlayer = $PortClickPlayer
 @onready var static_player: AudioStreamPlayer = $StaticPlayer
 @onready var morse_player: AudioStreamPlayer = $MorsePlayer
 
@@ -28,6 +29,9 @@ var is_calibrated: bool = false
 
 var transmission_authorized: bool = false
 
+var current_distance: float = 0.0
+var last_port: int = -1
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
@@ -41,10 +45,11 @@ func _ready():
 	dial_port.value_changed.connect(_on_port_changed)
 	
 	_setup_controls()
-	#play_button.disabled = not (GameManager.generator_repaired and GameManager.chain_auth["terminal_1"] and GameManager.chain_auth["terminal_2"])
+	play_button.disabled = not (GameManager.generator_repaired and GameManager.chain_auth["terminal_1"] and GameManager.chain_auth["terminal_2"])
 	_on_port_changed(dial_port.current_value)
 	
 	if static_player:
+		static_player.stream.loop = true
 		static_player.play()
 	
 	_update_combined_frequency()
@@ -75,31 +80,26 @@ func _on_slider_changed(value: float):
 
 func _update_combined_frequency():
 	combined_frequency = dial_value + slider_value
-	
 	frequency_label.text = "%.2f MHz" % combined_frequency
 	
-	var distance = abs(combined_frequency - target_frequency)
+	current_distance = abs(combined_frequency - target_frequency)
 	
-	var signal_strength = 100.0 * exp(-distance * 8.0)
+	var signal_strength = 100.0 * exp(-current_distance * 8.0)
 	signal_strength = clamp(signal_strength, 0, 100)
-	
 	signal_bar.set_signal(signal_strength)
 	
-	var sync = clamp(1.0 - (distance / 2.0), 0.0, 1.0)
+	var sync = clamp(1.0 - (current_distance / 2.0), 0.0, 1.0)
 	waveform.set_sync_level(sync)
 	
 	if static_player:
-		var static_volume = lerp(-10.0, -30.0, signal_strength / 100.0)
+		var static_volume = lerp(-3.0, -20.0, signal_strength / 100.0)
 		static_player.volume_db = static_volume
 	
-	is_calibrated = (distance <= tolerance)
+	is_calibrated = (current_distance <= tolerance)
 	play_button.disabled = not is_calibrated or (not morse_port_active and not correct_port_selected)
 
-	
 func _on_play_pressed():
-	play_button.text = "REPRODUCIENDO..."	
-	if static_player:
-		static_player.stop()
+	play_button.text = "REPRODUCIENDO..."
 	if morse_port_active:
 		MorseManager.play_current_message()
 		print("Reproduciendo morse...")
@@ -115,13 +115,24 @@ func _on_port_changed(value: float):
 	if not GameManager.generator_repaired: return
 	if not (GameManager.chain_auth["terminal_1"] and GameManager.chain_auth["terminal_2"]): return
 	
-	port_label.text = "%02d" % int(value)
 	var port = int(value)
+	if port == last_port:
+		return
+	last_port = port
+	
+	port_label.text = "%02d" % port
 	morse_port_active = (port == 0)
 	
-	dial_control.set_value(randf_range(dial_control.min_value, dial_control.max_value))
-	frequency_slider.set_value(randf_range(-0.5, 0.5))
+	var new_dial_value = randf_range(dial_control.min_value, dial_control.max_value)
+	var new_slider_value = randf_range(-0.5, 0.5)
+	dial_control.set_value(new_dial_value)
+	frequency_slider.set_value(new_slider_value)
+	
+	dial_value = new_dial_value
+	slider_value = new_slider_value
+	
 	play_button.disabled = true
+	is_calibrated = false
 	
 	var correct_port = int(GameManager.key_code[4])
 	
@@ -134,7 +145,13 @@ func _on_port_changed(value: float):
 	if not correct_port_selected:
 		MorseManager.stop_transmission()
 	
+	_play_port_click_sfx()
 	_update_combined_frequency()
+
+func _play_port_click_sfx() -> void:
+	if port_click_player and port_click_player.stream:
+		port_click_player.volume_db = 7.0
+		port_click_player.play()
 
 func _on_close_pressed():
 	MorseManager.stop_transmission()

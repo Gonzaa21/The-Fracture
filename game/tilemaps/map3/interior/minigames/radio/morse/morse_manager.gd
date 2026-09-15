@@ -57,6 +57,7 @@ func load_messages() -> void:
 func _setup_audio():
 	audio_player = AudioStreamPlayer.new()
 	add_child(audio_player)
+	audio_player.volume_db = -27.0
 	
 	morse_timer = Timer.new()
 	add_child(morse_timer)
