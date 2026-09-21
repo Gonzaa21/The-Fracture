@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dlttaeauhfxvp" path="res://game/fragments/popups/fragment_popup_photo.tscn" id="4_wfijn"]
 
 [node name="Level3" type="Node2D" unique_id=1226103913]
+y_sort_enabled = true
 script = ExtResource("1_b83io")
 
 [node name="Filter" parent="." unique_id=1738502881 instance=ExtResource("4_83qqx")]

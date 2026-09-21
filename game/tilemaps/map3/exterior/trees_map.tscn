@@ -76,7 +76,7 @@ position = Vector2(96, 200)
 position = Vector2(168, 224)
 
 [node name="TreePineNormal3" parent="." unique_id=312286824 instance=ExtResource("3_yt7d8")]
-position = Vector2(136, 224)
+position = Vector2(136, 230)
 
 [node name="TreePineNormal4" parent="." unique_id=2134783547 instance=ExtResource("3_yt7d8")]
 position = Vector2(248, 216)
@@ -184,7 +184,7 @@ position = Vector2(-48, -24)
 position = Vector2(-32, -56)
 
 [node name="TreePineHigh" parent="." unique_id=794297482 instance=ExtResource("4_5l00r")]
-position = Vector2(248, 168)
+position = Vector2(251, 168)
 
 [node name="TreePineHigh1" parent="." unique_id=1806097756 instance=ExtResource("4_5l00r")]
 position = Vector2(392, 40)
@@ -402,9 +402,6 @@ position = Vector2(119, 1)
 [node name="TreePineLow31" parent="." unique_id=950378341 instance=ExtResource("5_7cxbd")]
 position = Vector2(155, 62)
 
-[node name="TreePineLow32" parent="." unique_id=2147006250 instance=ExtResource("5_7cxbd")]
-position = Vector2(176, 192)
-
 [node name="TreePineLow33" parent="." unique_id=743246132 instance=ExtResource("5_7cxbd")]
 position = Vector2(336, 168)
 
@@ -418,7 +415,7 @@ position = Vector2(-8, 56)
 position = Vector2(122, 233)
 
 [node name="TreePineLow37" parent="." unique_id=2134140 instance=ExtResource("5_7cxbd")]
-position = Vector2(232, 232)
+position = Vector2(236, 232)
 
 [node name="TreeDie6" parent="." unique_id=1380433069 instance=ExtResource("7_bywnd")]
 position = Vector2(344, 120)

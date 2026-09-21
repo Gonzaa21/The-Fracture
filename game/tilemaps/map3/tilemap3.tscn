@@ -4,12 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://bvs6iecohcxv4" path="res://assets/nature/TILESET_NATURE_no_animations.png" id="2_0ppdw"]
 [ext_resource type="PackedScene" uid="uid://vhacoqilgvt8" path="res://game/tilemaps/map3/exterior/trees_map.tscn" id="3_0ppdw"]
 [ext_resource type="PackedScene" uid="uid://bv0qc77vwxnaj" path="res://game/tilemaps/map3/exterior/camping.tscn" id="4_ilyw7"]
+[ext_resource type="Script" uid="uid://duw0kamdcd1p8" path="res://game/tilemaps/map3/exterior/trees_map.gd" id="4_wxawr"]
 [ext_resource type="PackedScene" uid="uid://21fbtprlc63t" path="res://game/tilemaps/map3/exterior/secret_door.tscn" id="5_rrbhu"]
 [ext_resource type="PackedScene" uid="uid://cp6hqaoi8wnvd" path="res://game/tilemaps/map3/exterior/building_exterior.tscn" id="6_xq2rf"]
 [ext_resource type="PackedScene" uid="uid://bokfojviw4n1p" path="res://game/tilemaps/map3/interior/minigames/auth_chain/chain_terminal_object.tscn" id="7_0qllr"]
 [ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="7_li5i0"]
 [ext_resource type="Texture2D" uid="uid://d5s5s8dryy2r" path="res://assets/player principal/inventory/workshop_items.png" id="8_yrefk"]
+[ext_resource type="Texture2D" uid="uid://ny8w567v2f36" path="res://assets/interior/TILESET_LABORATORY.png" id="9_qingx"]
 [ext_resource type="PackedScene" uid="uid://dp0ntid76fn7s" path="res://game/fragments/fragment.tscn" id="10_ibis2"]
+[ext_resource type="PackedScene" uid="uid://00vd0mt5guwq" path="res://game/global_anomalies/eye/eye.tscn" id="11_lcq73"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilyw7"]
 texture = ExtResource("1_dc5od")
@@ -1127,6 +1130,401 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_dc5od")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ollso"]
+texture = ExtResource("9_qingx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+20:6/0 = 0
+22:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+0:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+20:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+20:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+1:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+24:14/0 = 0
+25:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+17:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+20:16/0 = 0
+21:16/0 = 0
+22:16/0 = 0
+23:16/0 = 0
+24:16/0 = 0
+25:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+16:17/0 = 0
+17:17/0 = 0
+18:17/0 = 0
+19:17/0 = 0
+20:17/0 = 0
+21:17/0 = 0
+22:17/0 = 0
+23:17/0 = 0
+24:17/0 = 0
+25:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+13:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+16:18/0 = 0
+17:18/0 = 0
+18:18/0 = 0
+19:18/0 = 0
+20:18/0 = 0
+21:18/0 = 0
+22:18/0 = 0
+23:18/0 = 0
+24:18/0 = 0
+25:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+20:19/0 = 0
+21:19/0 = 0
+22:19/0 = 0
+23:19/0 = 0
+24:19/0 = 0
+25:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bug04"]
+sources/1 = SubResource("TileSetAtlasSource_ollso")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibis2"]
 atlas = ExtResource("8_yrefk")
 region = Rect2(155, 7, 27, 37)
@@ -1154,12 +1552,19 @@ tile_map_data = PackedByteArray("AAAbAAIAAAANAA4AAAAbAAMAAAAMAA8AAAAbAAQAAAANABA
 tile_set = SubResource("TileSet_0ppdw")
 
 [node name="TreesMap" parent="." unique_id=504246264 instance=ExtResource("3_0ppdw")]
+script = ExtResource("4_wxawr")
+eye_scene = ExtResource("11_lcq73")
 
 [node name="Camping" parent="." unique_id=779220293 instance=ExtResource("4_ilyw7")]
 
 [node name="SecretDoor" parent="." unique_id=278794649 instance=ExtResource("5_rrbhu")]
 
 [node name="BuildingExterior" parent="." unique_id=170670298 instance=ExtResource("6_xq2rf")]
+
+[node name="Wire" type="TileMapLayer" parent="." unique_id=1306897846]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAAAAgAAQAJAA8AAAABAAgAAQAJAA8AAAAGAAUAAQAEAA8AAAAHAAUAAQAJAA8AAAAIAAUAAQABAA8AAGABAAYAAQAEAA8AAAAAAAsAAQAEAA8AAAABAAsAAQADAA8AAAAAABEAAQAEAA8AAAABABEAAQADAA8AAAABABIAAQANAA8AABABABMAAQAHAA8AAAAAABMAAQAJAA8AAAAAAB0AAQAJAA8AAAAAABsAAQAJAA8AAAAOAB8AAQAJAA8AAAAPAB8AAQAEAA8AAAAQAB8AAQALAA8AAAARAB8AAQALAA8AAAAUACEAAQACAA8AAAAVACEAAQADAA8AAAAcACEAAQADAA8AAAAbACEAAQAGAA8AAAAbACAAAQAIAA8AAAAfAB4AAQAEAA8AAAAhAB4AAQAJAA8AAAAmACEAAQAJAA8AAAAlACEAAQACAA8AAAAnACEAAQANAA8AAGAoACEAAQABAA8AAGA0ACEAAQAKAA8AAAA0ACAAAQAKAA8AAAA0AB8AAQAKAA8AAAA7AB4AAQAMAA8AAAA7AB0AAQACAA8AAAA6AB4AAQACAA8AAAABAB8AAQAEAA8AAAACAB8AAQABAA8AAGACABIAAQAAAA8AAGALAAAAAQAAAA8AAGAWAAMAAQAEAA8AAAAXAAMAAQAJAA8AAAAWAAAAAQAJAA8AAAAXAAAAAQAJAA8AAAArAAIAAQAFAA8AAAArAAMAAQAGAA8AAAAsAAMAAQABAA8AAEA0AAMAAQAHAA8AAAAzAAMAAQAJAA8AAAAyAAMAAQALAA8AAAAxAAMAAQALAA8AAAAwAAMAAQALAA8AAAAvAAMAAQAJAA8AAAAuAAMAAQABAA8AAFA1AAwAAQAJAA8AAAA=")
+tile_set = SubResource("TileSet_bug04")
 
 [node name="LabExit" type="Marker2D" parent="." unique_id=1542912964]
 position = Vector2(384, 88)
@@ -1206,3 +1611,30 @@ fragment_id = "texto_cientifico1"
 [node name="Diary2" parent="." unique_id=1912087146 instance=ExtResource("10_ibis2")]
 position = Vector2(369, 93)
 fragment_id = "texto_cientifico2"
+
+[node name="Eye1" parent="." unique_id=1866097718 instance=ExtResource("11_lcq73")]
+position = Vector2(384, 64)
+
+[node name="Eye2" parent="Eye1" unique_id=1631245673 instance=ExtResource("11_lcq73")]
+position = Vector2(40, -4)
+
+[node name="Eye3" parent="Eye1" unique_id=167501248 instance=ExtResource("11_lcq73")]
+position = Vector2(-161, 74)
+
+[node name="Eye5" parent="Eye1" unique_id=1206797404 instance=ExtResource("11_lcq73")]
+position = Vector2(-376, 177)
+
+[node name="Eye7" parent="Eye1" unique_id=1529429433 instance=ExtResource("11_lcq73")]
+position = Vector2(-160, -6)
+
+[node name="Eye8" parent="Eye1" unique_id=1172917790 instance=ExtResource("11_lcq73")]
+position = Vector2(55, 64)
+
+[node name="Eye9" parent="Eye1" unique_id=403957871 instance=ExtResource("11_lcq73")]
+position = Vector2(66, 64)
+
+[node name="Eye13" parent="Eye1" unique_id=1838543965 instance=ExtResource("11_lcq73")]
+position = Vector2(-248, -47)
+
+[node name="Eye15" parent="Eye1" unique_id=2084073278 instance=ExtResource("11_lcq73")]
+position = Vector2(-303, 152)

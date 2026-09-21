@@ -17,6 +17,9 @@ func _ready() -> void:
 	sprite.hframes = 9
 	sprite.self_modulate.a = 0.9
 	sprite.frame = FRAME_IDLE
+	
+	if sprite.material is ShaderMaterial:
+		sprite.material.set_shader_parameter("hframes", sprite.hframes)
 
 func _process(_delta: float) -> void:
 	var player = get_tree().get_first_node_in_group("player")
