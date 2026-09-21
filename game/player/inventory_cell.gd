@@ -51,7 +51,6 @@ func fade_out():
 	tween.tween_property(self, "modulate:a", 0.0, 0.5)
 	await tween.finished
 	visible = false
-	cell_bg.texture = null
 	item_icon.texture = null
 
 func has_item(): return current_icon != null

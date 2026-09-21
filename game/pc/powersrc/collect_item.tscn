@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmvjcp2eucgi6" path="res://game/pc/powersrc/collect_item.gd" id="1_b5ld5"]
 [ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_42hib"]
+[ext_resource type="Texture2D" uid="uid://6jn4qq5nm6b2" path="res://assets/backgrounds_popup/icon_fragment.png" id="3_b5ld5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cswul"]
 size = Vector2(15, 10.5)
@@ -27,6 +28,16 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
 theme_override_fonts/font = ExtResource("3_42hib")
 theme_override_font_sizes/font_size = 4
 text = "[E] para recoger"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=692254826]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=295261460]
+visible = false
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 60.0
+offset_bottom = 79.0
+texture = ExtResource("3_b5ld5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
