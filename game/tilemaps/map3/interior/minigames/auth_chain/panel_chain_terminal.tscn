@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_tmhmf"]
 [ext_resource type="Script" uid="uid://cj5td2608nihb" path="res://game/tilemaps/map3/interior/minigames/auth_chain/panel_chain_terminal.gd" id="1_wawmc"]
-[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="4_po85k"]
+[ext_resource type="Texture2D" uid="uid://cg82vidl8blre" path="res://assets/objects/popup_terminal.png" id="2_tv4u0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0w73"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -31,19 +31,41 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 script = ExtResource("1_wawmc")
 digit_index = [1, 2]
 
-[node name="Panel" type="VBoxContainer" parent="." unique_id=1444059331]
+[node name="Control" type="Control" parent="." unique_id=687583723]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1409111590]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_tv4u0")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Panel" type="VBoxContainer" parent="Control" unique_id=1444059331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 185.0
+offset_right = -196.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1479598680]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel" unique_id=1479598680]
 layout_mode = 2
-alignment = 1
+theme_override_constants/separation = -29
 
-[node name="Digit1" type="LineEdit" parent="Panel/HBoxContainer" unique_id=1286860879]
+[node name="Digit1" type="LineEdit" parent="Control/Panel/HBoxContainer" unique_id=1286860879]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
 theme_override_colors/font_placeholder_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
@@ -51,12 +73,15 @@ theme_override_colors/caret_color = Color(0, 0, 0, 0.08627451)
 theme_override_fonts/font = ExtResource("1_tmhmf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_k0w73")
 theme_override_styles/focus = SubResource("StyleBoxFlat_4qrry")
-placeholder_text = "-"
+placeholder_text = "_"
 alignment = 1
 max_length = 1
+emoji_menu_enabled = false
+drag_and_drop_selection_enabled = false
 virtual_keyboard_type = 2
+caret_blink = true
 
-[node name="Digit2" type="LineEdit" parent="Panel/HBoxContainer" unique_id=1938740596]
+[node name="Digit2" type="LineEdit" parent="Control/Panel/HBoxContainer" unique_id=1938740596]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
 theme_override_colors/font_placeholder_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
@@ -64,23 +89,25 @@ theme_override_colors/caret_color = Color(0, 0, 0, 0.08627451)
 theme_override_fonts/font = ExtResource("1_tmhmf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sxsio")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tv4u0")
-placeholder_text = "-"
+placeholder_text = "_"
 alignment = 1
 max_length = 1
 virtual_keyboard_type = 2
 caret_blink = true
 
-[node name="Error" type="Label" parent="Panel" unique_id=1864566709]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=303533965]
+layout_mode = 2
+
+[node name="Error" type="Label" parent="Control/Panel/VBoxContainer" unique_id=1864566709]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.57, 0.22799999, 0.25079995, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
 theme_override_fonts/font = ExtResource("1_tmhmf")
 theme_override_font_sizes/font_size = 6
 text = "PIN inválido"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ConfirmButton" type="Button" parent="Panel" unique_id=246876935]
+[node name="ConfirmButton" type="Button" parent="Control/Panel/VBoxContainer" unique_id=246876935]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.99585456, 1, 0.6588055, 1)
 theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
@@ -99,10 +126,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_tv4u0")
 theme_override_styles/focus = SubResource("StyleBoxFlat_po85k")
 text = "[confirmar]"
 
-[node name="Label" type="Label" parent="Panel" unique_id=2118506863]
-z_index = 10
+[node name="Locked" type="Label" parent="Control/Panel" unique_id=362397846]
+visible = false
 layout_mode = 2
-theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
-theme_override_fonts/font = ExtResource("4_po85k")
+theme_override_colors/font_color = Color(0.74658525, 2.0094587e-06, 8.663535e-07, 1)
+theme_override_fonts/font = ExtResource("1_tmhmf")
 theme_override_font_sizes/font_size = 6
+text = "Terminal 
+bloqueada"
+horizontal_alignment = 1

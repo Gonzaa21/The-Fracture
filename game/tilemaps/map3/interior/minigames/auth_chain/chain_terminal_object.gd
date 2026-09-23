@@ -21,7 +21,7 @@ func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_nearby = false
 		if is_instance_valid(minigame_instance):
-			minigame_instance.queue_free()
+			minigame_instance.close_panel()
 			minigame_instance = null
 			var player = get_tree().get_first_node_in_group("player")
 			if player: player.set_process_input(true)
@@ -34,7 +34,7 @@ func _open_authchain_minigame():
 	
 	get_tree().current_scene.add_child(minigame_instance)
 	minigame_instance.authorized.connect(_on_authorized)
-	minigame_instance.get_node("Panel").visible = true
+	minigame_instance.open_panel()
 
 func _on_authorized():
 	is_authorized = true
