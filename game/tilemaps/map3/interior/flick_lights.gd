@@ -21,13 +21,23 @@ func _ready():
 	GameManager.lab_door_locked.connect(_on_generator_activated)
 	
 	if GameManager.lab_door_powered:
-		_start_flicker()
+		_start_flicker_sequence()
 
 func _on_generator_activated():
-	_start_flicker()
+	_start_flicker_sequence()
 
-func _start_flicker():
+func _start_flicker_sequence():
 	enabled = true
+	
+	var tween = create_tween()
+	for i in range(15):
+		var random_flicker = randf_range(flicker_min, flicker_max)
+		tween.tween_property(self, "energy", random_flicker, 0.04)
+		tween.tween_property(self, "energy", base_energy, 0.04)
+	
+	tween.finished.connect(_start_permanent_timer)
+
+func _start_permanent_timer():
 	_schedule_next_flicker()
 
 func _schedule_next_flicker():

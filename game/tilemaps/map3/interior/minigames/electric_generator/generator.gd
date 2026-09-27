@@ -74,3 +74,11 @@ func _on_generator_fixed():
 	GameManager.generator_repaired = true
 	label.text = "Generador Activo"
 	GameManager.lab_door_locked.emit()
+	_play_startup_shake()
+
+func _play_startup_shake():
+	var original_pos = position
+	var tween = create_tween().set_loops()
+	var offset = Vector2(randf_range(-1, 1), randf_range(-1, 1))
+	tween.tween_property(self, "position", original_pos + offset, 0.04)
+	tween.tween_property(self, "position", original_pos, 0.04)

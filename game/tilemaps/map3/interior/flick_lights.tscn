@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="1_veq6f"]
 
 [node name="Lights" type="PointLight2D" unique_id=1582807195]
-position = Vector2(224, 128)
-scale = Vector2(0.5625, 0.5625)
+position = Vector2(224.00002, 128)
+scale = Vector2(0.4375, 0.4375)
 texture = ExtResource("1_veq6f")
 script = ExtResource("1_gj8hm")
 min_interval = 0.5

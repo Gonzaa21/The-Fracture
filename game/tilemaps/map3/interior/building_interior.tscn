@@ -2162,15 +2162,15 @@ grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Lights" parent="." unique_id=204440823 instance=ExtResource("13_tkg17")]
-position = Vector2(128, 136)
+position = Vector2(219.00003, 136)
 base_energy = 0.7
-flicker_min = 0.2
+flicker_min = 0.5
 flicker_max = 0.8
 min_interval = 0.4
 max_interval = 5.0
 
 [node name="Lights2" parent="." unique_id=1582807195 instance=ExtResource("13_tkg17")]
-position = Vector2(272, 136)
+position = Vector2(330, 136)
 base_energy = 0.7
 flicker_min = 0.2
 flicker_max = 0.8
@@ -2219,6 +2219,7 @@ terminal_id = "terminal_1"
 digit_index = [0, 1]
 
 [node name="ItemsDeco" type="TileMapLayer" parent="." unique_id=823787083]
+position = Vector2(1, 0)
 scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAAIABEAAAAOAA4AAGAIABAAAAAPAA4AAGAJABEAAAAOAA8AAGAJABAAAAAPAA8AAGAXAAkAAAAFAA4AAAAPAAoAAAADAA4AAAAPAAsAAAAEAAgAAAARABIAAAAHABUAAAAJABIAAAAHABUAAAAlAAkAAAAEABIAAAAlAAoAAAAEABMAAAAUABMAAAAEAA4AAAAQAAgAAAAaAA4AAAAQAAkAAAAaAA8AAAARAAgAAAAbAA4AAAARAAkAAAAbAA8AAAARAAoAAAAbABAAAAAhABIAAAAUAAgAAAAiABIAAAAVAAgAAAAhABMAAAAUAAkAAAAiABMAAAAVAAkAAAAMAAwAAAADAAgAAAAMAA0AAAADAAkAAAAPAAwAAAAEAAkAAAASAA4AAAADAAkAAFATAA4AAAADAAgAAFAfAAwAAAABAAkAAGAeAAwAAAABAAgAAGAkABIAAAAZAA8AAAAkABEAAAAZAA4AAAAlAAsAAAAJABMAAAA=")
 tile_set = SubResource("TileSet_ssdyy")
