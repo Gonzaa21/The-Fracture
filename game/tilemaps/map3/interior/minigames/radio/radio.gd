@@ -22,7 +22,15 @@ func _on_body_exited(body):
 
 func _process(_delta):
 	if player_nearby and Input.is_action_just_pressed("interact"):
-		_open_radio_tuner()
+		if GameManager.generator_repaired:
+			_open_radio_tuner()
+		else:
+			_show_no_power_feedback()
+
+func _show_no_power_feedback():
+	label.text = "Sin energía"
+	await get_tree().create_timer(1.0).timeout
+	label.text = "[E] para encender"
 
 func _open_radio_tuner():
 	var radio_instance = radio_tuner_scene.instantiate()
