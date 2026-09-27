@@ -174,4 +174,5 @@ func _on_close_pressed():
 		echo_player.finished.connect(func():
 			echo_player.queue_free())
 		GameManager.open_lab_door.emit()
+		GameManager.lab_door_is_open = true
 	queue_free()

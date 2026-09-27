@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bili4xrequmsv"]
+
+[ext_resource type="Script" uid="uid://ni54fprpq06n" path="res://game/objects/alarm/alarm.gd" id="1_vsrsf"]
+[ext_resource type="Texture2D" uid="uid://kxhvvxmjww04" path="res://assets/interior/alarm_tileset.png" id="1_yfqkq"]
+[ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="2_vsrsf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohpcm"]
+atlas = ExtResource("1_yfqkq")
+
+[node name="Alarm" type="Node2D" unique_id=2088226666]
+script = ExtResource("1_vsrsf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=612653094]
+texture = SubResource("AtlasTexture_ohpcm")
+hframes = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=714458668]
+scale = Vector2(0.25, 0.25)
+energy = 1.5
+texture = ExtResource("2_vsrsf")

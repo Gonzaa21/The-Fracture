@@ -2,6 +2,9 @@ extends Node
 
 signal fragment_collected(fragment_id)
 signal open_lab_door
+signal lab_door_locked
+
+var lab_door_is_open: bool = false
 
 # fragments var
 var fragments_database = {}

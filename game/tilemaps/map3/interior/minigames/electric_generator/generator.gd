@@ -73,3 +73,4 @@ func _on_generator_fixed():
 	GameManager.lab_door_powered = true
 	GameManager.generator_repaired = true
 	label.text = "Generador Activo"
+	GameManager.lab_door_locked.emit()

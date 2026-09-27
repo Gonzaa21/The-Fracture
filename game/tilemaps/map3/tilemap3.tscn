@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ny8w567v2f36" path="res://assets/interior/TILESET_LABORATORY.png" id="9_qingx"]
 [ext_resource type="PackedScene" uid="uid://dp0ntid76fn7s" path="res://game/fragments/fragment.tscn" id="10_ibis2"]
 [ext_resource type="PackedScene" uid="uid://00vd0mt5guwq" path="res://game/global_anomalies/eye/eye.tscn" id="11_lcq73"]
+[ext_resource type="PackedScene" uid="uid://bili4xrequmsv" path="res://game/objects/alarm/alarm.tscn" id="14_ollso"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilyw7"]
 texture = ExtResource("1_dc5od")
@@ -1638,3 +1639,6 @@ position = Vector2(-248, -47)
 
 [node name="Eye15" parent="Eye1" unique_id=2084073278 instance=ExtResource("11_lcq73")]
 position = Vector2(-303, 152)
+
+[node name="Alarm" parent="." unique_id=2088226666 instance=ExtResource("14_ollso")]
+position = Vector2(384, 54)
