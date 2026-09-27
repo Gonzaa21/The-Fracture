@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cgtcobavg7vmk"]
+
+[ext_resource type="Script" uid="uid://dhb1o8xxl0gw8" path="res://game/tilemaps/map3/interior/flick_lights.gd" id="1_gj8hm"]
+[ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="1_veq6f"]
+
+[node name="Lights" type="PointLight2D" unique_id=1582807195]
+position = Vector2(224, 128)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("1_veq6f")
+script = ExtResource("1_gj8hm")
+min_interval = 0.5
+max_interval = 1.0

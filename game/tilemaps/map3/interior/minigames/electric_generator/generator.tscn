@@ -1595,7 +1595,7 @@ texture = ExtResource("1_dg0vf")
 sources/0 = SubResource("TileSetAtlasSource_gdf35")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crrd1"]
-size = Vector2(32, 26)
+size = Vector2(32, 18)
 
 [node name="Generator" type="Area2D" unique_id=1111638430]
 script = ExtResource("1_wjd25")
@@ -1610,7 +1610,6 @@ tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 18, 0, 26, 0, 0,
 tile_set = SubResource("TileSet_lwjs4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=333525542]
-position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_crrd1")
 
 [node name="Label" type="Label" parent="." unique_id=13340861]
