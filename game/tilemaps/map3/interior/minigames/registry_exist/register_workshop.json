@@ -1,0 +1,50 @@
+{
+  "pages": [
+	{
+	  "rows": [
+		{ "lote": "48-C", "descripcion": "martillo", "ubicacion": "Panel Herr.", "codigo": 4, "stock": 14 },
+		{ "lote": "12-A", "descripcion": "llave inglesa", "ubicacion": "Carro", "codigo": 1, "stock": 20 },
+		{ "lote": "15-B", "descripcion": "destornillador", "ubicacion": "Panel Herr.", "codigo": 2, "stock": 15 },
+		{ "lote": "22-F", "descripcion": "cinta aislante", "ubicacion": "Mesa central", "codigo": 3, "stock": 32 },
+		{ "lote": "31-D", "descripcion": "lijas", "ubicacion": "Estante A", "codigo": 5, "stock": 18 },
+		{ "lote": "09-E", "descripcion": "aceite lubricante", "ubicacion": "Gabinete", "codigo": 1, "stock": 12 }
+	  ]
+	},
+	{
+	  "rows": [
+		{ "lote": "50-X", "descripcion": "taladro inalam.", "ubicacion": "Escritorio", "codigo": 4, "stock": 10 },
+		{ "lote": "51-Y", "descripcion": "brocas de acero", "ubicacion": "Cajonero", "codigo": 2, "stock": 25 },
+		{ "lote": "14-C", "descripcion": "guantes", "ubicacion": "Estante B", "codigo": 3, "stock": 40 },
+		{ "lote": "18-Z", "descripcion": "gafas", "ubicacion": "Mesa central", "codigo": 5, "stock": 15 },
+		{ "lote": "23-A", "descripcion": "caja de tornillos", "ubicacion": "Cajonero", "codigo": 1, "stock": 50 },
+		{ "lote": "27-B", "descripcion": "tuercas hexago.", "ubicacion": "Cajonero", "codigo": 2, "stock": 60 },
+		{ "lote": "33-C", "descripcion": "arandelas", "ubicacion": "Cajonero", "codigo": 3, "stock": 45 },
+		{ "lote": "39-D", "descripcion": "soldador", "ubicacion": "Escritorio", "codigo": 4, "stock": 11 }
+	  ]
+	},
+	{
+	  "rows": [
+		{ "lote": "60-F", "descripcion": "rollo alambre", "ubicacion": "Tambor", "codigo": 5, "stock": 22 },
+		{ "lote": "62-G", "descripcion": "multimetro", "ubicacion": "Mesa central", "codigo": 1, "stock": 14 },
+		{ "lote": "65-H", "descripcion": "cinta metrica", "ubicacion": "Carro", "codigo": 2, "stock": 19 },
+		{ "lote": "70-I", "descripcion": "cutter metalico", "ubicacion": "Escritorio", "codigo": 3, "stock": 30 },
+		{ "lote": "74-J", "descripcion": "sierra de mano", "ubicacion": "Panel Herr.", "codigo": 4, "stock": 13 },
+		{ "lote": "78-K", "descripcion": "prensa de banco", "ubicacion": "Mesa central", "codigo": 5, "stock": 10 },
+		{ "lote": "80-L", "descripcion": "limas", "ubicacion": "Panel Herr.", "codigo": 1, "stock": 24 },
+		{ "lote": "85-M", "descripcion": "cepillo alambre", "ubicacion": "Carro", "codigo": 2, "stock": 16 }
+	  ]
+	},
+	{
+	  "rows": [
+		{ "lote": "90-N", "descripcion": "mascarillas", "ubicacion": "Gabinete", "codigo": 3, "stock": 35 },
+		{ "lote": "92-O", "descripcion": "pasta saldante", "ubicacion": "Escritorio", "codigo": 4, "stock": 28 },
+		{ "lote": "95-P", "descripcion": "juego de llaves", "ubicacion": "Carro", "codigo": 5, "stock": 12 },
+		{ "lote": "97-Q", "descripcion": "alicates", "ubicacion": "Panel Herr.", "codigo": 1, "stock": 15 },
+		{ "lote": "99-R", "descripcion": "pistola silicona", "ubicacion": "Mesa central", "codigo": 2, "stock": 14 },
+		{ "lote": "10-S", "descripcion": "barras silicona", "ubicacion": "Estante A", "codigo": 3, "stock": 50 },
+		{ "lote": "11-T", "descripcion": "rec. de cuchillas", "ubicacion": "Cajonero", "codigo": 4, "stock": 40 },
+		{ "lote": "13-U", "descripcion": "grasera manual", "ubicacion": "Tambor", "codigo": 5, "stock": 10 }
+	  ]
+	}
+  ]
+}

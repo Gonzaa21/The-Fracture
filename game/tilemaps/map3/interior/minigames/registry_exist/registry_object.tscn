@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://glo2exgh5dox"]
+
+[ext_resource type="Script" uid="uid://kh8xn0v7rewe" path="res://game/tilemaps/map3/interior/minigames/registry_exist/registry_object.gd" id="1_1mnq2"]
+[ext_resource type="PackedScene" uid="uid://mbuv1j3j432v" path="res://game/fragments/popups/register_popup.tscn" id="2_axn36"]
+[ext_resource type="Texture2D" uid="uid://6jn4qq5nm6b2" path="res://assets/backgrounds_popup/icon_fragment.png" id="3_1mnq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8euxs"]
+size = Vector2(8, 8.015625)
+
+[node name="RegistryObject" type="Area2D" unique_id=44584338]
+script = ExtResource("1_1mnq2")
+popup_scene = ExtResource("2_axn36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2000595512]
+shape = SubResource("RectangleShape2D_8euxs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=887839830]
+layer = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=964208303]
+visible = false
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 60.0
+offset_bottom = 79.0
+texture = ExtResource("3_1mnq2")

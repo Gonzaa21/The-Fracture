@@ -83,7 +83,7 @@ func generate_new_message():
 	current_message = messages_database.pick_random()
 	generate_random_frequency()
 	GameManager.key_code = current_message["key_code"]
-	#GameManager.radio_frequency = target_frequency
+	GameManager.photo_lots = RegistryManager.pick_lots(current_message["key_code"])
 
 func get_current_key_code() -> Array:
 	if current_message.is_empty():

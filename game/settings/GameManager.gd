@@ -45,6 +45,7 @@ var lab_door_powered: bool = false
 var generator_repaired: bool = false
 var chain_auth: Dictionary = { "terminal_1": false, "terminal_2": false, "terminal_3": false }
 var terminal_lock_until: Dictionary = {}
+var photo_lots: Array = []
 
 func load_database():
 	var file = FileAccess.open("res://game/fragments/fragments.json",FileAccess.READ)

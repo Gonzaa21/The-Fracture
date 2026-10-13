@@ -1,0 +1,400 @@
+[gd_scene format=3 uid="uid://mbuv1j3j432v"]
+
+[ext_resource type="Script" uid="uid://dlrajdsuu34bt" path="res://game/fragments/popups/register_popup.gd" id="1_144lv"]
+[ext_resource type="Texture2D" uid="uid://cqvs5cam10xjn" path="res://assets/objects/popup_dashboard1.png" id="2_tbade"]
+[ext_resource type="Texture2D" uid="uid://c4x1ou8w2nyp0" path="res://assets/objects/popup_dashboard2.png" id="3_gt06p"]
+[ext_resource type="Script" uid="uid://c7up0kxccnt51" path="res://game/fragments/popups/grab_pages.gd" id="3_tbade"]
+[ext_resource type="FontFile" uid="uid://bq2hpbhx6upog" path="res://assets/fonts/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf" id="3_yvjov"]
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="6_gt06p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nhhv"]
+bg_color = Color(0, 0, 0, 0.03529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oej2g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4eci"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkl0q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="RegisterPopup" type="CanvasLayer" unique_id=454777766]
+layer = 2
+script = ExtResource("1_144lv")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1393882705]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6627451)
+
+[node name="Page1" type="TextureRect" parent="." unique_id=239009357]
+custom_minimum_size = Vector2(0, 180)
+offset_left = 112.0
+offset_right = 296.0
+offset_bottom = 180.0
+size_flags_vertical = 4
+texture = ExtResource("2_tbade")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_tbade")
+
+[node name="Lot" type="Label" parent="Page1" unique_id=393894873]
+layout_mode = 0
+offset_left = 21.000015
+offset_top = 60.0
+offset_right = 40.000015
+offset_bottom = 67.0
+rotation = 0.061086524
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+clip_text = true
+
+[node name="Description" type="Label" parent="Page1" unique_id=1211915828]
+layout_mode = 0
+offset_left = 39.00003
+offset_top = 61.0
+offset_right = 74.47238
+offset_bottom = 69.0
+rotation = 0.061086524
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Ubication" type="Label" parent="Page1" unique_id=410847431]
+layout_mode = 0
+offset_left = 76.999985
+offset_top = 64.000015
+offset_right = 107.182434
+offset_bottom = 72.000015
+rotation = 0.061086524
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Code" type="Label" parent="Page1" unique_id=1990681111]
+layout_mode = 0
+offset_left = 110.12924
+offset_top = 65.33511
+offset_right = 142.53796
+offset_bottom = 73.33511
+rotation = 0.061086524
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Stock" type="Label" parent="Page1" unique_id=1341196450]
+layout_mode = 0
+offset_left = 143.41286
+offset_top = 67.90292
+offset_right = 166.12476
+offset_bottom = 75.90292
+rotation = 0.061086524
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Page2" type="TextureRect" parent="." unique_id=1000856676]
+custom_minimum_size = Vector2(0, 180)
+offset_left = 152.0
+offset_top = 80.0
+offset_right = 336.0
+offset_bottom = 264.0
+size_flags_vertical = 4
+texture = ExtResource("3_gt06p")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_tbade")
+
+[node name="Lot" type="Label" parent="Page2" unique_id=319686351]
+layout_mode = 0
+offset_left = 21.7795
+offset_top = 37.76046
+offset_right = 38.11547
+offset_bottom = 46.30735
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+clip_text = true
+
+[node name="Description" type="Label" parent="Page2" unique_id=1273224512]
+layout_mode = 0
+offset_left = 41.118763
+offset_top = 37.690125
+offset_right = 75.79579
+offset_bottom = 47.765472
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Ubication" type="Label" parent="Page2" unique_id=725817567]
+layout_mode = 0
+offset_left = 78.45172
+offset_top = 39.486073
+offset_right = 114.14047
+offset_bottom = 47.939686
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Code" type="Label" parent="Page2" unique_id=754340592]
+layout_mode = 0
+offset_left = 117.71297
+offset_top = 40.4263
+offset_right = 145.57196
+offset_bottom = 50.41481
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Stock" type="Label" parent="Page2" unique_id=961309783]
+layout_mode = 0
+offset_left = 149.62561
+offset_top = 41.800392
+offset_right = 170.56403
+offset_bottom = 49.998207
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Page3" type="TextureRect" parent="." unique_id=678798565]
+custom_minimum_size = Vector2(0, 180)
+offset_left = 216.0
+offset_top = 24.0
+offset_right = 400.0
+offset_bottom = 204.0
+size_flags_vertical = 4
+texture = ExtResource("3_gt06p")
+expand_mode = 1
+stretch_mode = 5
+flip_v = true
+script = ExtResource("3_tbade")
+
+[node name="Lot" type="Label" parent="Page3" unique_id=813624652]
+layout_mode = 0
+offset_left = 17.999989
+offset_top = 53.0
+offset_right = 34.33596
+offset_bottom = 61.546886
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+clip_text = true
+
+[node name="Description" type="Label" parent="Page3" unique_id=1735993027]
+layout_mode = 0
+offset_left = 37.999985
+offset_top = 52.00001
+offset_right = 72.67702
+offset_bottom = 62.07536
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Ubication" type="Label" parent="Page3" unique_id=1278041008]
+layout_mode = 0
+offset_left = 75.50305
+offset_top = 51.016308
+offset_right = 111.1918
+offset_bottom = 60.940594
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Code" type="Label" parent="Page3" unique_id=652563607]
+layout_mode = 0
+offset_left = 114.71297
+offset_top = 50.4263
+offset_right = 142.57196
+offset_bottom = 60.41481
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Stock" type="Label" parent="Page3" unique_id=1532790836]
+layout_mode = 0
+offset_left = 146.62561
+offset_top = 50.800396
+offset_right = 167.56403
+offset_bottom = 58.99821
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Page4" type="TextureRect" parent="." unique_id=602409936]
+custom_minimum_size = Vector2(0, 180)
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 224.0
+offset_bottom = 244.0
+size_flags_vertical = 4
+texture = ExtResource("3_gt06p")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_tbade")
+
+[node name="Lot" type="Label" parent="Page4" unique_id=961681193]
+layout_mode = 0
+offset_left = 21.695955
+offset_top = 35.15109
+offset_right = 37.72856
+offset_bottom = 43.974598
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+clip_text = true
+
+[node name="Description" type="Label" parent="Page4" unique_id=499542148]
+layout_mode = 0
+offset_left = 41.78131
+offset_top = 35.377476
+offset_right = 74.77688
+offset_bottom = 44.711575
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Ubication" type="Label" parent="Page4" unique_id=1666903495]
+layout_mode = 0
+offset_left = 78.754555
+offset_top = 38.061275
+offset_right = 115.179054
+offset_bottom = 45.834858
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Code" type="Label" parent="Page4" unique_id=956991431]
+layout_mode = 0
+offset_left = 118.73518
+offset_top = 38.865707
+offset_right = 146.53908
+offset_bottom = 47.67756
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="Stock" type="Label" parent="Page4" unique_id=2008266490]
+layout_mode = 0
+offset_left = 149.67612
+offset_top = 40.787872
+offset_right = 170.68147
+offset_bottom = 47.787872
+rotation = 0.034906585
+theme_override_colors/font_color = Color(0.24705882, 0.19607843, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0.24705882, 0.19607843, 0.13725491, 0.2784314)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("3_yvjov")
+theme_override_font_sizes/font_size = 5
+
+[node name="CloseButton" type="Button" parent="." unique_id=661251166]
+offset_left = -64.0
+offset_top = 8.0
+offset_right = 115.0
+offset_bottom = 31.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("6_gt06p")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_0nhhv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oej2g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l4eci")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dkl0q")
+text = "[X]"
