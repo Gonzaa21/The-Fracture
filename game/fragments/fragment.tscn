@@ -17,6 +17,7 @@ shape = SubResource("RectangleShape2D_7foot")
 scale = Vector2(0.05138786, 0.04264099)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1299828793]
+layer = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=852513979]
 visible = false
