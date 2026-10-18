@@ -21,7 +21,7 @@ func _ready():
 	panel.visible = false
 	close_button.pressed.connect(_on_close_button_pressed)
 	if photo_texture:
-		photo_texture.mouse_filter = Control.MOUSE_FILTER_STOP  # el TextureRect ignora el mouse por defecto
+		photo_texture.mouse_filter = Control.MOUSE_FILTER_STOP
 		photo_texture.gui_input.connect(_on_photo_gui_input)
 	if lots_label:
 		lots_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -72,7 +72,7 @@ func _apply_side() -> void:
 			photo_texture.texture = back_texture
 			photo_texture.self_modulate = Color.WHITE
 		else:
-			photo_texture.texture = _front_texture  # provisional hasta tener el sprite del reverso
+			photo_texture.texture = _front_texture
 			photo_texture.self_modulate = Color(0.4, 0.35, 0.3)
 		if lots_label:
 			lots_label.text = _format_lots(_back_lots)
@@ -88,15 +88,12 @@ func _apply_side() -> void:
 	content_label.visible = true
 
 func _format_lots(lots: Array) -> String:
-	var lines: Array = []
+	var all_parts: Array = []
 	for group in LOT_GROUPS:
-		var parts: Array = []
 		for i in group:
 			if i < lots.size():
-				parts.append(str(lots[i]))
-		if not parts.is_empty():
-			lines.append("   ".join(parts))
-	return "\n".join(lines)
+				all_parts.append(str(lots[i]))
+	return "  ".join(all_parts)
 
 func _on_photo_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

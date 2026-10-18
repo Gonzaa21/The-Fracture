@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_rqnsu"]
 [ext_resource type="Script" uid="uid://tweu1u7806s5" path="res://game/fragments/popups/fragment_popup_BASE.gd" id="1_wlddm"]
+[ext_resource type="Texture2D" uid="uid://c4x1ou8w2nyp0" path="res://assets/objects/popup_dashboard2.png" id="2_cwqeq"]
 [ext_resource type="FontFile" uid="uid://cxrj7pyehmvi0" path="res://assets/fonts/Silkscreen-Bold.ttf" id="3_xrrpy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wlddm"]
@@ -20,6 +21,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="FragmentPopupPhoto" type="CanvasLayer" unique_id=66329717]
 script = ExtResource("1_wlddm")
+back_texture = ExtResource("2_cwqeq")
 
 [node name="Panel" type="Panel" parent="." unique_id=2019958492]
 anchors_preset = 15
@@ -61,6 +63,23 @@ layout_mode = 2
 size_flags_vertical = 4
 expand_mode = 1
 stretch_mode = 5
+
+[node name="LotsLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/TextureRect" unique_id=22620032]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.125
+offset_top = -11.5
+offset_right = 92.125
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_rqnsu")
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
 
 [node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=291563180]
 layout_mode = 2
