@@ -162,6 +162,9 @@ position = Vector2(407, 16)
 [node name="TreeHighYellow2" parent="." unique_id=1993134541 instance=ExtResource("6_ic2jk")]
 position = Vector2(385, 24)
 
+[node name="TreeLowYellow17" parent="." unique_id=1399157410 instance=ExtResource("2_yy55t")]
+position = Vector2(184, -48)
+
 [node name="TreeHighYellow5" parent="." unique_id=573467640 instance=ExtResource("6_ic2jk")]
 position = Vector2(144, -48)
 
@@ -215,6 +218,9 @@ position = Vector2(-32, 32)
 
 [node name="TreePineHigh10" parent="." unique_id=222260698 instance=ExtResource("4_5l00r")]
 position = Vector2(144, -32)
+
+[node name="TreeLowYellow11" parent="." unique_id=463242392 instance=ExtResource("2_yy55t")]
+position = Vector2(56, -56)
 
 [node name="TreePineHigh11" parent="." unique_id=471802288 instance=ExtResource("4_5l00r")]
 position = Vector2(88, -40)
@@ -291,9 +297,6 @@ position = Vector2(360, 40)
 [node name="TreeLowYellow10" parent="." unique_id=484602244 instance=ExtResource("2_yy55t")]
 position = Vector2(256, 40)
 
-[node name="TreeLowYellow11" parent="." unique_id=463242392 instance=ExtResource("2_yy55t")]
-position = Vector2(56, -56)
-
 [node name="TreeLowYellow12" parent="." unique_id=2073814498 instance=ExtResource("2_yy55t")]
 position = Vector2(107, -36)
 
@@ -302,9 +305,6 @@ position = Vector2(-17, 26)
 
 [node name="TreeLowYellow14" parent="." unique_id=24289210 instance=ExtResource("2_yy55t")]
 position = Vector2(16, -32)
-
-[node name="TreeLowYellow17" parent="." unique_id=1399157410 instance=ExtResource("2_yy55t")]
-position = Vector2(184, -48)
 
 [node name="TreeLowYellow18" parent="." unique_id=339511820 instance=ExtResource("2_yy55t")]
 position = Vector2(256, -40)

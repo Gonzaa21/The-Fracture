@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://tweu1u7806s5" path="res://game/fragments/popups/fragment_popup_BASE.gd" id="1_dbb01"]
 [ext_resource type="Texture2D" uid="uid://o5o04doo0mjh" path="res://assets/backgrounds_popup/document_break.png" id="2_c8kj2"]
 [ext_resource type="FontFile" uid="uid://cxrj7pyehmvi0" path="res://assets/fonts/Silkscreen-Bold.ttf" id="3_dbb01"]
-[ext_resource type="FontFile" uid="uid://cej1gbwfbcr47" path="res://assets/fonts/HomemadeApple-Regular.ttf" id="4_el2sp"]
 [ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="4_o6ejt"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="4_rbnrl"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qrljx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbnrl"]
+bg_color = Color(0, 0, 0, 0.60784316)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el2sp"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -25,6 +26,15 @@ process_mode = 3
 script = ExtResource("1_dbb01")
 
 [node name="Panel" type="Panel" parent="." unique_id=1552420385]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rbnrl")
+
+[node name="BackgroundTexture" type="TextureRect" parent="Panel" unique_id=401268638]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -36,20 +46,21 @@ offset_right = 150.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_qrljx")
-
-[node name="BackgroundTexture" type="TextureRect" parent="Panel" unique_id=401268638]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 texture = ExtResource("2_c8kj2")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=521793124]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 87.0
-offset_right = 247.0
-offset_bottom = 262.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -12.5
+offset_right = 101.0
+offset_bottom = 162.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
@@ -93,7 +104,7 @@ theme_override_constants/shadow_outline_size = 1
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 0
 theme_override_constants/text_highlight_h_padding = 3
-theme_override_fonts/normal_font = ExtResource("4_el2sp")
+theme_override_fonts/normal_font = ExtResource("4_rbnrl")
 theme_override_font_sizes/normal_font_size = 6
 bbcode_enabled = true
 text = "ContentLabel"

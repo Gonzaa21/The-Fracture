@@ -5,7 +5,8 @@
 [ext_resource type="FontFile" uid="uid://cxrj7pyehmvi0" path="res://assets/fonts/Silkscreen-Bold.ttf" id="3_bd4pb"]
 [ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="4_wrvnl"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qrljx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pvkk"]
+bg_color = Color(0, 0, 0, 0.60784316)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b42hs"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -29,26 +30,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -135.0
+offset_right = 240.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4pvkk")
+
+[node name="BackgroundTexture" type="TextureRect" parent="Panel" unique_id=818493321]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = -150.0
 offset_top = -100.0
 offset_right = 150.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_qrljx")
-
-[node name="BackgroundTexture" type="TextureRect" parent="Panel" unique_id=818493321]
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 200.0
 texture = ExtResource("2_b42hs")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1111068249]
-layout_mode = 0
-offset_left = 59.0
-offset_top = 16.0
-offset_right = 230.0
-offset_bottom = 220.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -88.0
+offset_right = 80.5
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15

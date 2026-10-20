@@ -16,8 +16,14 @@ func _ready():
 	login_button.pressed.connect(_on_login_button_pressed)
 	hint_label.visible = false
 	error_label.visible = false
-	
+
 func show_login():
+	if GameManager.computer_logged_in:
+		panel.visible = false
+		Global.input_locked = false
+		emit_signal("login_successful")
+		return
+	
 	panel.visible = true
 	Global.input_locked = true
 
@@ -26,6 +32,7 @@ func validate_password(input_text: String):
 		return
 		
 	if input_text == GameManager.computer_password:
+		GameManager.computer_logged_in = true
 		emit_signal("login_successful")
 		panel.visible = false
 		Global.input_locked = false
@@ -38,7 +45,7 @@ func validate_password(input_text: String):
 	
 	password_input.text = ""
 	password_input.grab_focus()
-	
+
 func _on_password_submitted(text: String):
 	validate_password(text)
 

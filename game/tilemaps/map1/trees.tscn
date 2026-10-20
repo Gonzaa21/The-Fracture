@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkdd5mbekr44"]
+[gd_scene format=3 uid="uid://bkdd5mbekr44"]
 
 [ext_resource type="PackedScene" uid="uid://6nhddkr7bbly" path="res://game/trees/tree_low_green.tscn" id="1_glibs"]
 [ext_resource type="PackedScene" uid="uid://0ee88fd5mgbx" path="res://game/trees/tree_high_green.tscn" id="2_3cmsr"]
@@ -7,247 +7,247 @@
 [ext_resource type="PackedScene" uid="uid://c401ys87xo41o" path="res://game/trees/tree_normal_yellow.tscn" id="5_yubch"]
 [ext_resource type="PackedScene" uid="uid://dm30ey06brjal" path="res://game/trees/tree_low_yellow.tscn" id="6_wt0ao"]
 
-[node name="Trees" type="TileMapLayer"]
+[node name="Trees" type="TileMapLayer" unique_id=1296262457]
 
-[node name="TreeLowGreen" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen" parent="." unique_id=60302514 instance=ExtResource("1_glibs")]
 position = Vector2(428, 107)
 
-[node name="TreeLowGreen2" parent="." instance=ExtResource("1_glibs")]
-position = Vector2(378, 117)
-
-[node name="TreeLowGreen3" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen3" parent="." unique_id=376072506 instance=ExtResource("1_glibs")]
 position = Vector2(221, 46)
 
-[node name="TreeLowGreen7" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen7" parent="." unique_id=1989607273 instance=ExtResource("1_glibs")]
 position = Vector2(229, -5)
 
-[node name="TreeLowGreen4" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen4" parent="." unique_id=1974440890 instance=ExtResource("1_glibs")]
 position = Vector2(428, 128)
 
-[node name="TreeLowGreen23" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen23" parent="." unique_id=855663513 instance=ExtResource("1_glibs")]
 position = Vector2(354, 179)
 
-[node name="TreeLowGreen5" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen5" parent="." unique_id=1118807401 instance=ExtResource("1_glibs")]
 position = Vector2(278, 220)
 
-[node name="TreeLowGreen6" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen6" parent="." unique_id=2001543279 instance=ExtResource("1_glibs")]
 position = Vector2(439, 40)
 
-[node name="TreeLowGreen11" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen11" parent="." unique_id=393845116 instance=ExtResource("1_glibs")]
 position = Vector2(129, 19)
 
-[node name="TreeLowGreen12" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen12" parent="." unique_id=410555584 instance=ExtResource("1_glibs")]
 position = Vector2(68, -8)
 
-[node name="TreeLowGreen20" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen20" parent="." unique_id=1071677871 instance=ExtResource("1_glibs")]
 position = Vector2(-7, 155)
 
-[node name="TreeLowGreen19" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen19" parent="." unique_id=1293655730 instance=ExtResource("1_glibs")]
 position = Vector2(-24, 218)
 
-[node name="TreeLowGreen18" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen18" parent="." unique_id=533414445 instance=ExtResource("1_glibs")]
 position = Vector2(164, 50)
 
-[node name="TreeLowGreen21" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen21" parent="." unique_id=1742873069 instance=ExtResource("1_glibs")]
 position = Vector2(398, 173)
 
-[node name="TreeLowGreen22" parent="." instance=ExtResource("1_glibs")]
+[node name="TreeLowGreen22" parent="." unique_id=360635083 instance=ExtResource("1_glibs")]
 position = Vector2(339, 210)
 
-[node name="TreeHighGreen" parent="." instance=ExtResource("2_3cmsr")]
-position = Vector2(410, 65)
+[node name="TreeHighGreen" parent="." unique_id=1163211428 instance=ExtResource("2_3cmsr")]
+position = Vector2(413, 68)
 
-[node name="TreeHighGreen2" parent="." instance=ExtResource("2_3cmsr")]
-position = Vector2(389, 36)
+[node name="TreeNormalYellow13" parent="." unique_id=1214568226 instance=ExtResource("5_yubch")]
+position = Vector2(286, 1)
 
-[node name="TreeHighGreen3" parent="." instance=ExtResource("2_3cmsr")]
+[node name="TreeHighGreen3" parent="." unique_id=549090444 instance=ExtResource("2_3cmsr")]
 position = Vector2(256, -17)
 
-[node name="TreeHighGreen4" parent="." instance=ExtResource("2_3cmsr")]
-position = Vector2(384, -52)
-
-[node name="TreeHighGreen5" parent="." instance=ExtResource("2_3cmsr")]
+[node name="TreeHighGreen5" parent="." unique_id=2101632792 instance=ExtResource("2_3cmsr")]
 position = Vector2(264, 28)
 
-[node name="TreeHighGreen6" parent="." instance=ExtResource("2_3cmsr")]
+[node name="TreeHighGreen6" parent="." unique_id=1059881828 instance=ExtResource("2_3cmsr")]
 position = Vector2(334, 26)
 
-[node name="TreeHighGreen9" parent="." instance=ExtResource("2_3cmsr")]
-position = Vector2(216, -6)
-
-[node name="TreeHighGreen11" parent="." instance=ExtResource("2_3cmsr")]
-position = Vector2(292, -56)
-
-[node name="TreeHighGreen10" parent="." instance=ExtResource("2_3cmsr")]
-position = Vector2(297, 82)
-
-[node name="TreeHighYellow" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(380, 74)
-
-[node name="TreeHighYellow2" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(315, 71)
-
-[node name="TreeHighYellow3" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(405, 111)
-
-[node name="TreeHighYellow4" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(348, 123)
-
-[node name="TreeHighYellow5" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(221, -52)
-
-[node name="TreeHighYellow6" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(390, -10)
-
-[node name="TreeHighYellow7" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(355, -34)
-
-[node name="TreeHighYellow8" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(401, -54)
-
-[node name="TreeHighYellow9" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(394, 169)
-
-[node name="TreeHighYellow10" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(302, 147)
-
-[node name="TreeHighYellow11" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(312, -14)
-
-[node name="TreeHighYellow12" parent="." instance=ExtResource("3_okgeb")]
-position = Vector2(335, 82)
-
-[node name="TreeNormalGreen" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(377, 52)
-
-[node name="TreeNormalGreen2" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(303, 57)
-
-[node name="TreeNormalGreen3" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(345, 17)
-
-[node name="TreeNormalGreen4" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(385, 10)
-
-[node name="TreeNormalGreen5" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(428, -12)
-
-[node name="TreeNormalGreen6" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(404, 144)
-
-[node name="TreeNormalGreen7" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(286, 121)
-
-[node name="TreeNormalGreen8" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(255, 168)
-
-[node name="TreeNormalGreen9" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(229, 55)
-
-[node name="TreeNormalGreen12" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(305, 1)
-
-[node name="TreeNormalGreen10" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen10" parent="." unique_id=553934292 instance=ExtResource("4_ko7gh")]
 position = Vector2(256, 3)
 
-[node name="TreeNormalGreen11" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeHighGreen9" parent="." unique_id=481720945 instance=ExtResource("2_3cmsr")]
+position = Vector2(216, -6)
+
+[node name="TreeHighGreen11" parent="." unique_id=1984191351 instance=ExtResource("2_3cmsr")]
+position = Vector2(292, -56)
+
+[node name="TreeLowYellow" parent="." unique_id=1617247544 instance=ExtResource("6_wt0ao")]
+position = Vector2(393, 67)
+
+[node name="TreeHighYellow" parent="." unique_id=2104659301 instance=ExtResource("3_okgeb")]
+position = Vector2(380, 74)
+
+[node name="TreeNormalGreen5" parent="." unique_id=1510511293 instance=ExtResource("4_ko7gh")]
+position = Vector2(428, -12)
+
+[node name="TreeHighYellow2" parent="." unique_id=491898632 instance=ExtResource("3_okgeb")]
+position = Vector2(315, 71)
+
+[node name="TreeHighGreen10" parent="." unique_id=802801821 instance=ExtResource("2_3cmsr")]
+position = Vector2(297, 82)
+
+[node name="TreeHighYellow3" parent="." unique_id=1521563804 instance=ExtResource("3_okgeb")]
+position = Vector2(405, 111)
+
+[node name="TreeHighYellow4" parent="." unique_id=1226581203 instance=ExtResource("3_okgeb")]
+position = Vector2(348, 123)
+
+[node name="TreeHighYellow5" parent="." unique_id=1700125755 instance=ExtResource("3_okgeb")]
+position = Vector2(221, -52)
+
+[node name="TreeHighYellow6" parent="." unique_id=1149606597 instance=ExtResource("3_okgeb")]
+position = Vector2(390, -10)
+
+[node name="TreeHighYellow7" parent="." unique_id=1621381670 instance=ExtResource("3_okgeb")]
+position = Vector2(355, -34)
+
+[node name="TreeHighYellow8" parent="." unique_id=41265956 instance=ExtResource("3_okgeb")]
+position = Vector2(401, -54)
+
+[node name="TreeHighGreen4" parent="." unique_id=554517170 instance=ExtResource("2_3cmsr")]
+position = Vector2(384, -52)
+
+[node name="TreeHighYellow9" parent="." unique_id=914828257 instance=ExtResource("3_okgeb")]
+position = Vector2(394, 169)
+
+[node name="TreeHighYellow10" parent="." unique_id=934978398 instance=ExtResource("3_okgeb")]
+position = Vector2(302, 147)
+
+[node name="TreeNormalGreen3" parent="." unique_id=490866281 instance=ExtResource("4_ko7gh")]
+position = Vector2(351, -1)
+
+[node name="TreeHighYellow11" parent="." unique_id=687894246 instance=ExtResource("3_okgeb")]
+position = Vector2(312, -14)
+
+[node name="TreeHighYellow12" parent="." unique_id=38636539 instance=ExtResource("3_okgeb")]
+position = Vector2(335, 82)
+
+[node name="TreeLowGreen2" parent="." unique_id=187681073 instance=ExtResource("1_glibs")]
+position = Vector2(378, 114)
+
+[node name="TreeNormalGreen" parent="." unique_id=1159829337 instance=ExtResource("4_ko7gh")]
+position = Vector2(377, 52)
+
+[node name="TreeNormalGreen2" parent="." unique_id=296823812 instance=ExtResource("4_ko7gh")]
+position = Vector2(307, 53)
+
+[node name="TreeNormalGreen4" parent="." unique_id=2029164455 instance=ExtResource("4_ko7gh")]
+position = Vector2(385, 10)
+
+[node name="TreeNormalGreen6" parent="." unique_id=215516444 instance=ExtResource("4_ko7gh")]
+position = Vector2(404, 144)
+
+[node name="TreeNormalGreen8" parent="." unique_id=63002308 instance=ExtResource("4_ko7gh")]
+position = Vector2(255, 168)
+
+[node name="TreeNormalGreen9" parent="." unique_id=1807841340 instance=ExtResource("4_ko7gh")]
+position = Vector2(229, 55)
+
+[node name="TreeNormalGreen12" parent="." unique_id=202284137 instance=ExtResource("4_ko7gh")]
+position = Vector2(305, 1)
+
+[node name="TreeNormalGreen11" parent="." unique_id=1351675121 instance=ExtResource("4_ko7gh")]
 position = Vector2(347, 198)
 
-[node name="TreeNormalGreen16" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen16" parent="." unique_id=297575323 instance=ExtResource("4_ko7gh")]
 position = Vector2(422, 202)
 
-[node name="TreeNormalGreen19" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen19" parent="." unique_id=179351898 instance=ExtResource("4_ko7gh")]
 position = Vector2(-43, 35)
 
-[node name="TreeNormalGreen20" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen20" parent="." unique_id=559477766 instance=ExtResource("4_ko7gh")]
 position = Vector2(-9, -34)
 
-[node name="TreeNormalGreen22" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen22" parent="." unique_id=341587137 instance=ExtResource("4_ko7gh")]
 position = Vector2(93, -23)
 
-[node name="TreeNormalGreen23" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen23" parent="." unique_id=1741698016 instance=ExtResource("4_ko7gh")]
 position = Vector2(121, 50)
 
-[node name="TreeNormalGreen27" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen27" parent="." unique_id=1000950359 instance=ExtResource("4_ko7gh")]
 position = Vector2(179, 46)
 
-[node name="TreeNormalGreen25" parent="." instance=ExtResource("4_ko7gh")]
-position = Vector2(242, 100)
+[node name="TreeNormalGreen25" parent="." unique_id=1152952929 instance=ExtResource("4_ko7gh")]
+position = Vector2(242, 101)
 
-[node name="TreeNormalGreen26" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen26" parent="." unique_id=943225133 instance=ExtResource("4_ko7gh")]
 position = Vector2(-43, 162)
 
-[node name="TreeNormalGreen24" parent="." instance=ExtResource("4_ko7gh")]
+[node name="TreeNormalGreen24" parent="." unique_id=1805735052 instance=ExtResource("4_ko7gh")]
 position = Vector2(160, -23)
 
-[node name="TreeNormalYellow" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow" parent="." unique_id=1227478598 instance=ExtResource("5_yubch")]
 position = Vector2(428, 44)
 
-[node name="TreeNormalYellow2" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow2" parent="." unique_id=346511699 instance=ExtResource("5_yubch")]
 position = Vector2(250, 38)
 
-[node name="TreeNormalYellow14" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow14" parent="." unique_id=1360891942 instance=ExtResource("5_yubch")]
 position = Vector2(192, -1)
 
-[node name="TreeNormalYellow3" parent="." instance=ExtResource("5_yubch")]
-position = Vector2(368, 24)
+[node name="TreeNormalYellow3" parent="." unique_id=22036526 instance=ExtResource("5_yubch")]
+position = Vector2(373, 24)
 
-[node name="TreeNormalYellow4" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow4" parent="." unique_id=786943548 instance=ExtResource("5_yubch")]
 position = Vector2(341, 125)
 
-[node name="TreeNormalYellow5" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow5" parent="." unique_id=2028167384 instance=ExtResource("5_yubch")]
 position = Vector2(383, 134)
 
-[node name="TreeNormalYellow6" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow6" parent="." unique_id=653199233 instance=ExtResource("5_yubch")]
 position = Vector2(336, 47)
 
-[node name="TreeNormalYellow7" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow7" parent="." unique_id=2143476228 instance=ExtResource("5_yubch")]
 position = Vector2(393, 30)
 
-[node name="TreeNormalYellow8" parent="." instance=ExtResource("5_yubch")]
-position = Vector2(282, -26)
+[node name="TreeNormalYellow8" parent="." unique_id=1362867867 instance=ExtResource("5_yubch")]
+position = Vector2(288, -28)
 
-[node name="TreeNormalYellow11" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow11" parent="." unique_id=877257642 instance=ExtResource("5_yubch")]
 position = Vector2(343, -42)
 
-[node name="TreeNormalYellow9" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow9" parent="." unique_id=1787744206 instance=ExtResource("5_yubch")]
 position = Vector2(270, 60)
 
-[node name="TreeNormalYellow10" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow10" parent="." unique_id=1676848066 instance=ExtResource("5_yubch")]
 position = Vector2(296, 186)
 
-[node name="TreeNormalYellow12" parent="." instance=ExtResource("5_yubch")]
+[node name="TreeNormalYellow12" parent="." unique_id=734639681 instance=ExtResource("5_yubch")]
 position = Vector2(367, 172)
 
-[node name="TreeNormalYellow13" parent="." instance=ExtResource("5_yubch")]
-position = Vector2(286, 21)
+[node name="TreeHighGreen2" parent="." unique_id=1564032223 instance=ExtResource("2_3cmsr")]
+position = Vector2(389, 36)
 
-[node name="TreeLowYellow" parent="." instance=ExtResource("6_wt0ao")]
-position = Vector2(392, 68)
+[node name="TreeLowYellow2" parent="." unique_id=736016986 instance=ExtResource("6_wt0ao")]
+position = Vector2(307, 23)
 
-[node name="TreeLowYellow2" parent="." instance=ExtResource("6_wt0ao")]
-position = Vector2(309, 38)
-
-[node name="TreeLowYellow3" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow3" parent="." unique_id=1487645549 instance=ExtResource("6_wt0ao")]
 position = Vector2(305, 121)
 
-[node name="TreeLowYellow4" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeNormalGreen7" parent="." unique_id=1812603038 instance=ExtResource("4_ko7gh")]
+position = Vector2(286, 121)
+
+[node name="TreeLowYellow4" parent="." unique_id=2145048125 instance=ExtResource("6_wt0ao")]
 position = Vector2(387, 204)
 
-[node name="TreeLowYellow10" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow10" parent="." unique_id=333529477 instance=ExtResource("6_wt0ao")]
 position = Vector2(323, 30)
 
-[node name="TreeLowYellow5" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow5" parent="." unique_id=1232140556 instance=ExtResource("6_wt0ao")]
 position = Vector2(426, 155)
 
-[node name="TreeLowYellow6" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow6" parent="." unique_id=2129481543 instance=ExtResource("6_wt0ao")]
 position = Vector2(261, 113)
 
-[node name="TreeLowYellow7" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow7" parent="." unique_id=1169648437 instance=ExtResource("6_wt0ao")]
 position = Vector2(281, 147)
 
-[node name="TreeLowYellow9" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow9" parent="." unique_id=313820963 instance=ExtResource("6_wt0ao")]
 position = Vector2(-21, 179)
 
-[node name="TreeLowYellow8" parent="." instance=ExtResource("6_wt0ao")]
+[node name="TreeLowYellow8" parent="." unique_id=405418852 instance=ExtResource("6_wt0ao")]
 position = Vector2(170, 15)

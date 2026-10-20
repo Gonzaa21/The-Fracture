@@ -17,6 +17,8 @@ var instruction_file_used: bool = false
 var computer_password = "20483"
 var password_hint_shown = false
 var computer_has_booted: bool = false
+var computer_logged_in: bool = false
+var computer_unlocked_permanent: bool = false
 # pc terminal vars
 var filesystem_data: Dictionary = {}
 var current_directory: String = "C:\\Users\\User"

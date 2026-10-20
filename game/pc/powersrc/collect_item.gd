@@ -5,7 +5,6 @@ extends Area2D
 @export var inventory_icon: Texture2D
 @export var item_id: String = ""
 @export var item_sprite: Texture2D
-@onready var icon = $CanvasLayer/TextureRect
 
 var player_nearby: bool = false
 var already_collected: bool = false
@@ -24,7 +23,6 @@ func _ready():
 		"A", "B", "C":
 			if GameManager.items_collected.get(item_id, false):
 				queue_free()
-			label.text = ""
 		"modulo_sync":
 			pass
 
@@ -58,11 +56,9 @@ func collect():
 func _on_body_entered(body):
 	if body.is_in_group("player") and not already_collected:
 		player_nearby = true
-		label.visible = true
-		if !already_collected: icon.visible = true
+		if !already_collected: label.visible = true
 
 func _on_body_exited(body):
 	if body.is_in_group("player"):
 		player_nearby = false
 		label.visible = false
-		icon.visible = false

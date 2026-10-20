@@ -10,10 +10,17 @@ var degradation_active: bool = false
 
 func _ready():
 	if GameManager.computer_has_battery:
-		current_state = ComputerState.LOCKED
+		if GameManager.computer_unlocked_permanent:
+			current_state = ComputerState.DEGRADING
+		else:
+			current_state = ComputerState.LOCKED
 		sprite.texture = load("res://assets/backgrounds_popup/computer/background_pc.png")
 	else:
 		current_state = ComputerState.NO_POWER
+	var login_screen = get_parent().get_node("ComputerLoginScreen")
+	if login_screen:
+		login_screen.login_successful.connect(_on_login_successful)
+		login_screen.login_cancelled.connect(_on_login_cancelled)
 
 func _process(delta: float) -> void:
 	if degradation_active and current_state != ComputerState.DESTROYED:
@@ -32,7 +39,10 @@ func interact():
 			else:
 				show_error_screen()
 		ComputerState.LOCKED:
-			show_boot_sequence()
+			if GameManager.computer_logged_in:
+				_on_login_successful()
+			else:
+				show_boot_sequence()
 		ComputerState.UNLOCKED, ComputerState.DEGRADING:
 			show_terminal()
 		ComputerState.DESTROYED:
@@ -93,8 +103,6 @@ func show_login_screen():
 		login_screen.visible = true
 		login_screen.panel.visible = true
 		login_screen.show_login()
-		login_screen.login_successful.connect(_on_login_successful, CONNECT_ONE_SHOT)
-		login_screen.login_cancelled.connect(_on_login_cancelled, CONNECT_ONE_SHOT)
 
 func show_terminal():
 	var terminal = get_parent().get_node("ComputerTerminalScreen")
@@ -103,6 +111,7 @@ func show_terminal():
 
 func _on_login_successful():
 	current_state = ComputerState.DEGRADING
+	GameManager.computer_unlocked_permanent = true
 	show_terminal()
 
 func _on_login_cancelled():

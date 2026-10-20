@@ -62,7 +62,6 @@ func show_terminal():
 			glitch_ambient_sfx.play()
 		has_booted_before = true
 	
-	# Mostrar mensaje de bienvenida
 	print_line("NeuralCorp PowerShell")
 	print_line("Copyright (C) Neural Corporation. All rights reserved.")
 	print_line("Type 'help' for available commands.")
@@ -81,12 +80,10 @@ func _on_command_submitted(text: String):
 	command_input.text = ""
 
 func process_command(input: String):
-	# limpiar input y convertir a minusculas
 	var clean_input = input.strip_edges()
 	if clean_input == "":
 		return
 	
-	# separar comandos y argumentos
 	var parts = clean_input.split(" ", false, 1)
 	var command = parts[0].to_lower()
 	var argument = parts[1] if parts.size() > 1 else ""
@@ -113,7 +110,12 @@ func scroll_to_bottom():
 		scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
 
 func update_prompt():
-	prompt_label.text = "PS " + GameManager.current_directory + ">"
+	var current_dir = GameManager.current_directory
+	var folder_name = current_dir.get_file()
+	if folder_name == "":
+		folder_name = current_dir
+	
+	prompt_label.text = "PS " + folder_name + ">"
 
 func close_terminal():
 	panel.visible = false
@@ -153,7 +155,6 @@ func default_terminal():
 	output_label.add_theme_color_override("default_color", terminal_color)
 
 func glitch_effect():
-	# Colores para el glitch
 	var terminal_green = Color(0, 1, 0)
 	var glitch_red = Color(1, 0, 0)
 	var glitch_white = Color(1, 1, 1)
@@ -166,7 +167,6 @@ func glitch_effect():
 	print_line("█████████████████████████████████████████")
 	await get_tree().create_timer(1.1).timeout
 	
-	# Parpadeo rápido: rojo → verde → rojo
 	output_label.add_theme_color_override("default_color", terminal_green)
 	await get_tree().create_timer(0.05).timeout
 	output_label.add_theme_color_override("default_color", glitch_red)
@@ -174,7 +174,6 @@ func glitch_effect():
 	print_line("███ ERROR ████ ACCESO ████ DENEGADO ███")
 	await get_tree().create_timer(0.08).timeout
 	
-	# Parpadeo caótico: blanco → azul → amarillo
 	output_label.add_theme_color_override("default_color", glitch_white)
 	await get_tree().create_timer(0.05).timeout
 	output_label.add_theme_color_override("default_color", glitch_blue)
@@ -186,8 +185,7 @@ func glitch_effect():
 	if glitch_sfx and glitch_sfx.stream:
 		glitch_sfx.play()
 	
-	# Estallido rápido de colores
-	for i in range(6):  # 6 parpadeos rápidos
+	for i in range(6):
 		var colors = [glitch_red, glitch_white, glitch_blue, glitch_purple, glitch_yellow, terminal_green]
 		output_label.add_theme_color_override("default_color", colors[i])
 		
@@ -200,7 +198,6 @@ func glitch_effect():
 	print_line("P̴̛r̵o̶t̷o̴c̵o̶l̴o̶ P̴h̶o̴e̵n̶i̷x̴ - A̶C̵C̶E̵S̶O̷ R̴E̵S̶T̷R̴I̵N̶G̷I̴D̵O̶")
 	await get_tree().create_timer(0.1).timeout
 	
-	# Parpadeo intenso: púrpura → rojo → púrpura
 	output_label.add_theme_color_override("default_color", glitch_purple)
 	await get_tree().create_timer(0.06).timeout
 	output_label.add_theme_color_override("default_color", glitch_red)
@@ -210,7 +207,6 @@ func glitch_effect():
 	print_line("██ INICIANDO BYPASS DE SEGURIDAD ██")
 	await get_tree().create_timer(0.15).timeout
 	
-	# Parpadeo final caótico antes de estabilizar
 	output_label.add_theme_color_override("default_color", glitch_yellow)
 	await get_tree().create_timer(0.05).timeout
 	output_label.add_theme_color_override("default_color", glitch_blue)
@@ -226,7 +222,6 @@ func glitch_effect():
 	print_line("ESTABLECIENDO CONEXIÓN SEGURA...")
 	await get_tree().create_timer(0.3).timeout
 	
-	# Parpadeo verde-blanco (estabilizando)
 	output_label.add_theme_color_override("default_color", terminal_green)
 	await get_tree().create_timer(0.1).timeout
 	output_label.add_theme_color_override("default_color", glitch_white)
@@ -236,7 +231,6 @@ func glitch_effect():
 	print_line("BYPASSING ENCRYPTION...")
 	await get_tree().create_timer(0.4).timeout
 	
-	# Último parpadeo antes de establecer
 	output_label.add_theme_color_override("default_color", glitch_blue)
 	await get_tree().create_timer(0.08).timeout
 	output_label.add_theme_color_override("default_color", terminal_green)
@@ -245,7 +239,6 @@ func glitch_effect():
 	await get_tree().create_timer(0.3).timeout
 	
 	print_line("")
-	# Parpadeo final dramático
 	output_label.add_theme_color_override("default_color", glitch_white)
 	await get_tree().create_timer(0.1).timeout
 	output_label.add_theme_color_override("default_color", terminal_green)
@@ -253,12 +246,10 @@ func glitch_effect():
 	print_line("")
 	await get_tree().create_timer(0.5).timeout
 
-# Reproducir un sonido de error
 func play_error_sound():
 	if terminal_error_sfx and terminal_error_sfx.stream:
 		terminal_error_sfx.play()
 
-# Reproducir varios errores con delays
 func play_error_burst(count: int):
 	for i in range(count):
 		play_error_sound()
@@ -274,10 +265,8 @@ func phoenix_conversation():
 		var formatted_text = "[color=" + color + "]" + text + "[/color]\n"
 		
 		
-		# Mostrar con efecto typewriter
 		await print_typewriter(formatted_text, 0.02)
 		
-		# Delay entre mensajes
 		await get_tree().create_timer(0.5).timeout
 	
 	print_line("")
@@ -291,7 +280,6 @@ func get_speaker_color(speaker: String) -> String:
 
 # typewriter
 func typewriter_audio():
-	# Crear reproductor
 	typewriter_player = AudioStreamPlayer.new()
 	add_child(typewriter_player)
 	typewriter_player.volume_db = -10
@@ -306,22 +294,18 @@ func print_typewriter(text: String, speed: float = 0.02):
 	var _current_text = ""
 	for character in text:
 		_current_text += character
-		# Actualizar el output agregando solo el último caracter
 		output_label.text += character
 		
 		if character != " " and character != "\n":
 			random_typewriter_sound()
 		
-		# Auto-scroll
 		await get_tree().process_frame
 		var scroll = $Panel/Control/OutputScroll
 		if scroll:
 			scroll.scroll_vertical = scroll.get_v_scroll_bar().max_value
 		
-		# Delay entre caracteres
 		await get_tree().create_timer(speed).timeout
 	
-	# Nueva línea al final
 	output_label.text += "\n"
 
 func random_typewriter_sound():
@@ -373,5 +357,5 @@ func _on_glitch_burst_timeout():
 
 func _schedule_next_glitch():
 	var ratio = clamp(GameManager.degradation_elapsed / GameManager.degradation_limit, 0.0, 1.0)
-	var wait = lerp(4.0, 0.3, ratio)
+	var wait = lerp(6.0, 0.2, ratio)
 	glitch_burst_timer.start(wait)
