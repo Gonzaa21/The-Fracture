@@ -41,6 +41,14 @@ var key_code: Array = []
 var level2_unlocked: bool = false
 var unlock_echo_sound: AudioStream
 #level3
+const GEN_DB_SILENT := -80.0
+const GEN_DB_WORKSHOP := -5.0
+const GEN_DB_OUTSIDE := -20.0
+const GEN_STARTUP_FADE := 0.5
+const GEN_ZONE_FADE := 1.5 
+var generator_player: AudioStreamPlayer
+var generator_tween: Tween
+var generator_in_workshop: bool = true
 var generator_pieces: Dictionary = { "A": false, "B": false,  "C": false }
 var items_collected: Dictionary = { "A": false, "B": false, "C": false }
 var lab_door_powered: bool = false
@@ -171,9 +179,48 @@ func unlock_echo():
 		
 		echo_player.finished.connect(func(): echo_player.queue_free())
 
+func _generator_target_db() -> float:
+	return GEN_DB_WORKSHOP if generator_in_workshop else GEN_DB_OUTSIDE
+
+func _fade_generator_to(target_db: float, duration: float) -> void:
+	if generator_tween and generator_tween.is_valid():
+		generator_tween.kill()
+	generator_tween = create_tween()
+	generator_tween.set_trans(Tween.TRANS_SINE)
+	generator_tween.set_ease(Tween.EASE_IN_OUT)
+	generator_tween.tween_property(generator_player, "volume_db", target_db, duration)
+
+func start_sound_generator(in_workshop: bool = true) -> void:
+	if not generator_repaired:
+		return
+	generator_in_workshop = in_workshop
+	
+	if generator_player.playing:
+		_fade_generator_to(_generator_target_db(), GEN_ZONE_FADE)
+		return
+	
+	generator_player.volume_db = GEN_DB_SILENT
+	generator_player.play()
+	_fade_generator_to(_generator_target_db(), GEN_STARTUP_FADE)
+ 
+func adjust_sound_zone(workshop: bool) -> void:
+	generator_in_workshop = workshop
+	if not generator_player.playing:
+		return
+	_fade_generator_to(_generator_target_db(), GEN_ZONE_FADE)
+ 
 func _ready():
 	load_database()
 	load_filesystem()
 	background_music()
 	unlock_audio()
 	print("Fragmentos cargados: ", fragments_database.size())
+	
+	generator_player = AudioStreamPlayer.new()
+	add_child(generator_player)
+	var gen_stream = load("res://assets/sound/effects/electric_generator.mp3")
+	if gen_stream is AudioStreamMP3:
+		gen_stream.loop = true
+	generator_player.stream = gen_stream
+	generator_player.bus = "SFX"
+	generator_player.volume_db = GEN_DB_SILENT

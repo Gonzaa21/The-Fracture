@@ -3,18 +3,33 @@ extends Area2D
 var player_nearby: bool = false
 @onready var label = $Label
 var is_fixed: bool = false
+@onready var sprite_bottom = $SpriteBottom
+@onready var sprite_top = $SpriteTop
+var _base_pos_bottom: Vector2
+var _base_pos_top: Vector2
 
 var pressure: float = 0.0
 var pressure_speed: float = 30.0
 var pressure_decay: float = 15.0
 
+const SHAKE_AMPLITUDE := 1.0
+const SHAKE_INTERVAL := 0.04
+var _shaking: bool = false
+var _shake_timer: float = 0.0
+var _base_position: Vector2
+
 func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	label.visible = false
+	_base_pos_bottom = sprite_bottom.position
+	_base_pos_top = sprite_top.position
+	
 	if GameManager.generator_repaired:
 		is_fixed = true
 		label.text = "Generador Activo"
+		_start_shake()
+		GameManager.start_sound_generator(true)
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
@@ -27,6 +42,8 @@ func _on_body_exited(body):
 		label.visible = false
 
 func _process(delta):
+	_update_shake(delta)
+	
 	var all_installed = GameManager.generator_pieces["A"] and GameManager.generator_pieces["B"] and GameManager.generator_pieces["C"]
 	if player_nearby: _update_label(all_installed)
 	
@@ -74,11 +91,26 @@ func _on_generator_fixed():
 	GameManager.generator_repaired = true
 	label.text = "Generador Activo"
 	GameManager.lab_door_locked.emit()
-	_play_startup_shake()
+	_start_shake()
+	GameManager.start_sound_generator(true)
 
-func _play_startup_shake():
-	var original_pos = position
-	var tween = create_tween().set_loops()
-	var offset = Vector2(randf_range(-1, 1), randf_range(-1, 1))
-	tween.tween_property(self, "position", original_pos + offset, 0.04)
-	tween.tween_property(self, "position", original_pos, 0.04)
+func _start_shake():
+	_shaking = true
+
+func _stop_shake():
+	_shaking = false
+	sprite_bottom.position = _base_pos_bottom
+	sprite_top.position = _base_pos_top
+
+func _update_shake(delta: float):
+	if not _shaking:
+		return
+	_shake_timer += delta
+	if _shake_timer >= SHAKE_INTERVAL:
+		_shake_timer = 0.0
+		var offset = Vector2(
+			randf_range(-SHAKE_AMPLITUDE, SHAKE_AMPLITUDE),
+			randf_range(-SHAKE_AMPLITUDE, SHAKE_AMPLITUDE)
+		)
+		sprite_bottom.position = _base_pos_bottom + offset
+		sprite_top.position = _base_pos_top + offset

@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	GameManager.adjust_sound_zone(false)
 	if Global.next_spawn_id != "":
 		var spawn_node = find_child(Global.next_spawn_id)
 		var player = find_child("Player")
