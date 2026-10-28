@@ -3,15 +3,15 @@ extends CharacterBody2D
 @onready var inventory_cell = $InventoryCell
 @onready var use_prompt: Label = $UsePrompt
 
-# config
 var speed_walk = 50.0;
 var speed_run = 70.0;
 var default_direction = "up";
-#audio
+
 var footstep_sounds: Array[AudioStream] = []
 var footstep_player: AudioStreamPlayer2D
 var footstep_timer: float = 0.0
 var footstep_interval: float = 0.3
+var idle_frames: int = 0
 
 func _ready() -> void:
 	setup_footstep_audio()
@@ -36,45 +36,50 @@ func _physics_process(delta: float) -> void:
 		return
 		
 	get_input()
+	
+	var pos_before = global_position
+	
 	move_and_slide()
 	
-	# audio
-	var is_moving = velocity.length() > 0
+	var distance_moved = global_position.distance_to(pos_before)
+	var is_trying_to_move = velocity.length() > 0
+	var is_actually_moving = is_trying_to_move and (distance_moved > 0.02)
+	
 	var is_running = Input.is_action_pressed("run")
 	
-	if is_moving:
+	if is_actually_moving:
+		idle_frames = 0
+		if is_running:
+			update_animation("run")
+		else:
+			update_animation("walk")
 		play_footsteps(delta, is_running)
 	else:
-		footstep_timer = 0.0
+		idle_frames += 1
+		if idle_frames >= 4 or not is_trying_to_move:
+			update_animation("idle")
+			footstep_timer = 0.0
 
-# get direction
 func get_input():
 	var direction = Input.get_vector("left", "right", "up", "down")
-
-	# IDLE
+	
 	if direction == Vector2.ZERO:
 		velocity = Vector2.ZERO
-		update_animation("idle")
 		return
-
-	# DIRECTION
+	
 	var x = abs(direction.x)
 	var y = abs(direction.y)
 	if x > y * 0.8:
 		default_direction = "right" if direction.x > 0 else "left"
 	elif y > x * 0.8:
 		default_direction = "down" if direction.y > 0 else "up"
-
-	# VELOCITY run/walk
+	
 	if Input.is_action_pressed("run"):
 		velocity = direction * speed_run
-		update_animation("run")
 	else:
 		velocity = direction * speed_walk
-		update_animation("walk")
 
 
-# update and play animation
 func update_animation(state):
 	animated_sprite.play(state + "_" + default_direction)
 
@@ -103,7 +108,6 @@ func play_footsteps(delta: float, is_running: bool):
 			footstep_player.pitch_scale = randf_range(0.9, 1.1)
 			footstep_player.play()
 
-# inventory cell
 func add_inventory(item_icon: Texture2D):
 	if inventory_cell.has_item():
 		return false
