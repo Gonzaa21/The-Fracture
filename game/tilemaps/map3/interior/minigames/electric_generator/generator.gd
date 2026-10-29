@@ -12,7 +12,7 @@ var pressure: float = 0.0
 var pressure_speed: float = 30.0
 var pressure_decay: float = 15.0
 
-const SHAKE_AMPLITUDE := 1.0
+const SHAKE_AMPLITUDE := 0.5
 const SHAKE_INTERVAL := 0.04
 var _shaking: bool = false
 var _shake_timer: float = 0.0

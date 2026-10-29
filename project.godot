@@ -28,6 +28,10 @@ ForestManager="*res://game/tilemaps/map2/anomalies/forest/forest_manager.gd"
 RegistryManager="*uid://cix6jt3a0f7mg"
 MorseManager="*uid://c12oab6skdbf0"
 
+[debug]
+
+file_logging/enable_file_logging=true
+
 [display]
 
 window/size/viewport_width=480

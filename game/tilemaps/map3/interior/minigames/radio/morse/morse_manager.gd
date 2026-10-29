@@ -141,20 +141,15 @@ func _play_next_symbol():
 		"dot":
 			await generate_tone(BEEP_FREQUENCY, DOT_DURATION)
 			morse_timer.start(DOT_DURATION + SYMBOL_SPACE)
-			pass
 		"dash":
 			await generate_tone(BEEP_FREQUENCY, DASH_DURATION)
 			morse_timer.start(DASH_DURATION + SYMBOL_SPACE)
-			pass
 		"symbol_space":
 			morse_timer.start(SYMBOL_SPACE)
-			pass
 		"letter_space":
 			morse_timer.start(LETTER_SPACE)
-			pass
 		"word_space":
 			morse_timer.start(WORD_SPACE)
-			pass
 
 func _on_morse_timeout():
 	_play_next_symbol()
@@ -169,13 +164,15 @@ func generate_tone(frequency: float, duration: float):
 	await get_tree().process_frame
 	
 	var playback: AudioStreamGeneratorPlayback = audio_player.get_stream_playback()
-	
+	if playback == null:
+		return
+		
 	var sample_count = int(stream.mix_rate * duration)
 	var phase = 0.0
 	var increment = frequency / stream.mix_rate
 	
 	for i in range(sample_count):
-		while playback.get_frames_available() == 0:
+		if playback.get_frames_available() == 0:
 			await get_tree().process_frame
 		
 		var sample = sin(phase * TAU)
