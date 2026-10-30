@@ -35,9 +35,10 @@ func _ready() -> void:
 	
 	error_label.visible = false
 	confirm_button.pressed.connect(_on_confirm_pressed)
-	#digit_1.text_changed.connect(_on_digit1_changed)
-	#digit_2.text_changed.connect(_on_digit2_changed)
-	#digit_2.focus_entered.connect(_on_digit2_focus_entered)
+	
+	digit_1.text_changed.connect(_on_digit1_changed)
+	digit_2.text_changed.connect(_on_digit2_changed)
+	digit_2.focus_entered.connect(_on_digit2_focus_entered)
 
 func open_panel():
 	control.visible = true
@@ -91,17 +92,17 @@ func _lock_terminal(duration := LOCK_DURATION):
 	locked_label.visible = false
 	GameManager.terminal_lock_until.erase(terminal_id)
 
-#func _on_digit1_changed(new_text: String):
-	#if new_text.length() > 0 and digit_2.visible:
-		#digit_2.grab_focus()
-#
-#func _on_digit2_changed(new_text: String):
-	#if new_text.length() == 0:
-		#digit_1.grab_focus()
-#
-#func _on_digit2_focus_entered():
-	#if digit_1.text.is_empty():
-		#digit_1.grab_focus()
+func _on_digit1_changed(new_text: String):
+	if new_text.length() > 0 and digit_2.visible:
+		digit_2.grab_focus.call_deferred()
+
+func _on_digit2_changed(new_text: String):
+	if new_text.length() == 0:
+		digit_1.grab_focus.call_deferred()
+
+func _on_digit2_focus_entered():
+	if digit_1.text.is_empty():
+		digit_1.grab_focus.call_deferred()
 
 func close_panel():
 	var tween = create_tween()
