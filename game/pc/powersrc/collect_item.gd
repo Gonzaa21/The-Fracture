@@ -20,7 +20,7 @@ func _ready():
 				visible = false
 				set_process(false)
 				monitoring = false
-		"A", "B", "C":
+		"A", "B", "C", "KEY":
 			if GameManager.items_collected.get(item_id, false):
 				queue_free()
 		"modulo_sync":
@@ -46,6 +46,8 @@ func collect():
 		"A", "B", "C":
 			GameManager.items_collected[item_id] = true
 			label.text = ""
+		"KEY":
+			GameManager.items_collected[item_id] = true
 	
 	if inventory_icon:
 		player.add_inventory(inventory_icon)

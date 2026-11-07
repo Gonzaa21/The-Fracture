@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c607qyktdox47"]
+
+[ext_resource type="Texture2D" uid="uid://bman687h52ety" path="res://assets/objects/security-camera_tileset.png" id="1_wqkiy"]
+[ext_resource type="Script" uid="uid://cyh1wnbqcbdub" path="res://game/tilemaps/map3/interior/minigames/laboratory/cameras/security_camera.gd" id="2_wqkiy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqkiy"]
+atlas = ExtResource("1_wqkiy")
+
+[node name="SecurityCamera" type="Area2D" unique_id=1787691521 node_paths=PackedStringArray("camera_sprite", "vision_polygon")]
+script = ExtResource("2_wqkiy")
+camera_sprite = NodePath("Sprite2D")
+vision_polygon = NodePath("Polygon2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1933330523]
+scale = Vector2(0.2, 0.2)
+texture = SubResource("AtlasTexture_wqkiy")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=622239918]
+position = Vector2(2, -4)
+scale = Vector2(1.0208333, 1)
+polygon = PackedVector2Array(3.9183676, 3, 52.897964, -18, 52.897964, 22)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1244259340]

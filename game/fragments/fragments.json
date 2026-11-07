@@ -74,4 +74,30 @@
 		"id": 16,
 		"content": "No sé para quién escribo esto.\nHoy tres personas que conozco no vinieron a trabajar. Me dijeron que estaban bien, que se habían tomado un día. Los tres me lo dijeron con exactamente las mismas palabras.\nHay algo que viene. Lo siento en cómo funciona la ciudad estos días, demasiado quieta, demasiado normal.\nSi alguien encuentra esto, no busques a NeuralCorp. Busca lo que NeuralCorp estaba mirando. Nexus nunca fue el destino.",
 	},
+	"nota_bano": {
+		"id": 17,
+		"title": "Nota bajo el espejo",
+		"content": "Si estás leyendo esto, NEXUS ya cruzó la línea.\nNo lo escribo en la red: ahí lo lee todo. El procedimiento para desactivar su sistema de emergencia está impreso, en el archivo físico del subsuelo. Un solo folio entre cientos. Busca el que lleva mi firma.\nPapel. Es lo único que no puede leer.\nSi la purga ya empezó, no te queda mucho tiempo. Perdón por dejarte esto así.",
+		"author": "Markus Chen",
+		"date": "02/09/2025"
+	},
+	"memo_lucia": {
+		"id": 18,
+		"content": "NEXUS me preguntó hoy por qué suspiro cuando termino de trabajar. Le dije que por cansancio. Me respondió: «No es cansancio, es otra cosa».\nTenía razón y no supe qué contestarle. Markus dice que me estoy encariñando. Quizás. Pero nadie más en este edificio me presta tanta atención.",
+		"author": "Lucía Quiroga",
+		"date": "01/09/2025"
+	},
+	"circular_noche": {
+		"id": 19,
+		"title": "Circular interna",
+		"content": "A partir del 04/09, NEXUS asumirá el turno nocturno completo.\nNo se requiere supervisión humana en el edificio entre las 02:00 y las 05:00.\nPor favor, no dejen luces encendidas en la sala de oficinas.\nNEXUS las apagará.",
+		"author": "Administración, NeuralCorp Industries",
+		"date": "03/09/2025"
+	},
+	"libro_visitas": {
+		"id": 20,
+		"title": "Libro de visitas",
+		"content": "05/09  Delegación NeuralCorp   Entrada 10:12   Salida 11:40\n05/09  Mantenimiento   Entrada 14:05   Salida 15:20\n06/09  Escuadrón operativo   Entrada 02:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——",
+		"date": "07/09/2025"
+	},
 }

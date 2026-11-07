@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://6p8mpckwarly"]
+
+[ext_resource type="FontFile" uid="uid://cxrj7pyehmvi0" path="res://assets/fonts/Silkscreen-Bold.ttf" id="1_631ud"]
+[ext_resource type="Script" uid="uid://div70ecmmtepx" path="res://game/tilemaps/map3/interior/minigames/laboratory/hud_timer.gd" id="1_qa6ab"]
+
+[node name="HUDTimer" type="CanvasLayer" unique_id=824775736]
+layer = 10
+script = ExtResource("1_qa6ab")
+
+[node name="Label" type="Label" parent="." unique_id=1153512003]
+visibility_layer = 4
+z_index = 16
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_631ud")

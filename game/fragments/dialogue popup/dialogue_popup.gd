@@ -35,10 +35,8 @@ func show_fragment(fragment_id: String):
 	
 	var fragment_data = GameManager.fragments_database[fragment_id]
 	
-	# Título
 	title_label.text = fragment_data.get("title", fragment_id.capitalize())
 	
-	# Metadata
 	var metadata_parts = []
 	if "date" in fragment_data:
 		metadata_parts.append(fragment_data["date"])
@@ -46,7 +44,6 @@ func show_fragment(fragment_id: String):
 		metadata_parts.append(fragment_data["author"])
 	metadata_label.text = " | ".join(metadata_parts)
 	
-	# Contenido con typewriter
 	full_text = fragment_data["content"]
 	current_char_index = 0
 	content_label.text = ""
