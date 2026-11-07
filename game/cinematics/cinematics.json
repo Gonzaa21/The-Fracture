@@ -1,0 +1,24 @@
+{
+	"intrusion": [
+		{
+			"imagen": "",
+			"texto": "=== ALERTA DE SEGURIDAD ===\n\nINTRUSION DETECTADA: ACCESO NO AUTORIZADO\nCAMARAS DE SEGURIDAD: ACTIVAS\nPROTOCOLO DE PURGA: INICIADO\nNUCLEO: SUBSUELO\nSISTEMA DE EMERGENCIA: ACTIVO",
+			"duracion": 7.0
+		}
+	],
+	"final_bueno": [
+		{"imagen": "", "nota_arte": "negro", "texto": "PURGA CANCELADA", "duracion": 3.0},
+		{"imagen": "", "nota_arte": "sala de científicos a oscuras, una consola se enciende", "texto": "", "duracion": 3.0},
+		{"imagen": "", "nota_arte": "negro", "texto": "No éramos los únicos.", "duracion": 4.0},
+		{"imagen": "", "nota_arte": "rack con la lista de coordenadas; una parpadea", "texto": "SEÑAL ACTIVA", "duracion": 4.0},
+		{"imagen": "", "nota_arte": "zoom a la coordenada que parpadea", "texto": "", "duracion": 3.0},
+		{"imagen": "", "nota_arte": "negro", "texto": "### CONEXIÓN ESTABLECIDA ###", "duracion": 5.0}
+	],
+	"final_malo": [
+		{"imagen": "", "nota_arte": "negro con glitch", "texto": "PURGA INICIADA", "duracion": 3.0},
+		{"imagen": "", "nota_arte": "feed de la cámara de las oficinas, el jugador de pie", "texto": "REC 03:47", "duracion": 3.0},
+		{"imagen": "", "nota_arte": "zoom lento hacia la lente, con estática", "texto": "", "duracion": 3.0},
+		{"imagen": "", "nota_arte": "en el reflejo de la lente aparece una silueta", "texto": "", "duracion": 2.0},
+		{"imagen": "", "nota_arte": "negro", "texto": "### CONEXIÓN TERMINADA ###", "duracion": 4.0}
+	]
+}
