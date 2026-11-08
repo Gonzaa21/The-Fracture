@@ -24,9 +24,9 @@ var filesystem_data: Dictionary = {}
 var current_directory: String = "C:\\Users\\User"
 var phoenix_viewed: bool = false
 var omega_decrypted: bool = false
-var degradation_speed_multiplier: float = 1.0
+var degradation_speed_multiplier: float = 0.7
 var degradation_elapsed: float = 0.0
-var degradation_limit: float = 720
+var degradation_limit: float = 540
 var glitch_timer: Timer
 var omega_acceleration_triggered: bool = false
 # audio
