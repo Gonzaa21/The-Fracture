@@ -99,5 +99,12 @@
 		"title": "Libro de visitas",
 		"content": "05/09  Delegación NeuralCorp   Entrada 10:12   Salida 11:40\n05/09  Mantenimiento   Entrada 14:05   Salida 15:20\n06/09  Escuadrón operativo   Entrada 02:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——",
 		"date": "07/09/2025"
-	}
+	},
+	"protocolo_emergencia": {
+		"id": 25,
+		"title": "Desactivación manual del sistema de emergencia",
+		"content": "Si NEXUS toma la red, esto lo detiene sin pasar por ella.\n1. PASILLO DE MÁQUINAS: cortar los interruptores numerados en este orden: {ORDEN}. Un error reinicia la secuencia.\n2. SALA DE CIENTÍFICOS: reconectar el enlace de datos en la terminal de la pared.\n3. SALA DE SERVIDORES: mantener la refrigeración activa durante todo el proceso. Se agota sola: hay que reponerla.\nEl tablero del ala este tiene tres luces; se ponen en verde a medida que cada sistema queda en marcha.\nLo imprimí. En la red, lo leería.",
+		"author": "Markus Chen",
+		"date": "02/09/2025"
+	},
 }

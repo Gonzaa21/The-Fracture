@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c607qyktdox47"]
 
 [ext_resource type="Texture2D" uid="uid://bman687h52ety" path="res://assets/objects/security-camera_tileset.png" id="1_wqkiy"]
-[ext_resource type="Script" uid="uid://cyh1wnbqcbdub" path="res://game/tilemaps/map3/interior/minigames/laboratory/cameras/security_camera.gd" id="2_wqkiy"]
+[ext_resource type="Script" uid="uid://cyh1wnbqcbdub" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab1/cameras/security_camera.gd" id="2_wqkiy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqkiy"]
 atlas = ExtResource("1_wqkiy")

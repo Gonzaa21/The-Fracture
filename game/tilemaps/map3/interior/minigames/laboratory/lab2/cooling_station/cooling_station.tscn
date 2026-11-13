@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dxtro41pao3bv"]
+
+[ext_resource type="Script" uid="uid://uksbqyj4nbsg" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/cooling_station/cooling_station.gd" id="1_tkaq1"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="2_165xw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkaq1"]
+size = Vector2(13, 26)
+
+[node name="CoolingStation" type="Area2D" unique_id=1157450498 node_paths=PackedStringArray("label")]
+script = ExtResource("1_tkaq1")
+label = NodePath("Prompt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=202246655]
+shape = SubResource("RectangleShape2D_tkaq1")
+
+[node name="Prompt" type="Label" parent="." unique_id=60630437]
+z_index = 10
+offset_left = -21.0
+offset_top = -13.0
+offset_right = 6.0
+offset_bottom = -7.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("2_165xw")
+theme_override_font_sizes/font_size = 4
+text = "[E] Interactuar"

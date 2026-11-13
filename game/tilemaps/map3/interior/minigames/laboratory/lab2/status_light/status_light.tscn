@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://58s0e2ug6a5l"]
+
+[ext_resource type="Script" uid="uid://bvp423hxlmf12" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/status_light/status_light.gd" id="1_4hb1x"]
+[ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="2_6n0qp"]
+
+[node name="StatusLight" type="Node2D" unique_id=1786753896 node_paths=PackedStringArray("light")]
+script = ExtResource("1_4hb1x")
+light = NodePath("Light")
+
+[node name="Light" type="PointLight2D" parent="." unique_id=668925939]
+texture = ExtResource("2_6n0qp")
+texture_scale = 0.15

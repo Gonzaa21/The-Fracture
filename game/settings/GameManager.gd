@@ -3,8 +3,9 @@ extends Node
 signal fragment_collected(fragment_id)
 signal open_lab_door
 signal lab_door_locked
-
 var lab_door_is_open: bool = false
+
+signal basement_system_changed(system_id: String, active: bool)
 
 # fragments var
 var fragments_database = {}
@@ -56,6 +57,14 @@ var generator_repaired: bool = false
 var chain_auth: Dictionary = { "terminal_1": false, "terminal_2": false, "terminal_3": false }
 var terminal_lock_until: Dictionary = {}
 var photo_lots: Array = []
+# subsuelo del laboratorio
+const BASEMENT_SYSTEMS: Array[String] = ["switches", "wires", "cooling"]
+const SWITCH_ORDERS: Array = [[2, 4, 1, 3], [3, 1, 4, 2], [4, 2, 3, 1], [1, 3, 2, 4]]
+var basement_done: Dictionary = {}
+var switch_progress: Array = []
+var cooling_level: float = 0.0
+var emergency_disabled: bool = false
+var _switch_order_idx: int = -1
 
 func load_database():
 	var file = FileAccess.open("res://game/fragments/fragments.json",FileAccess.READ)
@@ -209,6 +218,39 @@ func adjust_sound_zone(workshop: bool) -> void:
 		return
 	_fade_generator_to(_generator_target_db(), GEN_ZONE_FADE)
  
+func switch_order_index() -> int:
+	if _switch_order_idx < 0:
+		_switch_order_idx = randi() % SWITCH_ORDERS.size()
+	return _switch_order_idx
+
+func switch_order() -> Array:
+	return SWITCH_ORDERS[switch_order_index()]
+
+func set_basement_system(system_id: String, active: bool) -> void:
+	if basement_done.get(system_id, false) == active:
+		return
+	basement_done[system_id] = active
+	basement_system_changed.emit(system_id, active)
+
+func complete_basement_system(system_id: String) -> void:
+	set_basement_system(system_id, true)
+
+func all_basement_systems_done() -> bool:
+	for id in BASEMENT_SYSTEMS:
+		if not basement_done.get(id, false):
+			return false
+	return true
+
+func reset_basement() -> void:
+	basement_done.clear()
+	switch_progress.clear()
+	cooling_level = 0.0
+	emergency_disabled = false
+	_switch_order_idx = -1
+
+func is_cooling_active() -> bool:
+	return basement_done.get("cooling", false)
+
 func _ready():
 	load_database()
 	load_filesystem()

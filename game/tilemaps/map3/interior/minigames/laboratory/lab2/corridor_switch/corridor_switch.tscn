@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://drdvbcq4awm6d"]
+
+[ext_resource type="Script" uid="uid://i3fnuiwmmbj1" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/corridor_switch/corridor_switch.gd" id="1_1pd5a"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="2_xhcm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pd5a"]
+size = Vector2(10.5, 9.5)
+
+[node name="CorridorSwitch" type="Area2D" unique_id=252922518 node_paths=PackedStringArray("label")]
+script = ExtResource("1_1pd5a")
+label = NodePath("Prompt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=898339715]
+position = Vector2(3.75, 4.25)
+shape = SubResource("RectangleShape2D_1pd5a")
+
+[node name="Prompt" type="Label" parent="." unique_id=2004776999]
+z_index = 10
+offset_left = -9.0
+offset_top = -8.0
+offset_right = 18.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("2_xhcm2")
+theme_override_font_sizes/font_size = 4
+text = "[E] Interactuar"

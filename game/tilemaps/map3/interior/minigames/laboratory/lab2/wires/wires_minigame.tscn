@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://m0nccfwla6q"]
+
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_2c83p"]
+[ext_resource type="Script" uid="uid://d2kv2p7ear7cp" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/wires/wires_minigame.gd" id="1_lt2mq"]
+[ext_resource type="Texture2D" uid="uid://bo040id72vt1q" path="res://assets/interior/wire_ui.png" id="2_m3tde"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt2mq"]
+bg_color = Color(0, 0, 0, 0.03529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3tde"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15yjt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrcdu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="WiresMinigame" type="CanvasLayer" unique_id=136112974]
+layer = 20
+script = ExtResource("1_lt2mq")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1677357924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.02745098, 1)
+
+[node name="Board" type="TextureRect" parent="." unique_id=1411686645]
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 376.0
+offset_bottom = 264.0
+texture = ExtResource("2_m3tde")
+
+[node name="Lines" type="Control" parent="Board" unique_id=1397925866]
+anchors_preset = 0
+offset_left = 56.0
+offset_top = 37.0
+offset_right = 200.0
+offset_bottom = 208.0
+
+[node name="CloseButton" type="Button" parent="." unique_id=1461365687]
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 219.0
+offset_bottom = 55.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("1_2c83p")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_lt2mq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m3tde")
+theme_override_styles/hover = SubResource("StyleBoxFlat_15yjt")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mrcdu")
+text = "[X]"

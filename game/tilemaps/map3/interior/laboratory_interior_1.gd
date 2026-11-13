@@ -1,6 +1,6 @@
 extends Node2D
 
-const LAB_TIME := 60.0 
+const LAB_TIME := 480.0 
 
 func _ready():
 	if Global.next_spawn_id != "":
@@ -11,5 +11,6 @@ func _ready():
 			Global.next_spawn_id = ""
 	
 	if not AlarmManager.running and not AlarmManager.finished:
+		GameManager.reset_basement()
 		await CinematicsManager.play("intrusion")
 		AlarmManager.start(LAB_TIME)

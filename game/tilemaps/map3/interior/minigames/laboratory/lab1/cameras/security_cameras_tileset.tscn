@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drwfapic3t3t8"]
 
-[ext_resource type="PackedScene" uid="uid://c607qyktdox47" path="res://game/tilemaps/map3/interior/minigames/laboratory/cameras/security_camera.tscn" id="2_d3crn"]
+[ext_resource type="PackedScene" uid="uid://c607qyktdox47" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab1/cameras/security_camera.tscn" id="2_d3crn"]
 
 [node name="SecurityCamerasTileset" type="Node2D" unique_id=1538964873]
 

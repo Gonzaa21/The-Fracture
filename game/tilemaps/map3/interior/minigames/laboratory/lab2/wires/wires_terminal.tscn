@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cbn2h1e26lh6y"]
+
+[ext_resource type="Script" uid="uid://dxq04erwmsowj" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/wires/wires_terminal.gd" id="1_w8o7o"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="1_xajeo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xajeo"]
+size = Vector2(16, 16)
+
+[node name="WiresTerminal" type="Area2D" unique_id=1624008612 node_paths=PackedStringArray("label")]
+script = ExtResource("1_w8o7o")
+label = NodePath("Prompt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783431916]
+shape = SubResource("RectangleShape2D_xajeo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=827133269]
+
+[node name="Prompt" type="Label" parent="." unique_id=1083794216]
+z_index = 10
+offset_left = -13.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("1_xajeo")
+theme_override_font_sizes/font_size = 4
+text = "[E] Interactuar"
