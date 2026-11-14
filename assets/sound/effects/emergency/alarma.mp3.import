@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://4p2fgtts3x4n"
+uid="uid://krs5kmkmgg61"
 path="res://.godot/imported/alarma.mp3-4273c69629bc92b31bcf4364ff234c54.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/alarma.mp3-4273c69629bc92b31bcf4364ff234c54.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0.0
 bpm=0.0
 beat_count=0

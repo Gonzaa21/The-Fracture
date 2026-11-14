@@ -5,6 +5,7 @@ const GOOD_END_NEXT_SCENE := "res://game/tilemaps/map3/level_3.tscn"
 var _finished: bool = false
 
 func _ready() -> void:
+	AlarmManager.set_zone(true)
 	_prepare_protocol_text()
 	GameManager.basement_system_changed.connect(_on_system_changed)
 
