@@ -1,6 +1,13 @@
 extends Area2D
 
+const LAB_INTERIOR_1 := "res://game/tilemaps/map3/interior/laboratory_interior1.tscn"
+
 @export var sprite: Sprite2D
+@export var closed_texture: Texture2D
+@export var open_texture: Texture2D
+@export var open_sound: AudioStream
+@export var open_delay: float = 0.6
+@export var auto_enter_after_open: bool = true
 @export var target_scene: String = ""
 @export var spawn_point_id: String = "default"
 @export var requires_key: bool = false
@@ -20,6 +27,9 @@ func _ready():
 	GameManager.open_lab_door.connect(_on_lab_door_opened)
 	if feedback_label:
 		feedback_label.visible = false
+	if sprite and closed_texture == null:
+		closed_texture = sprite.texture
+	_apply_state(_is_open() or (target_scene == LAB_INTERIOR_1 and GameManager.lab_door_is_open))
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
@@ -32,6 +42,9 @@ func _on_body_exited(body):
 func _process(_delta):
 	if player_nearby and Input.is_action_just_pressed("interact") and not is_opening:
 		_open_door()
+
+func _is_open() -> bool:
+	return GameManager.opened_doors.get(str(get_path()), false)
 
 func _has_key() -> bool:
 	return GameManager.items_collected.get(key_id, false) or GameManager.has_fragment(key_id)
@@ -52,15 +65,42 @@ func _open_door():
 		_show_feedback("Puerta bloqueada")
 		return
 	
-	if requires_key and consume_key:
-		_consume_key()
-	
+	if not _is_open():
+		if requires_key and consume_key:
+			_consume_key()
+		_set_open()
+		if open_texture != null:
+			if not auto_enter_after_open:
+				return
+			is_opening = true
+			await get_tree().create_timer(open_delay).timeout
+	_enter()
+
+func _enter() -> void:
+	if not is_inside_tree():
+		return
 	is_opening = true
-	
 	if not spawn_point_id.is_empty():
 		Global.next_spawn_id = spawn_point_id
-	
 	TransitionEffect.fade_to_scene(target_scene)
+
+func _set_open() -> void:
+	GameManager.opened_doors[str(get_path())] = true
+	_apply_state(true)
+	if open_sound:
+		var p := AudioStreamPlayer.new()
+		p.stream = open_sound
+		p.bus = "SFX"
+		add_child(p)
+		p.finished.connect(p.queue_free)
+		p.play()
+
+func _apply_state(open: bool) -> void:
+	if sprite == null:
+		return
+	var tex: Texture2D = open_texture if (open and open_texture != null) else closed_texture
+	if tex:
+		sprite.texture = tex
 
 func _consume_key() -> void:
 	if GameManager.current_item_id != key_id:
@@ -86,5 +126,7 @@ func _show_feedback(text: String) -> void:
 		feedback_label.visible = false
 
 func _on_lab_door_opened():
-	if target_scene != "res://game/tilemaps/map3/interior/laboratory_interior1.tscn": return
-	if not is_instance_valid(sprite): return
+	# la puerta exterior del laboratorio se abre cuando la radio autoriza la transmisión
+	if target_scene != LAB_INTERIOR_1 or open_texture == null:
+		return
+	_set_open()

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://drdvbcq4awm6d" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/corridor_switch/corridor_switch.tscn" id="2_ers1g"]
 [ext_resource type="Texture2D" uid="uid://c4wv5dlit7fly" path="res://assets/interior/post apoc office furniture set updated.png" id="3_miwcd"]
 [ext_resource type="PackedScene" uid="uid://58s0e2ug6a5l" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/status_light/status_light.tscn" id="3_pkxn6"]
+[ext_resource type="AudioStream" uid="uid://d3rbtm54iuaj1" path="res://assets/sound/effects/electric_generator.mp3" id="3_qwn2a"]
 [ext_resource type="Texture2D" uid="uid://cal4x6qbacepq" path="res://assets/interior/PostApoc_Workshop_Icons.png" id="4_qwn2a"]
 [ext_resource type="PackedScene" uid="uid://dxtro41pao3bv" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab2/cooling_station/cooling_station.tscn" id="5_q3ii1"]
 [ext_resource type="Texture2D" uid="uid://ny8w567v2f36" path="res://assets/interior/TILESET_LABORATORY.png" id="5_rpulb"]
@@ -4104,6 +4105,8 @@ shake_targets = [NodePath("../GeneratorMachine")]
 shake_amplitude = 0.3
 light_color = Color(0.45882353, 0.5568628, 0.4117647, 1)
 light_energy = 4.5
+motor_stream = ExtResource("3_qwn2a")
+motor_pitch = 0.5
 
 [node name="GeneratorMachine" type="TileMapLayer" parent="." unique_id=1746975755]
 position = Vector2(452.00003, 97)
@@ -4118,6 +4121,8 @@ shake_targets = [NodePath("../GeneratorMachine2"), NodePath("../TopLayer2")]
 shake_amplitude = 0.3
 light_color = Color(0.45882353, 0.5568628, 0.4117647, 1)
 light_energy = 4.5
+motor_stream = ExtResource("3_qwn2a")
+motor_pitch = 2.0
 
 [node name="GeneratorMachine2" type="TileMapLayer" parent="." unique_id=540385175]
 position = Vector2(452, 174)
@@ -4138,6 +4143,8 @@ shake_targets = [NodePath("../GeneratorMachine3"), NodePath("../TopLayer3")]
 shake_amplitude = 0.3
 light_color = Color(0.45882353, 0.5568628, 0.4117647, 1)
 light_energy = 4.5
+motor_stream = ExtResource("3_qwn2a")
+motor_volume_db = 10.0
 
 [node name="GeneratorMachine3" type="TileMapLayer" parent="." unique_id=45293791]
 position = Vector2(435.00003, 135)

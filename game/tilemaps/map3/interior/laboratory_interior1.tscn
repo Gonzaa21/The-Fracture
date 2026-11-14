@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cbw482er8qe61" path="res://game/player/limits/limits.tscn" id="12_eqxdi"]
 [ext_resource type="PackedScene" uid="uid://drwfapic3t3t8" path="res://game/tilemaps/map3/interior/minigames/laboratory/lab1/cameras/security_cameras_tileset.tscn" id="14_me46s"]
 [ext_resource type="PackedScene" uid="uid://crgixvyk05bds" path="res://game/pc/powersrc/collect_item.tscn" id="15_6rvdx"]
+[ext_resource type="AudioStream" uid="uid://eb2s1c25m3se" path="res://assets/sound/effects/metal-door-open.mp3" id="19_00q0e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srk55"]
 texture = ExtResource("3_srk55")
@@ -8330,6 +8331,14 @@ physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_ff7wb")
 sources/1 = SubResource("TileSetAtlasSource_2661g")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuf5u"]
+atlas = ExtResource("10_dh1wk")
+region = Rect2(66, 256, 29, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8uea"]
+atlas = ExtResource("10_dh1wk")
+region = Rect2(66, 199, 29, 56)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_g16gn"]
 atlas = ExtResource("10_dh1wk")
 region = Rect2(64, 200, 32, 56)
@@ -8466,8 +8475,11 @@ position = Vector2(279, 187)
 fragment_id = "memo_lucia"
 
 [node name="Door1" parent="." unique_id=1253240259 node_paths=PackedStringArray("sprite") instance=ExtResource("9_rn8l0")]
-position = Vector2(248, 176)
+position = Vector2(252, 178)
 sprite = NodePath("Sprite2D2")
+closed_texture = SubResource("AtlasTexture_vuf5u")
+open_texture = SubResource("AtlasTexture_u8uea")
+open_sound = ExtResource("19_00q0e")
 target_scene = "res://game/tilemaps/map3/interior/laboratory_interior2.tscn"
 requires_key = true
 key_id = "KEY"

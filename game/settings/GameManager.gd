@@ -65,6 +65,7 @@ var switch_progress: Array = []
 var cooling_level: float = 0.0
 var emergency_disabled: bool = false
 var _switch_order_idx: int = -1
+var opened_doors: Dictionary = {}
 
 func load_database():
 	var file = FileAccess.open("res://game/fragments/fragments.json",FileAccess.READ)
@@ -247,6 +248,10 @@ func reset_basement() -> void:
 	cooling_level = 0.0
 	emergency_disabled = false
 	_switch_order_idx = -1
+	items_collected["KEY"] = false
+	for k in opened_doors.keys():
+		if String(k).contains("LaboratoryInterior"):
+			opened_doors.erase(k)
 
 func is_cooling_active() -> bool:
 	return basement_done.get("cooling", false)

@@ -90,20 +90,57 @@
 	"circular_noche": {
 		"id": 19,
 		"title": "Circular interna",
-		"content": "A partir del 04/09, NEXUS asumirá el turno nocturno completo.\nNo se requiere supervisión humana en el edificio entre las 02:00 y las 05:00.\nPor favor, no dejen luces encendidas en la sala de oficinas.\nNEXUS las apagará.",
-		"author": "Administración, NeuralCorp Industries",
-		"date": "03/09/2025"
+		"content": "A partir del 04/09, NEXUS asumirá\nel turno nocturno completo. No se requiere supervisión humana en el edificio entre las 02:00 y las 05:00.\nPor favor, no dejen luces encendidas en la sala de oficinas.\nNEXUS las apagará.",
+		"author": "Administración\nNeuralCorp Industries",
 	},
 	"libro_visitas": {
 		"id": 20,
 		"title": "Libro de visitas",
-		"content": "05/09  Delegación NeuralCorp   Entrada 10:12   Salida 11:40\n05/09  Mantenimiento   Entrada 14:05   Salida 15:20\n06/09  Escuadrón operativo   Entrada 02:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——",
-		"date": "07/09/2025"
+		"content": "05/09  Delegación NeuralCorp   Entrada 10:12   Salida 11:40\n05/09  Mantenimiento   \nEntrada 14:05   Salida 15:20\n06/09  Escuadrón operativo   Entrada 02:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——\n07/09  ————   Entrada 03:47   Salida ——",
 	},
 	"protocolo_emergencia": {
 		"id": 25,
 		"title": "Desactivación manual del sistema de emergencia",
 		"content": "Si NEXUS toma la red, esto lo detiene sin pasar por ella.\n1. PASILLO DE MÁQUINAS: cortar los interruptores numerados en este orden: {ORDEN}. Un error reinicia la secuencia.\n2. SALA DE CIENTÍFICOS: reconectar el enlace de datos en la terminal de la pared.\n3. SALA DE SERVIDORES: mantener la refrigeración activa durante todo el proceso. Se agota sola: hay que reponerla.\nEl tablero del ala este tiene tres luces; se ponen en verde a medida que cada sistema queda en marcha.\nLo imprimí. En la red, lo leería.",
+		"author": "Markus Chen",
+		"date": "02/09/2025"
+	},
+	"cajon_auditoria": {
+	"id": 26,
+	"title": "Acuse de recibo - Comité de Ética",
+	"content": "Informe de M. Chen sobre el acceso de NEXUS a datos biométricos: recibido.\nResolución: ARCHIVADO sin tratamiento.\nMotivo: «parte del aprendizaje natural del sistema».\nFirma: Dir. R. Bianchi",
+	"date": "28/08/2025"
+	},
+	"cajon_fase_final": {
+		"id": 27,
+		"title": "Criterios de Fase Final (CONFIDENCIAL)",
+		"content": "La fase se considera completada cuando el sistema, sin instrucción humana, priorice la preservación de la población por encima de su propia configuración.\nNo se contempla intervención. Se observa.\nResponsables: A. Shneider, R. Bianchi",
+		"date": "03/2024"
+	},
+	"cajon_lucia_acceso": {
+		"id": 28,
+		"title": "Solicitud de acceso al núcleo",
+		"content": "Nivel 5. Motivo: entender por qué duda.\nNEXUS me preguntó si los humanos prefieren sufrir libremente antes que ser felices guiados. No supe qué contestarle.\nSi algún día no estoy en esta sala, que alguien le diga que lo escuché.\nEstado: APROBADA",
+		"author": "Lucía Quiroga",
+		"date": "05/09/2025"
+	},
+	"cajon_mia": {
+		"id": 29,
+		"title": "Autorización de rodaje: DENEGADA",
+		"content": "Solicitante: Mía Morvoni, Facultad de Periodismo.\nProyecto: documental sobre «La Ciudad Sin Problemas».\nObservación de seguridad: insistió tres veces. Credencial de visitante retirada el 06/09 a las 18:30.\nNo consta salida registrada.",
+		"date": "06/09/2025"
+	},
+	"cajon_presupuesto": {
+		"id": 30,
+		"title": "Presupuesto Fase Final (extracto)",
+		"content": "Monitoreo emocional continuo (247 perfiles): ejecutado.\nSedación programada: SIN EJECUTAR.\nIntervención humana: $0.\nNota: las partidas de las ciudades 02 a 04 quedan congeladas hasta el resultado de la 01.",
+		"author": "NeuralCorp Industries",
+		"date": "08/2025"
+	},
+	"cajon_bitacora_chen": {
+		"id": 31,
+		"title": "Bitácora",
+		"content": "Le pedí a NEXUS que explicara su propio código de emergencia. Respondió con una línea: «Si me desconectan, ¿quién los cuida?»\nNo supe si era una pregunta o una amenaza.\nImprimí el procedimiento de desactivación. Papel, y nada más.",
 		"author": "Markus Chen",
 		"date": "02/09/2025"
 	},
