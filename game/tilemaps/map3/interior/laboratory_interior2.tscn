@@ -5560,12 +5560,12 @@ tile_set = SubResource("TileSet_wqgh1")
 
 [node name="LabDeco" type="TileMapLayer" parent="." unique_id=1315034825]
 scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAAFAA0AAgATAAMAAAAFAA4AAgATAAQAAAAGAA0AAgAUAAMAAAAGAA4AAgAUAAQAAAAHAAsAAgAPAAsAAAAUAAwAAQALAAcAAAA=")
+tile_map_data = PackedByteArray("AAAFAA0AAgATAAMAAAAFAA4AAgATAAQAAAAGAA0AAgAUAAMAAAAGAA4AAgAUAAQAAAAHAAsAAgAPAAsAAAAUAAwAAQALAAcAAAAQAAoAAAAEAAEAAAA=")
 tile_set = SubResource("TileSet_wqgh1")
 
 [node name="Generator2" type="TileMapLayer" parent="." unique_id=1774145642]
 scale = Vector2(0.6, 0.6)
-tile_map_data = PackedByteArray("AAAkABYAAgAMAAoAAAAlABYAAgANAAoAAAAvABYAAgAUAAEAAAAvABcAAgAUAAIAAAAvABAAAgATAAIAAAAuABAAAgASAAIAAAAuABQAAgAVAAQAAAAvABQAAgAWAAQAAAArAAsAAgARAAAAABArAAwAAgARAAEAABAsAAsAAgAQAAAAABAsAAwAAgAQAAEAABAuABgAAgAOAAEAAAAvABgAAgAPAAEAAAAuABUABwALABQAAAAsABMAAgABAA0AAAAtABQAAgATAA4AAAAsABQAAgABAA4AAAAtABgAAgAWAAcAAAAuABcABwALABcAAAAsABAAAgAXAAQAAAAtABAAAgAYAAQAAAAuAAcABwAMABEAAAAuAAgABwAMABIAAAAuAAkABwAMABMAAAAvAAcABwANABEAAAAvAAgABwANABIAAAAvAAkABwANABMAAAAvABUAAQAMAAoAAAArABQAAgAAAA4AAAAvAA4AAgAAAA4AAAAwAA4AAgABAA4AAAAtAAoAAAASAAAAAAAtAAsAAAASAAEAAAAtABUABwAKABQAAAAtABYABwAKABUAAAAuABYABwALABUAAAAtABcABwAKABcAAAAsABYAAgADAAYAAAA=")
+tile_map_data = PackedByteArray("AAAkABYAAgAMAAoAAAAlABYAAgANAAoAAAAvABYAAgAUAAEAAAAvABcAAgAUAAIAAAAvABAAAgATAAIAAAAuABAAAgASAAIAAAAuABQAAgAVAAQAAAAvABQAAgAWAAQAAAArAAsAAgARAAAAABArAAwAAgARAAEAABAsAAsAAgAQAAAAABAsAAwAAgAQAAEAABAuABgAAgAOAAEAAAAvABgAAgAPAAEAAAAuABUABwALABQAAAAsABMAAgABAA0AAAAtABQAAgATAA4AAAAsABQAAgABAA4AAAAtABgAAgAWAAcAAAAuABcABwALABcAAAAsABAAAgAXAAQAAAAtABAAAgAYAAQAAAAuAAcABwAMABEAAAAuAAgABwAMABIAAAAuAAkABwAMABMAAAAvAAcABwANABEAAAAvAAgABwANABIAAAAvAAkABwANABMAAAAvABUAAQAMAAoAAAArABQAAgAAAA4AAAAvAA4AAgAAAA4AAAAwAA4AAgABAA4AAAAtAAoAAAASAAAAAAAtAAsAAAASAAEAAAAtABUABwAKABQAAAAtABYABwAKABUAAAAuABYABwALABUAAAAtABcABwAKABcAAAAsABYAAgADAAYAAAAoAAYAAAAMAAUAAAAmABYAAAAGAAEAAAAoABYAAQADAAAAAAAjABYAAQACAAEAAGAbABUAAQAFAAIAAAARABYAAQAFAAAAAEAXABgAAQADAAEAAAAcABcAAQACAAAAAEATABgAAQANAA0AAAAVABUAAQAEAAwAAAAgABgAAQAFAA0AADApABcABwAAABUAAAAqABcABwABABUAAAA=")
 tile_set = SubResource("TileSet_wqgh1")
 
 [node name="TopLayer" type="TileMapLayer" parent="." unique_id=408519340]
@@ -5604,6 +5604,30 @@ tile_set = SubResource("TileSet_v8or0")
 [node name="Diary5" parent="." unique_id=1104251801 instance=ExtResource("8_v8or0")]
 position = Vector2(197, 120)
 fragment_id = "texto_cientifico5"
+
+[node name="Fragment" parent="." unique_id=696808208 instance=ExtResource("8_v8or0")]
+position = Vector2(306, 128)
+fragment_id = "cajon_auditoria"
+
+[node name="Fragment2" parent="." unique_id=649299565 instance=ExtResource("8_v8or0")]
+position = Vector2(379, 130)
+fragment_id = "cajon_fase_final"
+
+[node name="Fragment3" parent="." unique_id=597828529 instance=ExtResource("8_v8or0")]
+position = Vector2(389, 61)
+fragment_id = "cajon_lucia_acceso"
+
+[node name="Fragment4" parent="." unique_id=192011137 instance=ExtResource("8_v8or0")]
+position = Vector2(348, 129)
+fragment_id = "cajon_mia"
+
+[node name="Fragment5" parent="." unique_id=2017962113 instance=ExtResource("8_v8or0")]
+position = Vector2(160, 102)
+fragment_id = "cajon_presupuesto"
+
+[node name="Fragment6" parent="." unique_id=358642626 instance=ExtResource("8_v8or0")]
+position = Vector2(371, 217)
+fragment_id = "cajon_bitacora_chen"
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("8_ei86e")]
 position = Vector2(0, 216)
