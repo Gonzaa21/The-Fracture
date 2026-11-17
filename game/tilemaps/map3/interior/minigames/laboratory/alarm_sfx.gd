@@ -6,7 +6,7 @@ const VOLUME_GROUND := -6.0
 const VOLUME_BASEMENT := -14.0
 const ALPHA_GROUND := 0.35
 const ALPHA_BASEMENT := 0.18
-const FLASH_DECAY := 5.0
+const FLASH_DECAY := 1.0
 
 const BEEP_TIMES := [0.46, 2.14, 3.80, 5.45] 
 const AUDIO_DURATION := 6.35

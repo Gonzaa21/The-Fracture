@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://beuqym7fl0ok6"]
+[gd_scene format=3 uid="uid://beuqym7fl0ok6"]
 
 [ext_resource type="Texture2D" uid="uid://wxbyaoolpqmx" path="res://assets/objects/TILESET_OBJECTS_NO_ANIMATIONS.png" id="2_nlyb5"]
 [ext_resource type="Texture2D" uid="uid://cf0c3umdad6am" path="res://assets/objects/light_texture.webp" id="3_haqjc"]
@@ -308,19 +308,19 @@ texture = ExtResource("2_nlyb5")
 occlusion_layer_0/light_mask = 1
 sources/0 = SubResource("TileSetAtlasSource_jgiae")
 
-[node name="StreetLampFront" type="Node2D"]
+[node name="StreetLampFront" type="Node2D" unique_id=495725370]
 
-[node name="SpriteBottom" type="TileMapLayer" parent="."]
+[node name="SpriteBottom" type="TileMapLayer" parent="." unique_id=2063133878]
 y_sort_enabled = true
 tile_map_data = PackedByteArray(0, 0, 2, 0, 4, 0, 0, 0, 1, 0, 5, 0, 0, 0)
 tile_set = SubResource("TileSet_qoyma")
 
-[node name="SpriteTop" type="TileMapLayer" parent="."]
+[node name="SpriteTop" type="TileMapLayer" parent="." unique_id=757432155]
 z_index = 1
 tile_map_data = PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 2, 0, 0, 0, 1, 0, 3, 0, 0, 0, 2, 0, 3, 0, 0, 0, 1, 0, 4, 0, 0, 0)
 tile_set = SubResource("TileSet_g1vdg")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=146268045]
 position = Vector2(40, 38)
 scale = Vector2(0.31201172, 0.3236217)
 color = Color(0.8627451, 0.39215687, 0.15686275, 1)

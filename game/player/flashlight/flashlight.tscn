@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://f71rwyuvq0x7"]
+
+[ext_resource type="Script" uid="uid://5f5uuxafculx" path="res://game/player/flashlight/flashlight_pickup.gd" id="1_ai56p"]
+[ext_resource type="Texture2D" uid="uid://bxrecrj8w00np" path="res://assets/interior/flashlight_icon.png" id="2_h2nqj"]
+[ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="2_r66mv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkj3i"]
+size = Vector2(10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nwnr"]
+atlas = ExtResource("2_h2nqj")
+region = Rect2(160, 160, 16, 16)
+
+[node name="FlashlightPickup" type="Area2D" unique_id=1284614043 node_paths=PackedStringArray("label")]
+script = ExtResource("1_ai56p")
+label = NodePath("Prompt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1821530842]
+shape = SubResource("RectangleShape2D_mkj3i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=225167575]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_8nwnr")
+
+[node name="Prompt" type="Label" parent="." unique_id=747055416]
+z_index = 10
+offset_left = -13.0
+offset_top = -8.0
+offset_right = 14.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("2_r66mv")
+theme_override_font_sizes/font_size = 4
+text = "[E] Interactuar"

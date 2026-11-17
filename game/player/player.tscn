@@ -639,6 +639,9 @@ position = Vector2(212, 128)
 collision_mask = 4
 script = ExtResource("1_a4w0n")
 
+[node name="InventoryCell" parent="." unique_id=45083217 instance=ExtResource("5_5fytw")]
+layer = 0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1601773606]
 sprite_frames = SubResource("SpriteFrames_q4eq6")
 animation = &"idle_down"
@@ -648,13 +651,6 @@ frame_progress = 0.11993107
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=391445157]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_80rvt")
-
-[node name="InventoryCell" parent="." unique_id=45083217 instance=ExtResource("5_5fytw")]
-z_index = 12
-offset_left = -17.0
-offset_top = -30.0
-offset_right = 15.0
-offset_bottom = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=447406160]
 z_index = 2

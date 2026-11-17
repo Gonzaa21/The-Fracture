@@ -4104,7 +4104,7 @@ position = Vector2(446, 98)
 shake_targets = [NodePath("../GeneratorMachine")]
 shake_amplitude = 0.3
 light_color = Color(0.45882353, 0.5568628, 0.4117647, 1)
-light_energy = 4.5
+light_energy = 6.0
 motor_stream = ExtResource("3_qwn2a")
 motor_pitch = 0.5
 
@@ -4120,7 +4120,7 @@ system_id = "wires"
 shake_targets = [NodePath("../GeneratorMachine2"), NodePath("../TopLayer2")]
 shake_amplitude = 0.3
 light_color = Color(0.45882353, 0.5568628, 0.4117647, 1)
-light_energy = 4.5
+light_energy = 6.0
 motor_stream = ExtResource("3_qwn2a")
 motor_pitch = 2.0
 
@@ -4142,7 +4142,7 @@ system_id = "switches"
 shake_targets = [NodePath("../GeneratorMachine3"), NodePath("../TopLayer3")]
 shake_amplitude = 0.3
 light_color = Color(0.45882353, 0.5568628, 0.4117647, 1)
-light_energy = 4.5
+light_energy = 6.0
 motor_stream = ExtResource("3_qwn2a")
 motor_volume_db = 10.0
 
