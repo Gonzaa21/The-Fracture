@@ -28,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://b3xst03ftir7h" path="res://game/fragments/popups/fragment_popup_notes.tscn" id="21_r8gjy"]
 [ext_resource type="PackedScene" uid="uid://b5561orom5k2m" path="res://game/pc/computer.tscn" id="22_24ygv"]
 [ext_resource type="PackedScene" uid="uid://eup8adrwvdnq" path="res://game/global_anomalies/ghost/ghost.tscn" id="23_h63ih"]
-[ext_resource type="PackedScene" uid="uid://dicbtg2dnh3f4" path="res://game/fragments/tiles/fragments_popup_tiles.tscn" id="23_r8gjy"]
 [ext_resource type="Script" uid="uid://ctkyf20e6aiqk" path="res://game/global_anomalies/ghost/ghost_behavior.gd" id="29_uhvks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hnnvh"]
@@ -3568,8 +3567,6 @@ position = Vector2(152, 48)
 [node name="ComputerLoginScreen" parent="." unique_id=1534411470 instance=ExtResource("2_rd81t")]
 
 [node name="ComputerTerminalScreen" parent="." unique_id=2073301091 instance=ExtResource("7_h63ih")]
-
-[node name="FragmentsPopupTiles" parent="." unique_id=1794717855 instance=ExtResource("23_r8gjy")]
 
 [node name="Background" type="ColorRect" parent="." unique_id=1897434953]
 anchors_preset = 15

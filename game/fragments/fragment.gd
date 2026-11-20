@@ -1,5 +1,5 @@
 extends Area2D
-enum PopupStyle { WARNING, DOCUMENT, NOTES, DIALOGUE, IMAGE}
+enum PopupStyle { WARNING, DOCUMENT, DIARY, NOTES, DIALOGUE, IMAGE}
 
 @export var fragment_id: String = ""
 @export var popup_style: PopupStyle = PopupStyle.DOCUMENT 
@@ -55,11 +55,17 @@ func interact():
 				audio_player.play()
 		
 		var popup_node_name = ""
+		var is_diary = false
+		
 		match popup_style:
 			PopupStyle.WARNING:
 				popup_node_name = "FragmentPopupWarn"
 			PopupStyle.DOCUMENT:
 				popup_node_name = "FragmentPopupDoc"
+				is_diary = false
+			PopupStyle.DIARY:
+				popup_node_name = "FragmentPopupDoc"
+				is_diary = true
 			PopupStyle.NOTES:
 				popup_node_name = "FragmentPopupNotes"
 			PopupStyle.DIALOGUE:
@@ -70,10 +76,15 @@ func interact():
 				var image_popup = get_tree().current_scene.get_node_or_null("FragmentPopupPhoto")
 				if image_popup: image_popup.show_photo(image_texture, [])
 		
-		var popup = get_tree().current_scene.get_node_or_null(popup_node_name)
-		if popup:
-			popup.show_fragment(fragment_id)
-			print("¡Fragmento recolectado! ID: ", fragment_id)
+		if popup_node_name != "":
+			var popup = get_tree().current_scene.get_node_or_null(popup_node_name)
+			if popup and popup.has_method("show_fragment"):
+				if popup_node_name == "FragmentPopupDoc":
+					var is_doc := popup_style == PopupStyle.DOCUMENT
+					popup.show_fragment(fragment_id, is_diary, is_doc)
+				else:
+					popup.show_fragment(fragment_id, false, false)
+				print("¡Fragmento recolectado! ID: ", fragment_id)
 
 func should_play_collect_sound() -> bool:
-	return popup_style == PopupStyle.DOCUMENT or popup_style == PopupStyle.NOTES or popup_style == PopupStyle.IMAGE
+	return popup_style == PopupStyle.DOCUMENT or popup_style == PopupStyle.NOTES or popup_style == PopupStyle.IMAGE or popup_style == PopupStyle.DIARY

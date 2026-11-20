@@ -5604,6 +5604,7 @@ tile_set = SubResource("TileSet_v8or0")
 [node name="Diary5" parent="." unique_id=1104251801 instance=ExtResource("8_v8or0")]
 position = Vector2(197, 120)
 fragment_id = "texto_cientifico5"
+popup_style = 2
 
 [node name="Fragment" parent="." unique_id=696808208 instance=ExtResource("8_v8or0")]
 position = Vector2(306, 128)

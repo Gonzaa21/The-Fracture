@@ -4099,7 +4099,7 @@ spawn_point_id = "WorkshopExit"
 [node name="Fragment" parent="." unique_id=52584668 instance=ExtResource("10_vwr07")]
 position = Vector2(360, 110)
 fragment_id = "plano_electrico"
-popup_style = 4
+popup_style = 5
 image_texture = ExtResource("11_tkg17")
 
 [node name="RegistryObject" parent="." unique_id=44584338 instance=ExtResource("15_16hd2")]

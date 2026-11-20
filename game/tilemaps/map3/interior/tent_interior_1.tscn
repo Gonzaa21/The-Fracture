@@ -2246,6 +2246,7 @@ tile_set = SubResource("TileSet_w718i")
 [node name="Diary3" parent="." unique_id=770656303 instance=ExtResource("9_57gvk")]
 position = Vector2(236, 153)
 fragment_id = "texto_cientifico3"
+popup_style = 2
 
 [node name="Door1" parent="." unique_id=1253240259 instance=ExtResource("4_ggsws")]
 position = Vector2(239, 179)

@@ -81,8 +81,25 @@ theme_override_fonts/font = ExtResource("1_rqnsu")
 theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 
-[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=291563180]
+[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1902692612]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rqnsu")
+theme_override_font_sizes/font_size = 6
+
+[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1258224055]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xrrpy")
+theme_override_font_sizes/font_size = 13
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=291563180]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 226.0
+offset_right = 474.0
+offset_bottom = 241.0
 theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
 theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
@@ -98,15 +115,3 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pbjqf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ktu03")
 theme_override_styles/focus = SubResource("StyleBoxFlat_cvlk0")
 text = "[Continuar]"
-
-[node name="MetadataLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1902692612]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_rqnsu")
-theme_override_font_sizes/font_size = 6
-
-[node name="TitleLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1258224055]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xrrpy")
-theme_override_font_sizes/font_size = 13

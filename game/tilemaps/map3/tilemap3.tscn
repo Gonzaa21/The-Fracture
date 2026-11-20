@@ -1612,6 +1612,7 @@ fragment_id = "texto_cientifico1"
 [node name="Diary2" parent="." unique_id=1912087146 instance=ExtResource("10_ibis2")]
 position = Vector2(369, 93)
 fragment_id = "texto_cientifico2"
+popup_style = 2
 
 [node name="Eye1" parent="." unique_id=1866097718 instance=ExtResource("11_lcq73")]
 position = Vector2(384, 64)
