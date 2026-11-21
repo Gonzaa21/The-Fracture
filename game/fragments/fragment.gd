@@ -84,6 +84,7 @@ func interact():
 					popup.show_fragment(fragment_id, is_diary, is_doc)
 				else:
 					popup.show_fragment(fragment_id, false, false)
+				icon.visible = false
 				print("¡Fragmento recolectado! ID: ", fragment_id)
 
 func should_play_collect_sound() -> bool:

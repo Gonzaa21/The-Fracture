@@ -1,18 +1,16 @@
 extends CanvasLayer
 
-const AMBIENT_RADIUS_NO_LIGHT := 33.0
-const AMBIENT_RADIUS_WITH_LIGHT := 21.0
-
 var t := 0.0
 var shader_material: ShaderMaterial
-var _ambient: float = AMBIENT_RADIUS_NO_LIGHT
 var _beam: float = 0.0
+
+@export var vision_circle: bool = true
 
 func _ready() -> void:
 	if has_node("FilterParticles"):
 		shader_material = $FilterParticles.material
-	_ambient = AMBIENT_RADIUS_WITH_LIGHT if Flashlight.has_flashlight else AMBIENT_RADIUS_NO_LIGHT
 	_beam = 1.0 if Flashlight.active() else 0.0
+	shader_material.set_shader_parameter("use_vision_circle", vision_circle)
 
 func _process(delta: float) -> void:
 	t += delta
@@ -24,13 +22,10 @@ func _process(delta: float) -> void:
 	_update_flashlight(delta)
 
 func _update_flashlight(delta: float) -> void:
-	var target_ambient := AMBIENT_RADIUS_WITH_LIGHT if Flashlight.has_flashlight else AMBIENT_RADIUS_NO_LIGHT
-	_ambient = lerpf(_ambient, target_ambient, 1.0 - exp(-5.0 * delta))
 	
 	var target_beam := 1.0 if Flashlight.active() else 0.0
 	_beam = lerpf(_beam, target_beam, 1.0 - exp(-10.0 * delta))
 	
-	shader_material.set_shader_parameter("visibility_radius", _ambient)
 	shader_material.set_shader_parameter("flashlight_enabled", _beam)
 	shader_material.set_shader_parameter("flashlight_dir", Flashlight.direction)
 

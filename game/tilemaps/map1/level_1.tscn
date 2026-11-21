@@ -27,8 +27,10 @@ script = ExtResource("1_il7bj")
 [node name="Filter" parent="." unique_id=1094971403 instance=ExtResource("2_bjooh")]
 
 [node name="FragmentPopupWarn" parent="." unique_id=313895717 instance=ExtResource("12_slesh")]
+layer = 3
 
 [node name="DialoguePopup" parent="." unique_id=300916902 instance=ExtResource("13_aoj2y")]
+layer = 3
 
 [node name="TileMap" parent="." unique_id=505732810 instance=ExtResource("4_mv2oe")]
 

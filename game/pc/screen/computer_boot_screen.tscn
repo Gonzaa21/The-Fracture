@@ -1,27 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqjwijojcw5xi"]
+[gd_scene format=3 uid="uid://dqjwijojcw5xi"]
 
 [ext_resource type="Script" uid="uid://b0d1vxu2xifw4" path="res://game/pc/screen/computer_boot_screen.gd" id="1_yldww"]
 [ext_resource type="Texture2D" uid="uid://blpxxbk1aof86" path="res://assets/backgrounds_popup/computer/background_pc.png" id="2_1ub1l"]
 [ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_l52dv"]
 
-[node name="ComputerBootScreen" type="CanvasLayer"]
+[node name="ComputerBootScreen" type="CanvasLayer" unique_id=209927588]
 process_mode = 3
 script = ExtResource("1_yldww")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1143937259]
 offset_left = 128.0
 offset_top = 56.0
 offset_right = 360.0
 offset_bottom = 192.0
 
-[node name="ColorRect" type="ColorRect" parent="Panel"]
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=1912110999]
 layout_mode = 0
 offset_top = -8.0
 offset_right = 232.0
 offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
-[node name="Background" type="TextureRect" parent="Panel"]
+[node name="Background" type="TextureRect" parent="Panel" unique_id=1970275386]
 layout_mode = 0
 offset_left = -128.0
 offset_top = -57.0
@@ -31,7 +31,7 @@ texture = ExtResource("2_1ub1l")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="BootText" type="RichTextLabel" parent="Panel"]
+[node name="BootText" type="RichTextLabel" parent="Panel" unique_id=1828015182]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -6.0

@@ -19,6 +19,7 @@ shader_parameter/vignette_size = 1.0
 shader_parameter/player_position = Vector2(0.5, 0.5)
 shader_parameter/visibility_radius = 80.000001425
 shader_parameter/visibility_softness = 20.000000475
+shader_parameter/use_vision_circle = true
 shader_parameter/flashlight_enabled = 0.0
 shader_parameter/flashlight_dir = Vector2(1, 0)
 shader_parameter/flashlight_range = 200.0
@@ -30,6 +31,7 @@ shader_parameter/darkness = 0.8
 shader_parameter/time = 0.0
 
 [node name="Filter" type="CanvasLayer" unique_id=410465455]
+layer = 2
 script = ExtResource("1_0b5gx")
 
 [node name="FilterParticles" type="ColorRect" parent="." unique_id=427056329]
@@ -40,6 +42,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1780060144]
-color = Color(0.41960785, 0.41960785, 0.41960785, 1)

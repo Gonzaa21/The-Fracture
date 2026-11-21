@@ -1,12 +1,14 @@
 extends CanvasLayer
 @onready var panel = $Panel
 @onready var install_button = $Panel/InstallButton
+@onready var close_button = find_child("CloseButton", true, false)
 
 func _ready():
 	panel.visible = false
 	visible = true
 	install_button.visible = false
 	install_button.pressed.connect(_on_install_pressed)
+	close_button.pressed.connect(hide_error)
 
 func show_error():
 	panel.visible = true
@@ -23,10 +25,6 @@ func _on_install_pressed():
 	hide_error()
 	var computer = get_tree().current_scene.get_node("Computer")
 	if computer: computer.install_module()
-
-func _input(event):
-	if panel.visible and event.is_action_pressed("ui_cancel"):
-		hide_error()
 
 func hide_error():
 	panel.visible = false

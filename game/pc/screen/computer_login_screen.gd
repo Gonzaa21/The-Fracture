@@ -8,6 +8,7 @@ signal login_cancelled
 @onready var hint_label = $Panel/CenterContainer/Control/HintLabel
 @onready var error_label = $Panel/CenterContainer/Control/ErrorLabel
 @onready var login_button = $Panel/CenterContainer/Control/LoginButton
+@onready var close_button = find_child("CloseButton", true, false)
 
 func _ready():
 	panel.visible = false
@@ -16,6 +17,7 @@ func _ready():
 	login_button.pressed.connect(_on_login_button_pressed)
 	hint_label.visible = false
 	error_label.visible = false
+	close_button.pressed.connect(close_login)
 
 func show_login():
 	if GameManager.computer_logged_in:
@@ -52,10 +54,6 @@ func _on_password_submitted(text: String):
 func _on_login_button_pressed():
 	var input = password_input.text
 	validate_password(input)
-
-func _input(event):
-	if panel.visible and event.is_action_pressed("ui_cancel"):
-		close_login()
 
 func close_login():
 	panel.visible = false

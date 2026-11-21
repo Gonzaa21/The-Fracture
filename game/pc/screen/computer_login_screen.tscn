@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfnwitxraubbw"]
+[gd_scene format=3 uid="uid://cfnwitxraubbw"]
 
 [ext_resource type="Texture2D" uid="uid://cotvpxnqcw6yr" path="res://assets/backgrounds_popup/computer/background_pc_login.png" id="1_5ynb4"]
 [ext_resource type="Script" uid="uid://bkhv0maabrire" path="res://game/pc/screen/computer_login_screen.gd" id="1_xt3ff"]
 [ext_resource type="FontFile" uid="uid://bre5y5tbr188r" path="res://assets/fonts/Electrolize-Regular.ttf" id="3_sqahu"]
+[ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="4_wh88p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0jh8"]
 bg_color = Color(0, 0, 0, 1)
@@ -26,23 +27,35 @@ bg_color = Color(0, 0.32941177, 0.6509804, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sw4pa"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="ComputerLoginScreen" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgjxp"]
+bg_color = Color(0, 0, 0, 0.03529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nquu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggivl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cbka"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ComputerLoginScreen" type="CanvasLayer" unique_id=57992277]
 script = ExtResource("1_xt3ff")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=627959216]
 offset_right = 480.0
 offset_bottom = 270.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_t0jh8")
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel" unique_id=170261308]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Control" type="Control" parent="Panel/CenterContainer"]
+[node name="Control" type="Control" parent="Panel/CenterContainer" unique_id=1319083326]
 layout_mode = 2
 
-[node name="Background" type="TextureRect" parent="Panel/CenterContainer/Control"]
+[node name="Background" type="TextureRect" parent="Panel/CenterContainer/Control" unique_id=440007738]
 process_mode = 3
 layout_mode = 0
 offset_left = -20.0
@@ -53,7 +66,7 @@ texture = ExtResource("1_5ynb4")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="PasswordInput" type="LineEdit" parent="Panel/CenterContainer/Control"]
+[node name="PasswordInput" type="LineEdit" parent="Panel/CenterContainer/Control" unique_id=55632775]
 process_mode = 3
 layout_mode = 0
 offset_left = 167.0
@@ -69,7 +82,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_1gscy")
 placeholder_text = "Password"
 secret = true
 
-[node name="LoginButton" type="Button" parent="Panel/CenterContainer/Control"]
+[node name="LoginButton" type="Button" parent="Panel/CenterContainer/Control" unique_id=923792765]
 layout_mode = 0
 offset_left = 264.0
 offset_top = 118.0
@@ -82,7 +95,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sqahu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_sw4pa")
 text = "˃"
 
-[node name="HintLabel" type="Label" parent="Panel/CenterContainer/Control"]
+[node name="HintLabel" type="Label" parent="Panel/CenterContainer/Control" unique_id=98698827]
 layout_mode = 0
 offset_left = 178.0
 offset_top = 147.0
@@ -93,7 +106,7 @@ theme_override_font_sizes/font_size = 7
 text = "Hint: Water"
 horizontal_alignment = 1
 
-[node name="ErrorLabel" type="Label" parent="Panel/CenterContainer/Control"]
+[node name="ErrorLabel" type="Label" parent="Panel/CenterContainer/Control" unique_id=586392542]
 layout_mode = 0
 offset_left = 145.0
 offset_top = 130.0
@@ -104,3 +117,25 @@ theme_override_font_sizes/font_size = 7
 text = "Incorrect password"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/CenterContainer/Control" unique_id=1914856624]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 31.0
+theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_normal_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_focus_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("4_wh88p")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_hgjxp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1nquu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ggivl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3cbka")
+text = "[X]"
