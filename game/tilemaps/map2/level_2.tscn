@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dttmmraqxs5l6" path="res://game/tilemaps/map2/tilemap2.tscn" id="3_gxqjn"]
 [ext_resource type="Script" uid="uid://c51r4xuds2qxo" path="res://game/tilemaps/map2/anomalies/forest/object_pool.gd" id="6_jpsdn"]
 [ext_resource type="PackedScene" uid="uid://f71rwyuvq0x7" path="res://game/player/flashlight/flashlight.tscn" id="6_koplc"]
+[ext_resource type="AudioStream" uid="uid://bxw31uf12hitd" path="res://assets/sound/effects/collect/collect.wav" id="7_nukpm"]
 [ext_resource type="PackedScene" uid="uid://ccs8v86bfl0wo" path="res://game/tilemaps/map2/anomalies/ghost_spawn_points.tscn" id="7_r1ydk"]
 [ext_resource type="Script" uid="uid://b7mgxbqiicu1" path="res://game/tilemaps/map2/anomalies/forest/anomaly_spawner.gd" id="8_b0st8"]
 [ext_resource type="PackedScene" uid="uid://b3dq8a057eb2x" path="res://game/tilemaps/map2/anomalies/forest/anomaly_portals/portal_right.tscn" id="9_bw38y"]
@@ -27,6 +28,7 @@ visible = false
 
 [node name="FlashlightPickup" parent="." unique_id=1284614043 instance=ExtResource("6_koplc")]
 position = Vector2(359, 131)
+pickup_sound = ExtResource("7_nukpm")
 
 [node name="Player" parent="." unique_id=1379478734 instance=ExtResource("2_gxqjn")]
 position = Vector2(24, 168)

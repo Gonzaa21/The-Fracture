@@ -14,8 +14,8 @@ shader_parameter/particle_density = 100.0
 shader_parameter/particle_size = 2.0
 shader_parameter/particle_speed = Vector2(0.6, 0.9)
 shader_parameter/particle_brightness = 1.5
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_size = 1.0
+shader_parameter/vignette_intensity = 0.7290000346275
+shader_parameter/vignette_size = 0.650000030875
 shader_parameter/player_position = Vector2(0.5, 0.5)
 shader_parameter/visibility_radius = 80.000001425
 shader_parameter/visibility_softness = 20.000000475
@@ -27,7 +27,7 @@ shader_parameter/flashlight_range_softness = 40.0
 shader_parameter/flashlight_half_angle = 0.5
 shader_parameter/flashlight_edge_softness = 0.45
 shader_parameter/flashlight_origin_offset = 6.0
-shader_parameter/darkness = 0.8
+shader_parameter/darkness = 0.800000038
 shader_parameter/time = 0.0
 
 [node name="Filter" type="CanvasLayer" unique_id=410465455]

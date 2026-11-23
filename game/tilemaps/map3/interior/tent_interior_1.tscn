@@ -2214,6 +2214,7 @@ color = Color(0.8156863, 0.8156863, 0.8156863, 1)
 position = Vector2(240, 168)
 
 [node name="FragmentPopupDoc" parent="." unique_id=1398118531 instance=ExtResource("3_djh1j")]
+layer = 3
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=948625357]
 scale = Vector2(0.6, 0.6)

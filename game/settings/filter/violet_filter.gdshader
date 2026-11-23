@@ -3,7 +3,7 @@ shader_type canvas_item;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
 // Controles de tinte
-uniform float intensity : hint_range(0.0, 1.0) = 0.8;
+uniform float intensity : hint_range(0.0, 1.0) = 1.0;
 uniform vec3 tint_color = vec3(0.6, 0.2, 1.0);
 
 // Controles de niebla

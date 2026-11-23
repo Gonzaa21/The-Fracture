@@ -257,6 +257,7 @@ func is_cooling_active() -> bool:
 	return basement_done.get("cooling", false)
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_database()
 	load_filesystem()
 	background_music()

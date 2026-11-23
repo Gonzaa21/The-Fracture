@@ -4471,8 +4471,9 @@ color = Color(0, 0, 0, 1)
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2001332784]
 position = Vector2(72, 88)
 scale = Vector2(0.984375, 1.09375)
-color = Color(0.14509805, 0.2509804, 0.06666667, 0.827451)
-blend_mode = 1
+color = Color(0.16206557, 0.1620656, 0.16206557, 0.96862745)
+energy = 2.74
+blend_mode = 2
 texture = ExtResource("18_x8vfn")
 
 [node name="Base" type="TileMapLayer" parent="." unique_id=945097848]

@@ -1,6 +1,6 @@
 extends Node2D
 
-const LAB_TIME := 480.0 
+const LAB_TIME := 300.0 
 
 func _ready():
 	AlarmManager.set_zone(false)

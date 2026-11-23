@@ -73,11 +73,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_llpke")
 theme_override_styles/focus = SubResource("StyleBoxFlat_dowgv")
 text = "[Instalar batería]"
 
-[node name="CloseButton" type="Button" parent="Panel" unique_id=2084451822]
+[node name="CloseButton" type="Button" parent="Panel" unique_id=1414246677]
 layout_mode = 0
-offset_left = -32.0
+offset_left = 32.0
 offset_top = 8.0
-offset_right = 147.0
+offset_right = 82.0
 offset_bottom = 31.0
 theme_override_colors/font_pressed_color = Color(0.8627451, 0.8627451, 0.011764706, 1)
 theme_override_colors/font_hover_color = Color(0.8628672, 0.86248714, 0.010429741, 1)
