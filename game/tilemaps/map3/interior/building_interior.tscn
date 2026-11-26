@@ -4001,6 +4001,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
+[node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_8icl8")]
+reacts_to_generator = true
+
+[node name="FragmentPopupPhoto" parent="." unique_id=66329717 instance=ExtResource("9_xkeej")]
+layer = 3
+
 [node name="Lights" parent="." unique_id=204440823 instance=ExtResource("13_tkg17")]
 position = Vector2(219.00003, 136)
 base_energy = 1.5
@@ -4025,11 +4031,6 @@ flicker_min = 0.2
 flicker_max = 0.8
 min_interval = 0.4
 max_interval = 5.0
-
-[node name="Filter" parent="." unique_id=410465455 instance=ExtResource("4_8icl8")]
-
-[node name="FragmentPopupPhoto" parent="." unique_id=66329717 instance=ExtResource("9_xkeej")]
-layer = 3
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=468818627]
 scale = Vector2(0.6, 0.6)

@@ -18,6 +18,8 @@
 script = ExtResource("1_a5w5y")
 
 [node name="Filter" parent="." unique_id=2099620669 instance=ExtResource("1_jjuub")]
+base_brightness = 0.2
+base_outer_darkness = 0.8
 
 [node name="Limits" parent="." unique_id=356794169 instance=ExtResource("2_4vws6")]
 visible = false

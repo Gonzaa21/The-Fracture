@@ -20,6 +20,7 @@ uniform float particle_brightness : hint_range(0.0, 3.0) = 1.5;
 // Controles de vignette
 uniform float vignette_intensity : hint_range(0.0, 1.0) = 0.4;
 uniform float vignette_size : hint_range(0.0, 2.0) = 1.0;
+uniform float outer_darkness : hint_range(0.0, 1.0) = 0.6;
 
 // Círculo mínimo alrededor del jugador (el radio lo controla filter.gd)
 uniform vec2 player_position = vec2(0.5, 0.5);
@@ -152,7 +153,7 @@ void fragment() {
     final_color = mix(final_color, vec3(0.0), vignette * vignette_intensity);
 
     // 7. OSCURECIMIENTO fuera de la luz
-    final_color = mix(final_color, vec3(0.0), visibility_mask * darkness);
+    final_color = mix(final_color, vec3(0.0), visibility_mask * outer_darkness);
 
     COLOR = vec4(final_color, 1.0);
 }

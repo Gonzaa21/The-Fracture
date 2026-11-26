@@ -1,16 +1,42 @@
 extends CanvasLayer
 
-var t := 0.0
-var shader_material: ShaderMaterial
-var _beam: float = 0.0
+@export var base_brightness := 0.55
+@export var base_outer_darkness := 0.45
+@export var reacts_to_generator := false
+@export var powered_brightness := 0.8
+@export var powered_outer_darkness := 0.15
 
-@export var vision_circle: bool = true
+@onready var filter_particles: ColorRect = $FilterParticles
+
+var t := 0.0
+var _beam: float = 0.0
+var shader_material: ShaderMaterial
 
 func _ready() -> void:
 	if has_node("FilterParticles"):
 		shader_material = $FilterParticles.material
 	_beam = 1.0 if Flashlight.active() else 0.0
-	shader_material.set_shader_parameter("use_vision_circle", vision_circle)
+
+	_apply_look(base_brightness, base_outer_darkness)
+
+	if reacts_to_generator:
+		if GameManager.generator_repaired:
+			_apply_look(powered_brightness, powered_outer_darkness)
+		else:
+			GameManager.lab_door_locked.connect(_on_generator_fixed, CONNECT_ONE_SHOT)
+
+func _apply_look(brightness: float, darkness: float) -> void:
+	filter_particles.color = Color(brightness, brightness, brightness)
+	if shader_material:
+		shader_material.set_shader_parameter("outer_darkness", darkness)
+
+func _on_generator_fixed() -> void:
+	var tw := create_tween().set_parallel(true)
+	tw.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	var c := Color(powered_brightness, powered_brightness, powered_brightness)
+	tw.tween_property(filter_particles, "color", c, 2.0)
+	if shader_material:
+		tw.tween_property(shader_material, "shader_parameter/outer_darkness", powered_outer_darkness, 2.0)
 
 func _process(delta: float) -> void:
 	t += delta
