@@ -26,6 +26,7 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="RadioTuner" type="CanvasLayer" unique_id=42273130]
+layer = 3
 script = ExtResource("1_gi2aj")
 
 [node name="Panel" type="Panel" parent="." unique_id=2006022999]

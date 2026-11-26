@@ -102,7 +102,7 @@ func camera_stopped_seeing() -> void:
 	_update_speed()
 
 func _update_speed() -> void:
-	speed_multiplier = 2.0 if watchers > 0 else 1.0
+	speed_multiplier = 4.0 if watchers > 0 else 1.0
 
 func _free_hud() -> void:
 	if _hud:

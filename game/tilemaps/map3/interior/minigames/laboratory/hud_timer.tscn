@@ -10,8 +10,8 @@ script = ExtResource("1_qa6ab")
 [node name="Label" type="Label" parent="." unique_id=1153512003]
 visibility_layer = 4
 z_index = 16
-offset_left = 15.0
-offset_top = 16.0
-offset_right = 55.0
-offset_bottom = 39.0
+offset_left = 203.0
+offset_top = 12.0
+offset_right = 243.0
+offset_bottom = 35.0
 theme_override_fonts/font = ExtResource("1_631ud")

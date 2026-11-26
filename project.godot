@@ -30,6 +30,7 @@ MorseManager="*uid://c12oab6skdbf0"
 AlarmManager="*uid://c05ondlva3c1r"
 CinematicsManager="*uid://b26ggfhtsxrcm"
 Flashlight="*uid://dlrqfwsnrmjff"
+PauseMenu="*uid://d4dvb4ls810lf"
 
 [debug]
 

@@ -34,11 +34,8 @@ layer = 3
 
 [node name="TileMap" parent="." unique_id=505732810 instance=ExtResource("4_mv2oe")]
 
-[node name="Player" parent="." unique_id=1973994351 instance=ExtResource("3_65rxe")]
-position = Vector2(264, 257)
-
 [node name="Instructor" parent="." unique_id=1257170688 instance=ExtResource("14_p2l5k")]
-position = Vector2(240, 224)
+position = Vector2(238, 224)
 scale = Vector2(1.155, 1.155)
 inventory_icon = SubResource("AtlasTexture_irsav")
 item_id = "instructor"
@@ -61,3 +58,6 @@ position = Vector2(70, 108)
 
 [node name="Level2Portal" parent="." unique_id=1856397572 instance=ExtResource("14_slesh")]
 position = Vector2(464, 168)
+
+[node name="Player" parent="." unique_id=1973994351 instance=ExtResource("3_65rxe")]
+position = Vector2(264, 257)

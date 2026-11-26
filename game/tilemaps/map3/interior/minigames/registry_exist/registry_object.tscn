@@ -15,7 +15,7 @@ popup_scene = ExtResource("2_axn36")
 shape = SubResource("RectangleShape2D_8euxs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=887839830]
-layer = 2
+layer = 4
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=964208303]
 visible = false
