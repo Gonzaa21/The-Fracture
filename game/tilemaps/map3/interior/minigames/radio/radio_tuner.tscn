@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvpk56p5gj8vr" path="res://game/tilemaps/map3/interior/minigames/radio/radio_tuner.gd" id="1_gi2aj"]
 [ext_resource type="Texture2D" uid="uid://c5hdgmo3n0mg3" path="res://assets/objects/tileset_radio_clean.png" id="2_jtngv"]
+[ext_resource type="AudioStream" uid="uid://uwfuqcst323a" path="res://assets/sound/effects/pc/powercut.mp3" id="2_ynsrw"]
 [ext_resource type="FontFile" uid="uid://doq0pkqhisswv" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_qh3dw"]
 [ext_resource type="Script" uid="uid://5e2wpeboscb" path="res://game/tilemaps/map3/interior/minigames/radio/display/waveform_display.gd" id="4_3tas2"]
 [ext_resource type="Script" uid="uid://b76fg2866dr14" path="res://game/tilemaps/map3/interior/minigames/radio/display/signalstrength_display.gd" id="4_5ajqs"]
@@ -28,6 +29,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [node name="RadioTuner" type="CanvasLayer" unique_id=42273130]
 layer = 3
 script = ExtResource("1_gi2aj")
+power_fail_sound = ExtResource("2_ynsrw")
 
 [node name="Panel" type="Panel" parent="." unique_id=2006022999]
 anchors_preset = 15

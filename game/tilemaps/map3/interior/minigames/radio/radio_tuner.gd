@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var power_fail_sound: AudioStream
+
 @onready var panel: Panel = $Panel
 @onready var frequency_label: Label = $Panel/FrequencyLabel
 @onready var frequency_slider: Control = $Panel/FrequencySlider
@@ -15,6 +17,8 @@ extends CanvasLayer
 @onready var static_player: AudioStreamPlayer = $StaticPlayer
 @onready var morse_player: AudioStreamPlayer = $MorsePlayer
 
+var power_fail_player: AudioStreamPlayer
+
 var target_frequency: float = 92.3
 var tolerance: float = 0.05
 
@@ -26,14 +30,19 @@ var slider_value: float = 0.0
 var combined_frequency: float = 87.5
 
 var is_calibrated: bool = false
-
 var transmission_authorized: bool = false
+var radio_dead: bool = false
 
 var current_distance: float = 0.0
 var last_port: int = -1
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	power_fail_player = AudioStreamPlayer.new()
+	add_child(power_fail_player)
+	power_fail_player.stream = power_fail_sound
+	power_fail_player.bus = "SFX"
 	
 	target_frequency = MorseManager.get_target_frequency()
 	
@@ -55,6 +64,8 @@ func _ready():
 	_update_combined_frequency()
 
 func _on_morse_finished() -> void:
+	if radio_dead:
+		return
 	$Panel/PlayButton.text = "Volver a reproducir"
 
 func _setup_controls():
@@ -79,6 +90,9 @@ func _on_slider_changed(value: float):
 	_update_combined_frequency()
 
 func _update_combined_frequency():
+	if radio_dead:
+		return
+	
 	combined_frequency = dial_value + slider_value
 	frequency_label.text = "%.2f MHz" % combined_frequency
 	
@@ -99,6 +113,9 @@ func _update_combined_frequency():
 	play_button.disabled = not is_calibrated or (not morse_port_active and not correct_port_selected)
 
 func _on_play_pressed():
+	if radio_dead:
+		return
+	
 	play_button.text = "REPRODUCIENDO..."
 	if morse_port_active:
 		MorseManager.play_current_message()
@@ -108,9 +125,35 @@ func _on_play_pressed():
 		if not (GameManager.chain_auth["terminal_1"] and GameManager.chain_auth["terminal_2"]): return
 		GameManager.chain_auth["terminal_3"] = true
 		transmission_authorized = true
+		_trigger_power_failure()
 	else: return
 
+func _trigger_power_failure() -> void:
+	radio_dead = true
+	MorseManager.stop_transmission()
+	for p in [static_player, morse_player, port_click_player]:
+		if p: p.stop()
+	if power_fail_sound:
+		power_fail_player.play()
+	
+	# UI
+	play_button.disabled = true
+	play_button.text = "SIN ENERGÍA"
+	signal_bar.set_signal(0.0)
+	frequency_label.text = "--.-- MHz"
+	port_label.text = "--"
+	waveform.power_off()
+	
+	# Controles muertos
+	frequency_slider.is_dragging = false
+	frequency_slider.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	dial_control.is_dragging = false
+	dial_control.set_process_input(false)
+	dial_port.is_dragging = false
+	dial_port.set_process_input(false)
+
 func _on_port_changed(value: float):
+	if radio_dead: return
 	if GameManager.key_code.is_empty(): return
 	if not GameManager.generator_repaired: return
 	if not (GameManager.chain_auth["terminal_1"] and GameManager.chain_auth["terminal_2"]): return

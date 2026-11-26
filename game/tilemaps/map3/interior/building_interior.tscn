@@ -4009,28 +4009,28 @@ layer = 3
 
 [node name="Lights" parent="." unique_id=204440823 instance=ExtResource("13_tkg17")]
 position = Vector2(219.00003, 136)
-base_energy = 1.5
+base_energy = 0.4
 flicker_min = 0.5
 flicker_max = 0.8
 min_interval = 0.4
-max_interval = 5.0
+max_interval = 0.8
 
 [node name="Lights2" parent="." unique_id=1582807195 instance=ExtResource("13_tkg17")]
 position = Vector2(330, 136)
-base_energy = 1.5
+base_energy = 0.4
 flicker_min = 0.2
 flicker_max = 0.8
 min_interval = 0.4
-max_interval = 5.0
+max_interval = 0.8
 
 [node name="Lights3" parent="." unique_id=1579128261 instance=ExtResource("13_tkg17")]
 position = Vector2(126.00001, 143)
 scale = Vector2(0.28124988, 0.2968749)
-base_energy = 1.5
+base_energy = 0.4
 flicker_min = 0.2
 flicker_max = 0.8
 min_interval = 0.4
-max_interval = 5.0
+max_interval = 0.6
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=468818627]
 scale = Vector2(0.6, 0.6)

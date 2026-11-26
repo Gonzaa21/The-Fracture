@@ -12,10 +12,14 @@ var port_pattern: int = 0
 var base_frequency: float = 1.0
 var base_amplitude_mult: float = 0.38
 
+var powered: bool = true
+
 func _ready():
 	set_process(true)
 
 func _process(delta):
+	if not powered:
+		return
 	wave_offset += delta * 3.0
 	queue_redraw()
 
@@ -27,7 +31,20 @@ func set_port_pattern(port: int):
 func set_sync_level(level: float):
 	sync_level = clamp(level, 0.0, 1.0)
 
+func power_off() -> void:
+	var tw := create_tween()
+	for i in range(4):
+		tw.tween_property(self, "modulate:a", 0.15, 0.05)
+		tw.tween_property(self, "modulate:a", 1.0, 0.07)
+	tw.tween_property(self, "modulate:a", 0.0, 0.12)
+	tw.finished.connect(func():
+		powered = false
+		queue_redraw())
+
 func _draw():
+	if not powered:
+		return
+	
 	var width = size.x
 	var height = size.y
 	var center_y = height / 2.0
@@ -40,13 +57,10 @@ func _draw():
 		var y = center_y + sin(x * frequency + wave_offset) * amplitude
 		y = clamp(y, 2, height - 2)
 		y = floor(y / pixel_size) * pixel_size
-		
 		draw_rect(Rect2(x, y, pixel_size, pixel_size), color_wave1, true)
 	
 	for x in range(0, int(width), pixel_size):
 		var y = center_y + sin(x * frequency + wave_offset + phase_diff) * amplitude
 		y = clamp(y, 2, height - 2)
 		y = floor(y / pixel_size) * pixel_size
-		
 		draw_rect(Rect2(x, y, pixel_size, pixel_size), color_wave2, true)
-	
