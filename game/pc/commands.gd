@@ -171,7 +171,7 @@ static func cmd_type(terminal, argument: String) -> void:
 		terminal.print_line("═══════════════════════════════════════")
 		return
 	
-	if matched_file == "6157PRTO_INT-48U89_OMGA.txt":
+	if matched_file == "615PROTOCOL_48U89_OMGA.txt":
 		GameManager.trigger_omega_acceleration()
 	
 	# Archivo normal, mostrar contenido

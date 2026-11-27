@@ -12,6 +12,9 @@ var already_collected: bool = false
 func _ready():
 	if item_sprite:
 		sprite.texture = item_sprite
+	elif sprite.texture == null and inventory_icon:
+		sprite.texture = inventory_icon
+	
 	match item_id:
 		"instructor":
 			if GameManager.instructor_collected:
@@ -20,11 +23,18 @@ func _ready():
 				visible = false
 				set_process(false)
 				monitoring = false
+				GameManager.omega_triggered.connect(_on_omega_triggered, CONNECT_ONE_SHOT)
 		"A", "B", "C", "KEY":
 			if GameManager.items_collected.get(item_id, false):
 				queue_free()
 		"modulo_sync":
 			pass
+
+func _on_omega_triggered() -> void:
+	visible = true
+	set_process(true)
+	set_deferred("monitoring", true)
+	print("Instructor activado | visible=", visible, " | pos=", global_position, " | textura=", sprite.texture)
 
 func _process(_delta):
 	if player_nearby and Input.is_action_just_pressed("interact"):

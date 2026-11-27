@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var inventory_cell = $InventoryCell
 @onready var use_prompt: Label = $UsePrompt
 
+var _instructor_prompt_was_visible: bool = false
+
 var speed_walk = 50.0;
 var speed_run = 70.0;
 var default_direction = "up";
@@ -22,8 +24,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var show_prompt = GameManager.current_item_id == "instructor" and not GameManager.level2_unlocked
 	use_prompt.visible = show_prompt
-	if show_prompt and Input.is_action_just_pressed("interact"):
+	if show_prompt and _instructor_prompt_was_visible and Input.is_action_just_pressed("interact"):
 		_use_instructor()
+	
+	_instructor_prompt_was_visible = show_prompt
 
 func _use_instructor():
 	GameManager.unlock_level2()

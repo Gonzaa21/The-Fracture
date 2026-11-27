@@ -4,6 +4,7 @@ signal fragment_collected(fragment_id)
 signal open_lab_door
 signal lab_door_locked
 var lab_door_is_open: bool = false
+signal omega_triggered
 
 signal basement_system_changed(system_id: String, active: bool)
 
@@ -128,6 +129,7 @@ func trigger_omega_acceleration(multiplier: float = 3.0) -> void:
 	if omega_acceleration_triggered: return
 	omega_acceleration_triggered = true
 	degradation_speed_multiplier = multiplier
+	omega_triggered.emit()
 
 func background_music():
 	background_sound = AudioStreamPlayer.new()
